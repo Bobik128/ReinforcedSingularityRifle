@@ -9,9 +9,9 @@ Description: Rendering entity in world
 
 java.lang.NullPointerException: Cannot invoke "net.minecraft.network.syncher.SynchedEntityData$DataItem.getValue()" because the return value of "net.minecraft.network.syncher.SynchedEntityData.getItem(net.minecraft.network.syncher.EntityDataAccessor)" is null
 	at net.minecraft.network.syncher.SynchedEntityData.get(SynchedEntityData.java:139) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?] {re:classloading}
-	at com.mod.rbh.entity.BlackHole.getColor(BlackHole.java:125) ~[main/:?] {re:classloading}
-	at com.mod.rbh.entity.renderer.BlackHoleRenderer.render(BlackHoleRenderer.java:49) ~[main/:?] {re:classloading}
-	at com.mod.rbh.entity.renderer.BlackHoleRenderer.render(BlackHoleRenderer.java:33) ~[main/:?] {re:classloading}
+	at com.mod.rsrifle.entity.BlackHole.getColor(BlackHole.java:125) ~[main/:?] {re:classloading}
+	at com.mod.rsrifle.entity.renderer.BlackHoleRenderer.render(BlackHoleRenderer.java:49) ~[main/:?] {re:classloading}
+	at com.mod.rsrifle.entity.renderer.BlackHoleRenderer.render(BlackHoleRenderer.java:33) ~[main/:?] {re:classloading}
 	at net.minecraft.client.renderer.entity.EntityRenderDispatcher.render(EntityRenderDispatcher.java:141) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:mixins.oculus.json:MixinEntityRenderDispatcher,pl:mixin:APP:mixins.oculus.json:entity_render_context.MixinEntityRenderDispatcher,pl:mixin:APP:mixins.oculus.compat.sodium.json:copyEntity.shadows.EntityRenderDispatcherMixin,pl:mixin:APP:mixins.oculus.compat.sodium.json:vertex_format.entity.MixinEntityRenderDispatcher,pl:mixin:A,pl:runtimedistcleaner:A}
 	at net.minecraft.client.renderer.LevelRenderer.renderEntity(LevelRenderer.java:1470) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
 	at net.minecraft.client.renderer.LevelRenderer.invokeRenderEntity(LevelRenderer.java) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
@@ -56,12 +56,12 @@ Suspected Mods:
 		at TRANSFORMER/minecraft@1.20.1/net.minecraft.client.renderer.LevelRenderer.invokeRenderEntity(LevelRenderer.java)
 
 	Reinforced Black Holes (rbh), Version: 1.0.0
-		at TRANSFORMER/rbh@1.0.0/com.mod.rbh.entity.BlackHole.getColor(BlackHole.java:125)
+		at TRANSFORMER/rbh@1.0.0/com.mod.rsrifle.entity.BlackHole.getColor(BlackHole.java:125)
 Stacktrace:
 	at net.minecraft.network.syncher.SynchedEntityData.get(SynchedEntityData.java:139) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/:?] {re:classloading}
-	at com.mod.rbh.entity.BlackHole.getColor(BlackHole.java:125) ~[%23186!/:?] {re:classloading}
-	at com.mod.rbh.entity.renderer.BlackHoleRenderer.render(BlackHoleRenderer.java:49) ~[%23186!/:?] {re:classloading}
-	at com.mod.rbh.entity.renderer.BlackHoleRenderer.render(BlackHoleRenderer.java:33) ~[%23186!/:?] {re:classloading}
+	at com.mod.rsrifle.entity.BlackHole.getColor(BlackHole.java:125) ~[%23186!/:?] {re:classloading}
+	at com.mod.rsrifle.entity.renderer.BlackHoleRenderer.render(BlackHoleRenderer.java:49) ~[%23186!/:?] {re:classloading}
+	at com.mod.rsrifle.entity.renderer.BlackHoleRenderer.render(BlackHoleRenderer.java:33) ~[%23186!/:?] {re:classloading}
 	at net.minecraft.client.renderer.entity.EntityRenderDispatcher.render(EntityRenderDispatcher.java:141) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:mixins.oculus.json:MixinEntityRenderDispatcher,pl:mixin:APP:mixins.oculus.json:entity_render_context.MixinEntityRenderDispatcher,pl:mixin:APP:mixins.oculus.compat.sodium.json:copyEntity.shadows.EntityRenderDispatcherMixin,pl:mixin:APP:mixins.oculus.compat.sodium.json:vertex_format.entity.MixinEntityRenderDispatcher,pl:mixin:A,pl:runtimedistcleaner:A}
 	at net.minecraft.client.renderer.LevelRenderer.renderEntity(LevelRenderer.java:1470) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
 	at net.minecraft.client.renderer.LevelRenderer.invokeRenderEntity(LevelRenderer.java) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:A,pl:runtimedistcleaner:A}
@@ -73,7 +73,7 @@ Stacktrace:
 	at net.minecraft.client.renderer.GameRenderer.renderLevel(GameRenderer.java:1147) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:rbh.mixins.json:client.GameRendererMixin,pl:mixin:APP:ponder-common.mixins.json:client.accessor.GameRendererAccessor,pl:mixin:APP:mixins.oculus.json:GameRendererAccessor,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer,pl:mixin:APP:mixins.oculus.json:MixinModelViewBobbing,pl:mixin:APP:create.mixins.json:client.GameRendererMixin,pl:mixin:APP:embeddium.mixins.json:features.gui.hooks.console.GameRendererMixin,pl:mixin:APP:mixins.oculus.json:MixinGameRenderer_NightVisionCompat,pl:mixin:A,pl:runtimedistcleaner:A}
 -- Entity being rendered --
 Details:
-	Entity Type: rbh:test_black_hole (com.mod.rbh.entity.TestBlackHole)
+	Entity Type: rbh:test_black_hole (com.mod.rsrifle.entity.TestBlackHole)
 	Entity ID: 25
 	Entity Name: entity.rbh.test_black_hole
 	Entity's Exact location: 150.65, 144.87, -301.38
@@ -115,7 +115,7 @@ Stacktrace:
 
 -- Renderer details --
 Details:
-	Assigned renderer: com.mod.rbh.entity.renderer.BlackHoleRenderer@6ffb6f4d
+	Assigned renderer: com.mod.rsrifle.entity.renderer.BlackHoleRenderer@6ffb6f4d
 	Location: 1.36,0.55,-6.03 - World: (1,0,-7), Section: (at 1,0,9 in 0,0,-1; chunk contains blocks 0,-64,-16 to 15,319,-1), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,-64,-512 to 511,319,-1)
 	Rotation: 0.0
 	Delta: 0.0

@@ -75,6 +75,13 @@ ordering="NONE"
 side="BOTH"
 
 [[dependencies.${mod_id}]]
+modId="rbh"
+mandatory=true
+versionRange="[1.0.1,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
 modId="oculus"
 mandatory=false
 versionRange="[1.8.0,)"

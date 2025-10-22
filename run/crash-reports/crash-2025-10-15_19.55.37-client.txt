@@ -7,9 +7,9 @@
 Time: 2025-10-15 19:55:37
 Description: Ticking entity
 
-java.lang.NullPointerException: Cannot invoke "com.mod.rbh.sound.EntityBoundSound.remove()" because the return value of "java.util.HashMap.get(Object)" is null
-	at com.mod.rbh.utils.FirearmMode.onTick(FirearmMode.java:354) ~[main/:?] {re:classloading,re:mixin}
-	at com.mod.rbh.items.SingularityRifle.inventoryTick(SingularityRifle.java:135) ~[main/:?] {re:mixin,re:classloading}
+java.lang.NullPointerException: Cannot invoke "com.mod.rsrifle.sound.EntityBoundSound.remove()" because the return value of "java.util.HashMap.get(Object)" is null
+	at com.mod.rsrifle.utils.FirearmMode.onTick(FirearmMode.java:354) ~[main/:?] {re:classloading,re:mixin}
+	at com.mod.rsrifle.items.SingularityRifle.inventoryTick(SingularityRifle.java:135) ~[main/:?] {re:mixin,re:classloading}
 	at net.minecraft.world.item.ItemStack.inventoryTick(ItemStack.java:538) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?] {re:mixin,xf:fml:forge:itemstack,re:classloading,xf:fml:forge:itemstack}
 	at net.minecraftforge.common.extensions.IForgeItem.onInventoryTick(IForgeItem.java:353) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?] {re:mixin,re:classloading}
 	at net.minecraftforge.common.extensions.IForgeItemStack.onInventoryTick(IForgeItemStack.java:306) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?] {re:computing_frames,re:classloading}
@@ -54,10 +54,10 @@ A detailed walkthrough of the error, its code path and all known details is as f
 Thread: Render thread
 Suspected Mod: 
 	Reinforced Black Holes (rbh), Version: 1.0.0
-		at TRANSFORMER/rbh@1.0.0/com.mod.rbh.utils.FirearmMode.onTick(FirearmMode.java:354)
+		at TRANSFORMER/rbh@1.0.0/com.mod.rsrifle.utils.FirearmMode.onTick(FirearmMode.java:354)
 Stacktrace:
-	at com.mod.rbh.utils.FirearmMode.onTick(FirearmMode.java:354) ~[%23186!/:?] {re:classloading,re:mixin}
-	at com.mod.rbh.items.SingularityRifle.inventoryTick(SingularityRifle.java:135) ~[%23186!/:?] {re:mixin,re:classloading}
+	at com.mod.rsrifle.utils.FirearmMode.onTick(FirearmMode.java:354) ~[%23186!/:?] {re:classloading,re:mixin}
+	at com.mod.rsrifle.items.SingularityRifle.inventoryTick(SingularityRifle.java:135) ~[%23186!/:?] {re:mixin,re:classloading}
 	at net.minecraft.world.item.ItemStack.inventoryTick(ItemStack.java:538) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/:?] {re:mixin,xf:fml:forge:itemstack,re:classloading,xf:fml:forge:itemstack}
 	at net.minecraftforge.common.extensions.IForgeItem.onInventoryTick(IForgeItem.java:353) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23180%23187!/:?] {re:mixin,re:classloading}
 	at net.minecraftforge.common.extensions.IForgeItemStack.onInventoryTick(IForgeItemStack.java:306) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23180%23187!/:?] {re:computing_frames,re:classloading}

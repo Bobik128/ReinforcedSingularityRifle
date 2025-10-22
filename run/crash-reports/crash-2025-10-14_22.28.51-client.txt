@@ -8,7 +8,7 @@ Time: 2025-10-14 22:28:51
 Description: Unexpected error
 
 java.lang.NullPointerException: Cannot invoke "net.minecraft.world.entity.Entity.position()" because "this.soundSource" is null
-	at com.mod.rbh.sound.LoopingSound.tick(LoopingSound.java:46) ~[main/:?] {re:classloading}
+	at com.mod.rsrifle.sound.LoopingSound.tick(LoopingSound.java:46) ~[main/:?] {re:classloading}
 	at net.minecraft.client.sounds.SoundEngine.tickNonPaused(SoundEngine.java:334) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at net.minecraft.client.sounds.SoundEngine.tick(SoundEngine.java:301) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at net.minecraft.client.sounds.SoundManager.tick(SoundManager.java:225) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
@@ -41,9 +41,9 @@ A detailed walkthrough of the error, its code path and all known details is as f
 Thread: Render thread
 Suspected Mod: 
 	Reinforced Black Holes (rbh), Version: 1.0.0
-		at TRANSFORMER/rbh@1.0.0/com.mod.rbh.sound.LoopingSound.tick(LoopingSound.java:46)
+		at TRANSFORMER/rbh@1.0.0/com.mod.rsrifle.sound.LoopingSound.tick(LoopingSound.java:46)
 Stacktrace:
-	at com.mod.rbh.sound.LoopingSound.tick(LoopingSound.java:46) ~[%23186!/:?] {re:classloading}
+	at com.mod.rsrifle.sound.LoopingSound.tick(LoopingSound.java:46) ~[%23186!/:?] {re:classloading}
 	at net.minecraft.client.sounds.SoundEngine.tickNonPaused(SoundEngine.java:334) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at net.minecraft.client.sounds.SoundEngine.tick(SoundEngine.java:301) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at net.minecraft.client.sounds.SoundManager.tick(SoundManager.java:225) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/:?] {re:classloading,pl:runtimedistcleaner:A}

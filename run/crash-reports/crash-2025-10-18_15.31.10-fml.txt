@@ -47,7 +47,7 @@ Stacktrace:
 -- MOD rbh --
 Details:
 	Caused by 0: java.lang.NoClassDefFoundError: com/simibubi/create/content/processing/sequenced/SequencedAssemblyItem
-		at com.mod.rbh.ReinforcedBlackHoles.<init>(ReinforcedBlackHoles.java:45) ~[%23186!/:?] {re:classloading}
+		at com.mod.rsrifle.ReinforcedSingularityRifle.<init>(ReinforcedBlackHoles.java:45) ~[%23186!/:?] {re:classloading}
 		at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?] {}
 		at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?] {}
 		at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?] {}
@@ -78,7 +78,7 @@ Stacktrace:
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?] {}
 	at cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:137) ~[securejarhandler-2.1.10.jar:?] {}
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?] {}
-	at com.mod.rbh.ReinforcedBlackHoles.<init>(ReinforcedBlackHoles.java:45) ~[%23186!/:?] {re:classloading}
+	at com.mod.rsrifle.ReinforcedSingularityRifle.<init>(ReinforcedBlackHoles.java:45) ~[%23186!/:?] {re:classloading}
 	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?] {}
 	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?] {}
 	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?] {}

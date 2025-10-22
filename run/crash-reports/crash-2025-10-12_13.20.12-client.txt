@@ -8,8 +8,8 @@ Time: 2025-10-12 13:20:12
 Description: Unexpected error
 
 java.lang.NullPointerException: Cannot read field "second" because the return value of "java.util.Map.get(Object)" is null
-	at com.mod.rbh.items.renderer.SingularityRifleModel.setCustomAnimations(SingularityRifleModel.java:56) ~[main/:?] {re:classloading}
-	at com.mod.rbh.items.renderer.SingularityRifleModel.setCustomAnimations(SingularityRifleModel.java:18) ~[main/:?] {re:classloading}
+	at com.mod.rsrifle.items.renderer.SingularityRifleModel.setCustomAnimations(SingularityRifleModel.java:56) ~[main/:?] {re:classloading}
+	at com.mod.rsrifle.items.renderer.SingularityRifleModel.setCustomAnimations(SingularityRifleModel.java:18) ~[main/:?] {re:classloading}
 	at software.bernie.geckolib.model.GeoModel.handleAnimations(GeoModel.java:221) ~[geckolib-388172-7020955_mapped_parchment_2023.08.06-1.20.1.jar:4.8.1] {re:classloading}
 	at software.bernie.geckolib.renderer.GeoItemRenderer.actuallyRender(GeoItemRenderer.java:236) ~[geckolib-388172-7020955_mapped_parchment_2023.08.06-1.20.1.jar:4.8.1] {re:classloading}
 	at software.bernie.geckolib.renderer.GeoItemRenderer.actuallyRender(GeoItemRenderer.java:42) ~[geckolib-388172-7020955_mapped_parchment_2023.08.06-1.20.1.jar:4.8.1] {re:classloading}
@@ -53,7 +53,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 Thread: Render thread
 Suspected Mods: 
 	Reinforced Black Holes (rbh), Version: 1.0.0
-		at TRANSFORMER/rbh@1.0.0/com.mod.rbh.items.renderer.SingularityRifleModel.setCustomAnimations(SingularityRifleModel.java:56)
+		at TRANSFORMER/rbh@1.0.0/com.mod.rsrifle.items.renderer.SingularityRifleModel.setCustomAnimations(SingularityRifleModel.java:56)
 
 	GeckoLib 4 (geckolib), Version: 4.8.1
 		Issue tracker URL: https://github.com/bernie-g/geckolib/issues
@@ -65,8 +65,8 @@ Suspected Mods:
 		Target: net.minecraft.client.renderer.GameRenderer
 		at TRANSFORMER/minecraft@1.20.1/net.minecraft.client.renderer.GameRenderer.redirect$zjg000$iris$disableVanillaHandRendering(GameRenderer.java:10055)
 Stacktrace:
-	at com.mod.rbh.items.renderer.SingularityRifleModel.setCustomAnimations(SingularityRifleModel.java:56) ~[%23186!/:?] {re:classloading}
-	at com.mod.rbh.items.renderer.SingularityRifleModel.setCustomAnimations(SingularityRifleModel.java:18) ~[%23186!/:?] {re:classloading}
+	at com.mod.rsrifle.items.renderer.SingularityRifleModel.setCustomAnimations(SingularityRifleModel.java:56) ~[%23186!/:?] {re:classloading}
+	at com.mod.rsrifle.items.renderer.SingularityRifleModel.setCustomAnimations(SingularityRifleModel.java:18) ~[%23186!/:?] {re:classloading}
 	at software.bernie.geckolib.model.GeoModel.handleAnimations(GeoModel.java:221) ~[geckolib-388172-7020955_mapped_parchment_2023.08.06-1.20.1.jar%23188!/:4.8.1] {re:classloading}
 	at software.bernie.geckolib.renderer.GeoItemRenderer.actuallyRender(GeoItemRenderer.java:236) ~[geckolib-388172-7020955_mapped_parchment_2023.08.06-1.20.1.jar%23188!/:4.8.1] {re:classloading}
 	at software.bernie.geckolib.renderer.GeoItemRenderer.actuallyRender(GeoItemRenderer.java:42) ~[geckolib-388172-7020955_mapped_parchment_2023.08.06-1.20.1.jar%23188!/:4.8.1] {re:classloading}
