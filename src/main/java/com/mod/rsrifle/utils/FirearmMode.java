@@ -1,6 +1,6 @@
 package com.mod.rsrifle.utils;
 
-import com.mod.rbh.entity.BlackHoleProjectile;
+import com.mod.rsrifle.entity.BlackHoleProjectile2;
 import com.mod.rsrifle.items.SingularityBattery;
 import com.mod.rsrifle.items.SingularityRifle;
 import com.mod.rsrifle.network.RSRifleNetwork;
@@ -369,7 +369,7 @@ public class FirearmMode {
                 float modifier = (float) FirearmDataUtils.getChargeLevel(itemStack) / SingularityRifle.MAX_CHARGE_LEVEL;
                 Vec3 lookVector = entity.getLookAngle();
 //                Vec3 additionalOffset = lookVector.multiply(0.5f, 0.5f, 0.5f);
-                BlackHoleProjectile hole = new BlackHoleProjectile(entity.getEyePosition().add(entity.getLookAngle().scale(0.5f)), entity.level(), SingularityRifle.MAX_SIZE * modifier, SingularityRifle.MAX_EFFECT_SIZE * modifier, ((SingularityRifle) itemStack.getItem()).shouldBeColorful(itemStack));
+                BlackHoleProjectile2 hole = new BlackHoleProjectile2(entity.getEyePosition().add(entity.getLookAngle().scale(0.5f)), entity.level(), SingularityRifle.MAX_SIZE * modifier, SingularityRifle.MAX_EFFECT_SIZE * modifier, ((SingularityRifle) itemStack.getItem()).shouldBeColorful(itemStack));
                 entity.level().addFreshEntity(hole);
                 hole.shoot(lookVector.x, lookVector.y, lookVector.z, 6.0f, 0.01f);
                 if (entity.level() instanceof ServerLevel) RSRifleNetwork.sendToAllInDimension(new ClientboundShootPacket(GeoItem.getId(itemStack), FirearmDataUtils.getChargeLevel(itemStack)), entity.level());

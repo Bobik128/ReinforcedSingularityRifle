@@ -2,7 +2,7 @@ package com.mod.rsrifle.entity.ItemEntity;
 
 import com.mod.rsrifle.entity.RSRifleEntityTypes;
 import com.mod.rsrifle.sound.LoopingSound;
-import com.mod.rsrifle.sound.RBHSounds;
+import com.mod.rsrifle.sound.RSRifleSounds;
 import com.mod.rsrifle.utils.FirearmMode;
 import net.minecraft.client.Minecraft;
 import net.minecraft.sounds.SoundSource;
@@ -46,7 +46,7 @@ public class SingularityRifleItemEntity extends ItemEntity {
     @OnlyIn(Dist.CLIENT)
     private void clientTick() {
         if (soundInstance == null || soundInstance.isStopped()) {
-            soundInstance = new LoopingSound(RBHSounds.ELECTRIC_BUZZ_MONO.get(), SoundSource.NEUTRAL, this, FirearmMode.getVolume(getItem()) + 0.01f);
+            soundInstance = new LoopingSound(RSRifleSounds.ELECTRIC_BUZZ_MONO.get(), SoundSource.NEUTRAL, this, FirearmMode.getVolume(getItem()) + 0.01f);
             Minecraft.getInstance().getSoundManager().play(soundInstance);
         }
         soundInstance.setVolume(FirearmMode.getVolume(getItem()));

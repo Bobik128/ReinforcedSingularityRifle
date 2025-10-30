@@ -21,7 +21,7 @@ public class ClientSoundHandler {
         if (holding) {
             if (currentLoopSound == null || currentLoopSound.isStopped()) {
                 currentLoopSound = new ItemHoldLoopingSound(
-                        RBHSounds.ELECTRIC_BUZZ_STEREO.get(), mc.player, RSRifleItems.SINGULARITY_RIFLE.get(), FirearmMode.getVolume(stack) + 0.01f);
+                        RSRifleSounds.ELECTRIC_BUZZ_STEREO.get(), mc.player, RSRifleItems.SINGULARITY_RIFLE.get(), FirearmMode.getVolume(stack) + 0.01f);
                 mc.getSoundManager().play(currentLoopSound);
             }
             currentLoopSound.setVolume(FirearmMode.getVolume(stack));

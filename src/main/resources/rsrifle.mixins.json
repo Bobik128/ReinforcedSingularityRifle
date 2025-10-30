@@ -7,7 +7,6 @@
   "mixins": [
   ],
   "client": [
-    "client.GameRendererMixin",
     "client.GuiMixin",
     "client.ItemInHandRendererMixin",
     "client.MinecraftMixin",

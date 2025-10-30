@@ -3,7 +3,7 @@
     "category": "ambient",
     "sounds": [
       {
-        "name": "rbh:electric_buzz",
+        "name": "rsrifle:electric_buzz",
         "stream": true
       }
     ]
@@ -12,7 +12,7 @@
     "category": "neutral",
     "sounds": [
       {
-        "name": "rbh:electric_buzz_mono",
+        "name": "rsrifle:electric_buzz_mono",
         "stream": true
       }
     ]
@@ -21,7 +21,7 @@
     "category": "neutral",
     "sounds": [
       {
-        "name": "rbh:rifle_shoot",
+        "name": "rsrifle:rifle_shoot",
         "stream": true
       }
     ]
@@ -30,7 +30,7 @@
     "category": "neutral",
     "sounds": [
       {
-        "name": "rbh:reload_full",
+        "name": "rsrifle:reload_full",
         "stream": true
       }
     ]

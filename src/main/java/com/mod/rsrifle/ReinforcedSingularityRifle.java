@@ -6,7 +6,7 @@ import com.mod.rsrifle.items.RSRifleItems;
 import com.mod.rsrifle.items.SingularityRifle;
 import com.mod.rsrifle.network.RSRifleNetwork;
 import com.mod.rsrifle.recipe.RSRifleRecipes;
-import com.mod.rsrifle.sound.RBHSounds;
+import com.mod.rsrifle.sound.RSRifleSounds;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.player.AbstractClientPlayer;
@@ -44,7 +44,7 @@ public class ReinforcedSingularityRifle
         RSRifleCreativeModeTab.register(modEventBus);
         RSRifleEntityTypes.register(modEventBus);
         RSRifleRecipes.register(modEventBus);
-        RBHSounds.register(modEventBus);
+        RSRifleSounds.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 

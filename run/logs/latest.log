@@ -1,470 +1,357 @@
-[22Oct2025 18:58:30.964] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, /home/tomas/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 47.4.6, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mixin.config, rsrifle.mixins.json]
-[22Oct2025 18:58:30.966] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.15 by Eclipse Adoptium; OS Linux arch amd64 version 6.16.10-200.fc42.x86_64
-[22Oct2025 18:58:31.039] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[22Oct2025 18:58:31.079] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[22Oct2025 18:58:31.156] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[22Oct2025 18:58:31.195] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/tomas/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23116!/ Service=ModLauncher Env=CLIENT
-[22Oct2025 18:58:31.233] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 580.95.05, NVIDIA Corporation
-[22Oct2025 18:58:31.365] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.4.6/9e86bf67e222253576e982856d9958695725adb5/javafmllanguage-1.20.1-47.4.6.jar is missing mods.toml file
-[22Oct2025 18:58:31.366] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.4.6/56100545804adc991cc48ab68b86ba46c5873246/lowcodelanguage-1.20.1-47.4.6.jar is missing mods.toml file
-[22Oct2025 18:58:31.367] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.4.6/fd228d7d879a9da774eda022ea3092cedb5178f1/mclanguage-1.20.1-47.4.6.jar is missing mods.toml file
-[22Oct2025 18:58:31.368] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.4.6/cefc55ada370ce2f23f92834530eb967c0de1fdd/fmlcore-1.20.1-47.4.6.jar is missing mods.toml file
-[22Oct2025 18:58:31.599] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: mixinextras-forge-0.5.0.jar. Using Mod File: /home/tomas/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-forge/0.5.0/cebe4d98a42a4a32ebf0ddec7b93d5bdbdad009/mixinextras-forge-0.5.0.jar
-[22Oct2025 18:58:31.600] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 5 dependencies adding them to mods collection
-[22Oct2025 18:58:32.431] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by rsrifle.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
-[22Oct2025 18:58:32.431] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[22Oct2025 18:58:32.442] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /home/tomas/.gradle/caches/forge_gradle/assets, --assetIndex, 5]
-[22Oct2025 18:58:32.454] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
-[22Oct2025 18:58:32.455] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
-[22Oct2025 18:58:32.461] [main/INFO] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
-[22Oct2025 18:58:32.461] [main/INFO] [mixin/]: Selecting config rsrifle.mixins.json
-[22Oct2025 18:58:32.463] [main/WARN] [mixin/]: Reference map 'rsrifle.refmap.json' for rsrifle.mixins.json could not be read. If this is a development environment you can ignore this message
-[22Oct2025 18:58:32.463] [main/INFO] [mixin/]: Selecting config flywheel.backend.mixins.json
-[22Oct2025 18:58:32.606] [main/INFO] [mixin/]: Remapping refMap backend-flywheel.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
-[22Oct2025 18:58:32.606] [main/INFO] [mixin/]: Selecting config flywheel.impl.mixins.json
-[22Oct2025 18:58:32.607] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
-[22Oct2025 18:58:32.607] [main/INFO] [mixin/]: Selecting config geckolib.mixins.json
-[22Oct2025 18:58:32.612] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
-[22Oct2025 18:58:32.612] [main/INFO] [mixin/]: Selecting config ponder.mixins.json
-[22Oct2025 18:58:32.614] [main/INFO] [mixin/]: Remapping refMap ponder.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
-[22Oct2025 18:58:32.614] [main/INFO] [mixin/]: Selecting config ponder-common.mixins.json
-[22Oct2025 18:58:32.615] [main/INFO] [mixin/]: Remapping refMap ponder.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
-[22Oct2025 18:58:32.615] [main/INFO] [mixin/]: Selecting config create.mixins.json
-[22Oct2025 18:58:32.622] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
-[22Oct2025 18:58:32.622] [main/INFO] [mixin/]: Selecting config rbh.mixins.json
-[22Oct2025 18:58:32.624] [main/INFO] [mixin/]: Remapping refMap rbh.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
-[22Oct2025 18:58:32.625] [main/INFO] [mixin/]: Selecting config mixinextras.init.mixins.json
-[22Oct2025 18:58:32.697] [main/INFO] [mixin/]: Preparing rsrifle.mixins.json (6)
-[22Oct2025 18:58:32.755] [main/INFO] [mixin/]: Preparing flywheel.backend.mixins.json (8)
-[22Oct2025 18:58:32.803] [main/INFO] [mixin/]: Preparing flywheel.impl.mixins.json (15)
-[22Oct2025 18:58:32.916] [main/INFO] [mixin/]: Preparing geckolib.mixins.json (1)
-[22Oct2025 18:58:32.917] [main/INFO] [mixin/]: Preparing ponder.mixins.json (1)
-[22Oct2025 18:58:32.921] [main/INFO] [mixin/]: Preparing ponder-common.mixins.json (6)
-[22Oct2025 18:58:32.939] [main/INFO] [mixin/]: Preparing rbh.mixins.json (11)
-[22Oct2025 18:58:32.948] [main/INFO] [mixin/]: Preparing mixinextras.init.mixins.json (0)
-[22Oct2025 18:58:32.948] [main/INFO] [mixin/]: Preparing create.mixins.json (53)
-[22Oct2025 18:58:33.039] [main/WARN] [mixin/]: Error loading class: journeymap/client/ui/fullscreen/Fullscreen (java.lang.ClassNotFoundException: journeymap.client.ui.fullscreen.Fullscreen)
-[22Oct2025 18:58:33.039] [main/WARN] [mixin/]: @Mixin target journeymap.client.ui.fullscreen.Fullscreen was not found create.mixins.json:compat.JourneyFullscreenMapMixin
-[22Oct2025 18:58:33.081] [main/INFO] [mixin/]: Prepared 100 mixins in 0.619 sec (6.2ms avg) (0ms load, 0ms transform, 0ms plugin)
-[22Oct2025 18:58:33.100] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
-[22Oct2025 18:58:33.116] [main/INFO] [mixin/]: Mixing client.MinecraftMixin from rsrifle.mixins.json into net.minecraft.client.Minecraft
-[22Oct2025 18:58:33.130] [main/INFO] [mixin/]: Mixing MinecraftMixin from flywheel.impl.mixins.json into net.minecraft.client.Minecraft
-[22Oct2025 18:58:33.135] [main/INFO] [mixin/]: Mixing client.WindowResizeMixin from ponder-common.mixins.json into net.minecraft.client.Minecraft
-[22Oct2025 18:58:33.137] [main/INFO] [mixin/]: Mixing client.MinecraftMixin from rbh.mixins.json into net.minecraft.client.Minecraft
-[22Oct2025 18:58:33.443] [main/INFO] [mixin/]: Mixing accessor.SystemReportAccessor from create.mixins.json into net.minecraft.SystemReport
-[22Oct2025 18:58:33.444] [main/INFO] [mixin/]: Renaming @Accessor method getOPERATING_SYSTEM()Ljava/lang/String; to getOPERATING_SYSTEM_$md$acec1d$0 in create.mixins.json:accessor.SystemReportAccessor
-[22Oct2025 18:58:33.447] [main/INFO] [mixin/]: Renaming @Accessor method getJAVA_VERSION()Ljava/lang/String; to getJAVA_VERSION_$md$acec1d$1 in create.mixins.json:accessor.SystemReportAccessor
-[22Oct2025 18:58:33.548] [pool-4-thread-1/INFO] [mixin/]: Mixing BuiltInRegistriesMixin from create.mixins.json into net.minecraft.core.registries.BuiltInRegistries
-[22Oct2025 18:58:33.548] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$ourRegistriesAreNotEmpty$0(Ljava/util/function/Consumer;Lnet/minecraft/core/Registry;)V to mdacec1d$lambda$create$ourRegistriesAreNotEmpty$0$0 in create.mixins.json:BuiltInRegistriesMixin
-[22Oct2025 18:58:33.553] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.BuiltInRegistriesAccessor from create.mixins.json into net.minecraft.core.registries.BuiltInRegistries
-[22Oct2025 18:58:33.553] [pool-4-thread-1/INFO] [mixin/]: Renaming @Accessor method create$getWRITABLE_REGISTRY()Lnet/minecraft/core/WritableRegistry; to create$getWRITABLE_REGISTRY_$md$acec1d$1 in create.mixins.json:accessor.BuiltInRegistriesAccessor
-[22Oct2025 18:58:33.609] [pool-4-thread-1/INFO] [mixin/]: Mixing BlockMixin from create.mixins.json into net.minecraft.world.level.block.Block
-[22Oct2025 18:58:33.631] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.StateHolderAccessor from create.mixins.json into net.minecraft.world.level.block.state.StateHolder
-[22Oct2025 18:58:33.649] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.EntityAccessor from ponder-common.mixins.json into net.minecraft.world.entity.Entity
-[22Oct2025 18:58:33.652] [pool-4-thread-1/INFO] [mixin/]: Mixing client.EntityContraptionInteractionMixin from create.mixins.json into net.minecraft.world.entity.Entity
-[22Oct2025 18:58:33.654] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$onSpawnSprintParticle$4(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;Lcom/simibubi/create/content/contraptions/Contraption;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V to mdacec1d$lambda$create$onSpawnSprintParticle$4$0 in create.mixins.json:client.EntityContraptionInteractionMixin
-[22Oct2025 18:58:33.654] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$onMove$3(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/Entity;Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)Z to mdacec1d$lambda$create$onMove$3$1 in create.mixins.json:client.EntityContraptionInteractionMixin
-[22Oct2025 18:58:33.654] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$contraptionStepSounds$2(Lorg/apache/commons/lang3/mutable/MutableBoolean;Lcom/simibubi/create/content/contraptions/Contraption;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V to mdacec1d$lambda$create$contraptionStepSounds$2$2 in create.mixins.json:client.EntityContraptionInteractionMixin
-[22Oct2025 18:58:33.654] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$forCollision$1(Lnet/minecraft/world/phys/Vec3;Lorg/apache/logging/log4j/util/TriConsumer;Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)V to mdacec1d$lambda$create$forCollision$1$3 in create.mixins.json:client.EntityContraptionInteractionMixin
-[22Oct2025 18:58:33.654] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$getIntersectionContraptionsStream$0(Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)Z to mdacec1d$lambda$create$getIntersectionContraptionsStream$0$4 in create.mixins.json:client.EntityContraptionInteractionMixin
-[22Oct2025 18:58:33.680] [pool-4-thread-1/INFO] [mixin/]: Mixing EntityMixin from create.mixins.json into net.minecraft.world.entity.Entity
-[22Oct2025 18:58:33.740] [pool-4-thread-1/INFO] [mixin/]: Mixing CustomItemUseEffectsMixin from create.mixins.json into net.minecraft.world.entity.LivingEntity
-[22Oct2025 18:58:33.749] [pool-4-thread-1/INFO] [mixin/]: Mixing LavaSwimmingMixin from create.mixins.json into net.minecraft.world.entity.LivingEntity
-[22Oct2025 18:58:33.754] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.LivingEntityAccessor from create.mixins.json into net.minecraft.world.entity.LivingEntity
-[22Oct2025 18:58:33.801] [pool-4-thread-1/INFO] [mixin/]: Mixing LevelMixin from flywheel.impl.mixins.json into net.minecraft.world.level.Level
-[22Oct2025 18:58:33.816] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.ServerLevelAccessor from create.mixins.json into net.minecraft.server.level.ServerLevel
-[22Oct2025 18:58:33.831] [pool-4-thread-1/INFO] [mixin/]: Mixing PlayerMixin from create.mixins.json into net.minecraft.world.entity.player.Player
-[22Oct2025 18:58:33.878] [pool-4-thread-1/INFO] [mixin/]: Mixing EntityTypeMixin from flywheel.impl.mixins.json into net.minecraft.world.entity.EntityType
-[22Oct2025 18:58:33.887] [pool-4-thread-1/INFO] [mixin/]: Mixing BlockEntityTypeMixin from flywheel.impl.mixins.json into net.minecraft.world.level.block.entity.BlockEntityType
-[22Oct2025 18:58:34.024] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.DispenserBlockAccessor from create.mixins.json into net.minecraft.world.level.block.DispenserBlock
-[22Oct2025 18:58:34.043] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.CropBlockAccessor from create.mixins.json into net.minecraft.world.level.block.CropBlock
-[22Oct2025 18:58:34.094] [pool-4-thread-1/INFO] [mixin/]: Mixing ShulkerBoxBlockMixin from create.mixins.json into net.minecraft.world.level.block.ShulkerBoxBlock
-[22Oct2025 18:58:34.103] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.ConcretePowderBlockAccessor from create.mixins.json into net.minecraft.world.level.block.ConcretePowderBlock
-[22Oct2025 18:58:34.121] [pool-4-thread-1/INFO] [mixin/]: Mixing BeehiveBlockMixin from create.mixins.json into net.minecraft.world.level.block.BeehiveBlock
-[22Oct2025 18:58:34.156] [pool-4-thread-1/INFO] [mixin/]: Mixing WaterWheelFluidSpreadMixin from create.mixins.json into net.minecraft.world.level.material.FlowingFluid
-[22Oct2025 18:58:34.164] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.FlowingFluidAccessor from create.mixins.json into net.minecraft.world.level.material.FlowingFluid
-[22Oct2025 18:58:34.210] [pool-4-thread-1/INFO] [mixin/]: Mixing visualmanage.BlockEntityMixin from flywheel.impl.mixins.json into net.minecraft.world.level.block.entity.BlockEntity
-[22Oct2025 18:58:34.215] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.FallingBlockEntityAccessor from create.mixins.json into net.minecraft.world.entity.item.FallingBlockEntity
-[22Oct2025 18:58:34.215] [pool-4-thread-1/INFO] [mixin/]: Renaming @Invoker method create$callInit(Lnet/minecraft/world/level/Level;DDDLnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/entity/item/FallingBlockEntity; to create$callInit_$md$acec1d$0 in create.mixins.json:accessor.FallingBlockEntityAccessor
-[22Oct2025 18:58:34.638] [pool-4-thread-1/INFO] [mixin/]: Mixing SmithingMenuMixin from create.mixins.json into net.minecraft.world.inventory.SmithingMenu
-[22Oct2025 18:58:34.640] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$preventUnbreakingOnBacktanks$0(Lnet/minecraft/world/item/ItemStack;Ljava/util/Map;Lnet/minecraft/world/item/enchantment/Enchantment;Ljava/lang/Integer;)V to mdacec1d$lambda$create$preventUnbreakingOnBacktanks$0$0 in create.mixins.json:SmithingMenuMixin
-[22Oct2025 18:58:34.760] [pool-4-thread-1/INFO] [mixin/]: Mixing BlockItemMixin from create.mixins.json into net.minecraft.world.item.BlockItem
-[22Oct2025 18:58:34.788] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.SuspiciousStewItemAccessor from create.mixins.json into net.minecraft.world.item.SuspiciousStewItem
-[22Oct2025 18:58:34.789] [pool-4-thread-1/INFO] [mixin/]: Renaming @Invoker method create$listPotionEffects(Lnet/minecraft/world/item/ItemStack;Ljava/util/function/Consumer;)V to create$listPotionEffects_$md$acec1d$0 in create.mixins.json:accessor.SuspiciousStewItemAccessor
-[22Oct2025 18:58:35.154] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 60 milliseconds
-[22Oct2025 18:58:35.194] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.UseOnContextAccessor from create.mixins.json into net.minecraft.world.item.context.UseOnContext
-[22Oct2025 18:58:35.299] [pool-4-thread-1/INFO] [mixin/]: Mixing visualmanage.LevelChunkMixin from flywheel.impl.mixins.json into net.minecraft.world.level.chunk.LevelChunk
-[22Oct2025 18:58:35.343] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.MobEffectInstanceAccessor from create.mixins.json into net.minecraft.world.effect.MobEffectInstance
-[22Oct2025 18:58:35.373] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.AbstractProjectileDispenseBehaviorAccessor from create.mixins.json into net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior
-[22Oct2025 18:58:35.464] [pool-4-thread-1/INFO] [mixin/]: Mixing LootingEnchantFunctionMixin from create.mixins.json into net.minecraft.world.level.storage.loot.functions.LootingEnchantFunction
-[22Oct2025 18:58:35.810] [Render thread/INFO] [mixin/]: Mixing RenderSystemMixin from flywheel.backend.mixins.json into com.mojang.blaze3d.systems.RenderSystem
-[22Oct2025 18:58:35.811] [Render thread/INFO] [mixin/]: Mixing client.accessor.RenderSystemAccessor from ponder-common.mixins.json into com.mojang.blaze3d.systems.RenderSystem
-[22Oct2025 18:58:35.811] [Render thread/INFO] [mixin/]: Renaming @Accessor method catnip$getShaderLightDirections()[Lorg/joml/Vector3f; to catnip$getShaderLightDirections_$md$acec1d$0 in ponder-common.mixins.json:client.accessor.RenderSystemAccessor
-[22Oct2025 18:58:35.825] [Render thread/INFO] [mixin/]: Mixing client.accessor.BufferBuilderAccessor from ponder-common.mixins.json into com.mojang.blaze3d.vertex.BufferBuilder
-[22Oct2025 18:58:35.867] [Render thread/INFO] [mixin/]: Mixing PoseStackAccessor from flywheel.impl.mixins.json into com.mojang.blaze3d.vertex.PoseStack
-[22Oct2025 18:58:35.869] [Render thread/INFO] [mixin/]: Mixing PoseStackMixin from flywheel.impl.mixins.json into com.mojang.blaze3d.vertex.PoseStack
-[22Oct2025 18:58:35.870] [Render thread/INFO] [mixin/]: Mixing fix.FixNormalScalingMixin from flywheel.impl.mixins.json into com.mojang.blaze3d.vertex.PoseStack
-[22Oct2025 18:58:35.880] [Render thread/INFO] [mixin/]: Mixing client.GuiMixin from rsrifle.mixins.json into net.minecraft.client.gui.Gui
-[22Oct2025 18:58:35.880] [Render thread/INFO] [mixin/]: Mixing client.GuiMixin from rbh.mixins.json into net.minecraft.client.gui.Gui
-[22Oct2025 18:58:35.881] [Render thread/INFO] [mixin/]: Mixing accessor.GuiAccessor from create.mixins.json into net.minecraft.client.gui.Gui
-[22Oct2025 18:58:35.902] [Render thread/INFO] [mixin/]: Mixing client.HeavyBootsOnPlayerMixin from create.mixins.json into net.minecraft.client.player.LocalPlayer
-[22Oct2025 18:58:35.909] [Render thread/INFO] [mixin/]: Mixing AbstractClientPlayerAccessor from flywheel.backend.mixins.json into net.minecraft.client.player.AbstractClientPlayer
-[22Oct2025 18:58:35.943] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/tomas/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1/forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/assets/.mcassetsroot' uses unexpected schema
-[22Oct2025 18:58:35.943] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/tomas/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1/forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/data/.mcassetsroot' uses unexpected schema
-[22Oct2025 18:58:35.952] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[22Oct2025 18:58:35.955] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[22Oct2025 18:58:35.958] [Render thread/INFO] [mixin/]: Mixing OptionsMixin from flywheel.backend.mixins.json into net.minecraft.client.Options
-[22Oct2025 18:58:36.012] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
-[22Oct2025 18:58:36.038] [Render thread/INFO] [mixin/]: Mixing accessor.MouseHandlerAccessor from create.mixins.json into net.minecraft.client.MouseHandler
-[22Oct2025 18:58:36.067] [Render thread/INFO] [mixin/]: Mixing GlStateManagerMixin from flywheel.backend.mixins.json into com.mojang.blaze3d.platform.GlStateManager
-[22Oct2025 18:58:36.129] [modloading-worker-0/INFO] [com.simibubi.create.Create/]: Create 6.0.6 initializing! Commit hash: 338bfa0aec952fa51656e8f61bd621ca9b3b2e00
-[22Oct2025 18:58:36.148] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.6, for MC 1.20.1 with MCP 20230612.114412
-[22Oct2025 18:58:36.148] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.6 Initialized
-[22Oct2025 18:58:36.158] [modloading-worker-0/INFO] [mixin/]: Mixing client.MultiPlayerGameModeMixin from rsrifle.mixins.json into net.minecraft.client.multiplayer.MultiPlayerGameMode
-[22Oct2025 18:58:36.158] [modloading-worker-0/INFO] [mixin/]: Mixing client.MultiPlayerGameModeMixin from rbh.mixins.json into net.minecraft.client.multiplayer.MultiPlayerGameMode
-[22Oct2025 18:58:36.213] [modloading-worker-0/INFO] [mixin/]: Mixing LevelRendererAccessor from flywheel.backend.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[22Oct2025 18:58:36.216] [modloading-worker-0/INFO] [mixin/]: Mixing fix.FixFabulousDepthMixin from flywheel.impl.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[22Oct2025 18:58:36.216] [modloading-worker-0/INFO] [mixin/]: Mixing visualmanage.LevelRendererMixin from flywheel.impl.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[22Oct2025 18:58:36.224] [modloading-worker-0/INFO] [mixin/]: Mixing client.LevelRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[22Oct2025 18:58:36.225] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.LevelRendererAccessor from create.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[22Oct2025 18:58:36.231] [modloading-worker-0/INFO] [mixin/]: Mixing client.LevelRendererMixin from create.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[22Oct2025 18:58:36.231] [modloading-worker-0/INFO] [mixin/]: Renaming synthetic method lambda$create$onDestroyBlockProgress$0(J)Ljava/util/SortedSet; to mdacec1d$lambda$create$onDestroyBlockProgress$0$0 in create.mixins.json:client.LevelRendererMixin
-[22Oct2025 18:58:36.234] [modloading-worker-0/INFO] [mixin/]: Mixing LevelRendererMixin from flywheel.impl.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[22Oct2025 18:58:36.318] [modloading-worker-0/INFO] [mixin/]: Mixing client.ShaderInstanceMixin from rbh.mixins.json into net.minecraft.client.renderer.ShaderInstance
-[22Oct2025 18:58:36.351] [modloading-worker-0/INFO] [mixin/]: Mixing client.CameraMixin from create.mixins.json into net.minecraft.client.Camera
-[22Oct2025 18:58:36.366] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.FontAccessor from create.mixins.json into net.minecraft.client.gui.Font
-[22Oct2025 18:58:36.415] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.BlockLootSubProviderAccessor from create.mixins.json into net.minecraft.data.loot.BlockLootSubProvider
-[22Oct2025 18:58:36.416] [modloading-worker-0/INFO] [mixin/]: Renaming @Accessor method create$HAS_SILK_TOUCH()Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder; to create$HAS_SILK_TOUCH_$md$acec1d$0 in create.mixins.json:accessor.BlockLootSubProviderAccessor
-[22Oct2025 18:58:36.450] [modloading-worker-0/INFO] [mixin/]: Mixing client.accessor.RenderTypeAccessor from ponder-common.mixins.json into net.minecraft.client.renderer.RenderType
-[22Oct2025 18:58:36.451] [modloading-worker-0/INFO] [mixin/]: Renaming @Invoker method catnip$create(Ljava/lang/String;Lcom/mojang/blaze3d/vertex/VertexFormat;Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;IZZLnet/minecraft/client/renderer/RenderType$CompositeState;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType; to catnip$create_$md$acec1d$0 in ponder-common.mixins.json:client.accessor.RenderTypeAccessor
-[22Oct2025 18:58:36.461] [modloading-worker-0/INFO] [mixin/]: Mixing client.GameRendererMixin from rsrifle.mixins.json into net.minecraft.client.renderer.GameRenderer
-[22Oct2025 18:58:36.465] [modloading-worker-0/INFO] [mixin/]: Mixing client.accessor.GameRendererAccessor from ponder-common.mixins.json into net.minecraft.client.renderer.GameRenderer
-[22Oct2025 18:58:36.467] [modloading-worker-0/INFO] [mixin/]: Mixing client.GameRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.GameRenderer
-[22Oct2025 18:58:36.468] [modloading-worker-0/INFO] [mixin/]: Mixing client.GameRendererMixin from create.mixins.json into net.minecraft.client.renderer.GameRenderer
-[22Oct2025 18:58:36.471] [modloading-worker-0/WARN] [mixin/]: Method overwrite conflict for getFovPublic in rbh.mixins.json:client.GameRendererMixin, previously written by com.mod.rsrifle.mixin.client.GameRendererMixin. Skipping method.
-[22Oct2025 18:58:37.152] [modloading-worker-0/INFO] [mixin/]: Mixing client.accessor.ParticleEngineAccessor from ponder.mixins.json into net.minecraft.client.particle.ParticleEngine
-[22Oct2025 18:58:37.248] [modloading-worker-0/INFO] [mixin/]: Mixing client.PlayerRendererMixin from rsrifle.mixins.json into net.minecraft.client.renderer.entity.player.PlayerRenderer
-[22Oct2025 18:58:37.250] [modloading-worker-0/INFO] [mixin/]: Mixing client.PlayerRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.entity.player.PlayerRenderer
-[22Oct2025 18:58:37.250] [modloading-worker-0/INFO] [mixin/]: Mixing client.PlayerRendererMixin from create.mixins.json into net.minecraft.client.renderer.entity.player.PlayerRenderer
-[22Oct2025 18:58:37.813] [Render thread/INFO] [mixin/]: Mixing client.HumanoidModelMixin from create.mixins.json into net.minecraft.client.model.HumanoidModel
-[22Oct2025 18:58:37.819] [Render thread/INFO] [mixin/]: Mixing accessor.AgeableListModelAccessor from create.mixins.json into net.minecraft.client.model.AgeableListModel
-[22Oct2025 18:58:37.870] [Render thread/INFO] [mixin/]: Mixing accessor.ItemModelGeneratorsAccessor from create.mixins.json into net.minecraft.data.models.ItemModelGenerators
-[22Oct2025 18:58:37.870] [Render thread/INFO] [mixin/]: Renaming @Accessor method create$getGENERATED_TRIM_MODELS()Ljava/util/List; to create$getGENERATED_TRIM_MODELS_$md$acec1d$0 in create.mixins.json:accessor.ItemModelGeneratorsAccessor
-[22Oct2025 18:58:38.013] [Render thread/INFO] [mixin/]: Mixing client.TextureManagerMixin from geckolib.mixins.json into net.minecraft.client.renderer.texture.TextureManager
-[22Oct2025 18:58:38.103] [Render thread/INFO] [mixin/]: Mixing client.ItemInHandRendererMixin from rsrifle.mixins.json into net.minecraft.client.renderer.ItemInHandRenderer
-[22Oct2025 18:58:38.106] [Render thread/INFO] [mixin/]: Mixing client.ItemInHandRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.ItemInHandRenderer
-[22Oct2025 18:58:38.193] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [rsrifle]
-[22Oct2025 18:58:38.197] [Render thread/INFO] [mixin/]: Mixing accessor.GameTestHelperAccessor from create.mixins.json into net.minecraft.gametest.framework.GameTestHelper
-[22Oct2025 18:58:38.242] [Render thread/INFO] [mixin/]: Mixing accessor.HumanoidArmorLayerAccessor from create.mixins.json into net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer
-[22Oct2025 18:58:38.243] [Render thread/INFO] [mixin/]: Renaming @Accessor method create$getArmorLocationCache()Ljava/util/Map; to create$getArmorLocationCache_$md$acec1d$0 in create.mixins.json:accessor.HumanoidArmorLayerAccessor
-[22Oct2025 18:58:38.250] [Render thread/INFO] [mixin/]: Mixing client.HumanoidArmorLayerMixin from create.mixins.json into net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer
-[22Oct2025 18:58:38.260] [Render thread/INFO] [mixin/]: Mixing client.ArrowRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.entity.ArrowRenderer
-[22Oct2025 18:58:38.400] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
-[22Oct2025 18:58:38.444] [Worker-Main-1/INFO] [mixin/]: Mixing accessor.FluidInteractionRegistryAccessor from create.mixins.json into net.minecraftforge.fluids.FluidInteractionRegistry
-[22Oct2025 18:58:38.444] [Worker-Main-1/INFO] [mixin/]: Renaming @Accessor method getInteractions()Ljava/util/Map; to getInteractions_$md$acec1d$0 in create.mixins.json:accessor.FluidInteractionRegistryAccessor
-[22Oct2025 18:58:38.482] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[22Oct2025 18:58:38.514] [Worker-Main-6/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
-[22Oct2025 18:58:38.930] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.4.6 Target: 47.4.10
-[22Oct2025 18:58:40.142] [Worker-Main-3/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model rsrifle:singularity_rifle#inventory:
+[30Oct2025 19:18:21.513] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, /home/tomas/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 47.4.6, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mixin.config, rsrifle.mixins.json]
+[30Oct2025 19:18:21.515] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.15 by Eclipse Adoptium; OS Linux arch amd64 version 6.16.10-200.fc42.x86_64
+[30Oct2025 19:18:21.575] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[30Oct2025 19:18:21.615] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[30Oct2025 19:18:21.716] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[30Oct2025 19:18:21.759] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/tomas/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23116!/ Service=ModLauncher Env=CLIENT
+[30Oct2025 19:18:21.797] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 580.95.05, NVIDIA Corporation
+[30Oct2025 19:18:21.936] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.4.6/9e86bf67e222253576e982856d9958695725adb5/javafmllanguage-1.20.1-47.4.6.jar is missing mods.toml file
+[30Oct2025 19:18:21.937] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.4.6/56100545804adc991cc48ab68b86ba46c5873246/lowcodelanguage-1.20.1-47.4.6.jar is missing mods.toml file
+[30Oct2025 19:18:21.937] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.4.6/fd228d7d879a9da774eda022ea3092cedb5178f1/mclanguage-1.20.1-47.4.6.jar is missing mods.toml file
+[30Oct2025 19:18:21.938] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.4.6/cefc55ada370ce2f23f92834530eb967c0de1fdd/fmlcore-1.20.1-47.4.6.jar is missing mods.toml file
+[30Oct2025 19:18:22.119] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: mixinextras-forge-0.5.0.jar. Using Mod File: /home/tomas/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-forge/0.5.0/cebe4d98a42a4a32ebf0ddec7b93d5bdbdad009/mixinextras-forge-0.5.0.jar
+[30Oct2025 19:18:22.119] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 5 dependencies adding them to mods collection
+[30Oct2025 19:18:22.918] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by rsrifle.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[30Oct2025 19:18:22.918] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[30Oct2025 19:18:22.932] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /home/tomas/.gradle/caches/forge_gradle/assets, --assetIndex, 5]
+[30Oct2025 19:18:22.949] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
+[30Oct2025 19:18:22.950] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
+[30Oct2025 19:18:22.958] [main/INFO] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[30Oct2025 19:18:22.959] [main/INFO] [mixin/]: Selecting config rsrifle.mixins.json
+[30Oct2025 19:18:22.961] [main/WARN] [mixin/]: Reference map 'rsrifle.refmap.json' for rsrifle.mixins.json could not be read. If this is a development environment you can ignore this message
+[30Oct2025 19:18:22.962] [main/INFO] [mixin/]: Selecting config flywheel.backend.mixins.json
+[30Oct2025 19:18:23.090] [main/INFO] [mixin/]: Remapping refMap backend-flywheel.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
+[30Oct2025 19:18:23.090] [main/INFO] [mixin/]: Selecting config flywheel.impl.mixins.json
+[30Oct2025 19:18:23.091] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
+[30Oct2025 19:18:23.091] [main/INFO] [mixin/]: Selecting config rbh.mixins.json
+[30Oct2025 19:18:23.092] [main/INFO] [mixin/]: Remapping refMap rbh.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
+[30Oct2025 19:18:23.092] [main/INFO] [mixin/]: Selecting config geckolib.mixins.json
+[30Oct2025 19:18:23.092] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
+[30Oct2025 19:18:23.092] [main/INFO] [mixin/]: Selecting config ponder.mixins.json
+[30Oct2025 19:18:23.093] [main/INFO] [mixin/]: Remapping refMap ponder.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
+[30Oct2025 19:18:23.093] [main/INFO] [mixin/]: Selecting config ponder-common.mixins.json
+[30Oct2025 19:18:23.093] [main/INFO] [mixin/]: Remapping refMap ponder.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
+[30Oct2025 19:18:23.093] [main/INFO] [mixin/]: Selecting config create.mixins.json
+[30Oct2025 19:18:23.097] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
+[30Oct2025 19:18:23.097] [main/INFO] [mixin/]: Selecting config mixinextras.init.mixins.json
+[30Oct2025 19:18:23.145] [main/INFO] [mixin/]: Preparing rsrifle.mixins.json (5)
+[30Oct2025 19:18:23.194] [main/INFO] [mixin/]: Preparing flywheel.backend.mixins.json (8)
+[30Oct2025 19:18:23.244] [main/INFO] [mixin/]: Preparing flywheel.impl.mixins.json (15)
+[30Oct2025 19:18:23.369] [main/INFO] [mixin/]: Preparing rbh.mixins.json (7)
+[30Oct2025 19:18:23.379] [main/INFO] [mixin/]: Preparing geckolib.mixins.json (1)
+[30Oct2025 19:18:23.380] [main/INFO] [mixin/]: Preparing ponder.mixins.json (1)
+[30Oct2025 19:18:23.382] [main/INFO] [mixin/]: Preparing ponder-common.mixins.json (6)
+[30Oct2025 19:18:23.395] [main/INFO] [mixin/]: Preparing mixinextras.init.mixins.json (0)
+[30Oct2025 19:18:23.395] [main/INFO] [mixin/]: Preparing create.mixins.json (53)
+[30Oct2025 19:18:23.460] [main/WARN] [mixin/]: Error loading class: journeymap/client/ui/fullscreen/Fullscreen (java.lang.ClassNotFoundException: journeymap.client.ui.fullscreen.Fullscreen)
+[30Oct2025 19:18:23.460] [main/WARN] [mixin/]: @Mixin target journeymap.client.ui.fullscreen.Fullscreen was not found create.mixins.json:compat.JourneyFullscreenMapMixin
+[30Oct2025 19:18:23.490] [main/INFO] [mixin/]: Prepared 95 mixins in 0.532 sec (5.6ms avg) (0ms load, 0ms transform, 0ms plugin)
+[30Oct2025 19:18:23.511] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
+[30Oct2025 19:18:23.523] [main/INFO] [mixin/]: Mixing client.MinecraftMixin from rsrifle.mixins.json into net.minecraft.client.Minecraft
+[30Oct2025 19:18:23.535] [main/INFO] [mixin/]: Mixing MinecraftMixin from flywheel.impl.mixins.json into net.minecraft.client.Minecraft
+[30Oct2025 19:18:23.539] [main/INFO] [mixin/]: Mixing client.WindowResizeMixin from ponder-common.mixins.json into net.minecraft.client.Minecraft
+[30Oct2025 19:18:23.803] [main/INFO] [mixin/]: Mixing accessor.SystemReportAccessor from create.mixins.json into net.minecraft.SystemReport
+[30Oct2025 19:18:23.803] [main/INFO] [mixin/]: Renaming @Accessor method getOPERATING_SYSTEM()Ljava/lang/String; to getOPERATING_SYSTEM_$md$3e9b8b$0 in create.mixins.json:accessor.SystemReportAccessor
+[30Oct2025 19:18:23.808] [main/INFO] [mixin/]: Renaming @Accessor method getJAVA_VERSION()Ljava/lang/String; to getJAVA_VERSION_$md$3e9b8b$1 in create.mixins.json:accessor.SystemReportAccessor
+[30Oct2025 19:18:23.909] [pool-4-thread-1/INFO] [mixin/]: Mixing BuiltInRegistriesMixin from create.mixins.json into net.minecraft.core.registries.BuiltInRegistries
+[30Oct2025 19:18:23.909] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$ourRegistriesAreNotEmpty$0(Ljava/util/function/Consumer;Lnet/minecraft/core/Registry;)V to md3e9b8b$lambda$create$ourRegistriesAreNotEmpty$0$0 in create.mixins.json:BuiltInRegistriesMixin
+[30Oct2025 19:18:23.913] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.BuiltInRegistriesAccessor from create.mixins.json into net.minecraft.core.registries.BuiltInRegistries
+[30Oct2025 19:18:23.914] [pool-4-thread-1/INFO] [mixin/]: Renaming @Accessor method create$getWRITABLE_REGISTRY()Lnet/minecraft/core/WritableRegistry; to create$getWRITABLE_REGISTRY_$md$3e9b8b$1 in create.mixins.json:accessor.BuiltInRegistriesAccessor
+[30Oct2025 19:18:23.966] [pool-4-thread-1/INFO] [mixin/]: Mixing BlockMixin from create.mixins.json into net.minecraft.world.level.block.Block
+[30Oct2025 19:18:23.983] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.StateHolderAccessor from create.mixins.json into net.minecraft.world.level.block.state.StateHolder
+[30Oct2025 19:18:23.999] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.EntityAccessor from ponder-common.mixins.json into net.minecraft.world.entity.Entity
+[30Oct2025 19:18:24.002] [pool-4-thread-1/INFO] [mixin/]: Mixing client.EntityContraptionInteractionMixin from create.mixins.json into net.minecraft.world.entity.Entity
+[30Oct2025 19:18:24.003] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$onSpawnSprintParticle$4(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;Lcom/simibubi/create/content/contraptions/Contraption;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V to md3e9b8b$lambda$create$onSpawnSprintParticle$4$0 in create.mixins.json:client.EntityContraptionInteractionMixin
+[30Oct2025 19:18:24.003] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$onMove$3(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/Entity;Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)Z to md3e9b8b$lambda$create$onMove$3$1 in create.mixins.json:client.EntityContraptionInteractionMixin
+[30Oct2025 19:18:24.003] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$contraptionStepSounds$2(Lorg/apache/commons/lang3/mutable/MutableBoolean;Lcom/simibubi/create/content/contraptions/Contraption;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V to md3e9b8b$lambda$create$contraptionStepSounds$2$2 in create.mixins.json:client.EntityContraptionInteractionMixin
+[30Oct2025 19:18:24.003] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$forCollision$1(Lnet/minecraft/world/phys/Vec3;Lorg/apache/logging/log4j/util/TriConsumer;Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)V to md3e9b8b$lambda$create$forCollision$1$3 in create.mixins.json:client.EntityContraptionInteractionMixin
+[30Oct2025 19:18:24.003] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$getIntersectionContraptionsStream$0(Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)Z to md3e9b8b$lambda$create$getIntersectionContraptionsStream$0$4 in create.mixins.json:client.EntityContraptionInteractionMixin
+[30Oct2025 19:18:24.033] [pool-4-thread-1/INFO] [mixin/]: Mixing EntityMixin from create.mixins.json into net.minecraft.world.entity.Entity
+[30Oct2025 19:18:24.093] [pool-4-thread-1/INFO] [mixin/]: Mixing CustomItemUseEffectsMixin from create.mixins.json into net.minecraft.world.entity.LivingEntity
+[30Oct2025 19:18:24.103] [pool-4-thread-1/INFO] [mixin/]: Mixing LavaSwimmingMixin from create.mixins.json into net.minecraft.world.entity.LivingEntity
+[30Oct2025 19:18:24.108] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.LivingEntityAccessor from create.mixins.json into net.minecraft.world.entity.LivingEntity
+[30Oct2025 19:18:24.148] [pool-4-thread-1/INFO] [mixin/]: Mixing LevelMixin from flywheel.impl.mixins.json into net.minecraft.world.level.Level
+[30Oct2025 19:18:24.156] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.ServerLevelAccessor from create.mixins.json into net.minecraft.server.level.ServerLevel
+[30Oct2025 19:18:24.170] [pool-4-thread-1/INFO] [mixin/]: Mixing PlayerMixin from create.mixins.json into net.minecraft.world.entity.player.Player
+[30Oct2025 19:18:24.214] [pool-4-thread-1/INFO] [mixin/]: Mixing EntityTypeMixin from flywheel.impl.mixins.json into net.minecraft.world.entity.EntityType
+[30Oct2025 19:18:24.223] [pool-4-thread-1/INFO] [mixin/]: Mixing BlockEntityTypeMixin from flywheel.impl.mixins.json into net.minecraft.world.level.block.entity.BlockEntityType
+[30Oct2025 19:18:24.357] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.DispenserBlockAccessor from create.mixins.json into net.minecraft.world.level.block.DispenserBlock
+[30Oct2025 19:18:24.377] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.CropBlockAccessor from create.mixins.json into net.minecraft.world.level.block.CropBlock
+[30Oct2025 19:18:24.440] [pool-4-thread-1/INFO] [mixin/]: Mixing ShulkerBoxBlockMixin from create.mixins.json into net.minecraft.world.level.block.ShulkerBoxBlock
+[30Oct2025 19:18:24.449] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.ConcretePowderBlockAccessor from create.mixins.json into net.minecraft.world.level.block.ConcretePowderBlock
+[30Oct2025 19:18:24.471] [pool-4-thread-1/INFO] [mixin/]: Mixing BeehiveBlockMixin from create.mixins.json into net.minecraft.world.level.block.BeehiveBlock
+[30Oct2025 19:18:24.507] [pool-4-thread-1/INFO] [mixin/]: Mixing WaterWheelFluidSpreadMixin from create.mixins.json into net.minecraft.world.level.material.FlowingFluid
+[30Oct2025 19:18:24.515] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.FlowingFluidAccessor from create.mixins.json into net.minecraft.world.level.material.FlowingFluid
+[30Oct2025 19:18:24.569] [pool-4-thread-1/INFO] [mixin/]: Mixing visualmanage.BlockEntityMixin from flywheel.impl.mixins.json into net.minecraft.world.level.block.entity.BlockEntity
+[30Oct2025 19:18:24.577] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.FallingBlockEntityAccessor from create.mixins.json into net.minecraft.world.entity.item.FallingBlockEntity
+[30Oct2025 19:18:24.577] [pool-4-thread-1/INFO] [mixin/]: Renaming @Invoker method create$callInit(Lnet/minecraft/world/level/Level;DDDLnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/entity/item/FallingBlockEntity; to create$callInit_$md$3e9b8b$0 in create.mixins.json:accessor.FallingBlockEntityAccessor
+[30Oct2025 19:18:24.964] [pool-4-thread-1/INFO] [mixin/]: Mixing SmithingMenuMixin from create.mixins.json into net.minecraft.world.inventory.SmithingMenu
+[30Oct2025 19:18:24.966] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$create$preventUnbreakingOnBacktanks$0(Lnet/minecraft/world/item/ItemStack;Ljava/util/Map;Lnet/minecraft/world/item/enchantment/Enchantment;Ljava/lang/Integer;)V to md3e9b8b$lambda$create$preventUnbreakingOnBacktanks$0$0 in create.mixins.json:SmithingMenuMixin
+[30Oct2025 19:18:25.079] [pool-4-thread-1/INFO] [mixin/]: Mixing BlockItemMixin from create.mixins.json into net.minecraft.world.item.BlockItem
+[30Oct2025 19:18:25.126] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.SuspiciousStewItemAccessor from create.mixins.json into net.minecraft.world.item.SuspiciousStewItem
+[30Oct2025 19:18:25.127] [pool-4-thread-1/INFO] [mixin/]: Renaming @Invoker method create$listPotionEffects(Lnet/minecraft/world/item/ItemStack;Ljava/util/function/Consumer;)V to create$listPotionEffects_$md$3e9b8b$0 in create.mixins.json:accessor.SuspiciousStewItemAccessor
+[30Oct2025 19:18:25.539] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 57 milliseconds
+[30Oct2025 19:18:25.602] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.UseOnContextAccessor from create.mixins.json into net.minecraft.world.item.context.UseOnContext
+[30Oct2025 19:18:25.703] [pool-4-thread-1/INFO] [mixin/]: Mixing visualmanage.LevelChunkMixin from flywheel.impl.mixins.json into net.minecraft.world.level.chunk.LevelChunk
+[30Oct2025 19:18:25.747] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.MobEffectInstanceAccessor from create.mixins.json into net.minecraft.world.effect.MobEffectInstance
+[30Oct2025 19:18:25.776] [pool-4-thread-1/INFO] [mixin/]: Mixing accessor.AbstractProjectileDispenseBehaviorAccessor from create.mixins.json into net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior
+[30Oct2025 19:18:25.869] [pool-4-thread-1/INFO] [mixin/]: Mixing LootingEnchantFunctionMixin from create.mixins.json into net.minecraft.world.level.storage.loot.functions.LootingEnchantFunction
+[30Oct2025 19:18:26.216] [Render thread/INFO] [mixin/]: Mixing RenderSystemMixin from flywheel.backend.mixins.json into com.mojang.blaze3d.systems.RenderSystem
+[30Oct2025 19:18:26.217] [Render thread/INFO] [mixin/]: Mixing client.accessor.RenderSystemAccessor from ponder-common.mixins.json into com.mojang.blaze3d.systems.RenderSystem
+[30Oct2025 19:18:26.217] [Render thread/INFO] [mixin/]: Renaming @Accessor method catnip$getShaderLightDirections()[Lorg/joml/Vector3f; to catnip$getShaderLightDirections_$md$3e9b8b$0 in ponder-common.mixins.json:client.accessor.RenderSystemAccessor
+[30Oct2025 19:18:26.233] [Render thread/INFO] [mixin/]: Mixing client.accessor.BufferBuilderAccessor from ponder-common.mixins.json into com.mojang.blaze3d.vertex.BufferBuilder
+[30Oct2025 19:18:26.273] [Render thread/INFO] [mixin/]: Mixing PoseStackAccessor from flywheel.impl.mixins.json into com.mojang.blaze3d.vertex.PoseStack
+[30Oct2025 19:18:26.275] [Render thread/INFO] [mixin/]: Mixing PoseStackMixin from flywheel.impl.mixins.json into com.mojang.blaze3d.vertex.PoseStack
+[30Oct2025 19:18:26.276] [Render thread/INFO] [mixin/]: Mixing fix.FixNormalScalingMixin from flywheel.impl.mixins.json into com.mojang.blaze3d.vertex.PoseStack
+[30Oct2025 19:18:26.288] [Render thread/INFO] [mixin/]: Mixing client.GuiMixin from rsrifle.mixins.json into net.minecraft.client.gui.Gui
+[30Oct2025 19:18:26.289] [Render thread/INFO] [mixin/]: Mixing accessor.GuiAccessor from create.mixins.json into net.minecraft.client.gui.Gui
+[30Oct2025 19:18:26.307] [Render thread/INFO] [mixin/]: Mixing client.HeavyBootsOnPlayerMixin from create.mixins.json into net.minecraft.client.player.LocalPlayer
+[30Oct2025 19:18:26.314] [Render thread/INFO] [mixin/]: Mixing AbstractClientPlayerAccessor from flywheel.backend.mixins.json into net.minecraft.client.player.AbstractClientPlayer
+[30Oct2025 19:18:26.359] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/tomas/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1/forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/assets/.mcassetsroot' uses unexpected schema
+[30Oct2025 19:18:26.359] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/tomas/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1/forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/data/.mcassetsroot' uses unexpected schema
+[30Oct2025 19:18:26.366] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[30Oct2025 19:18:26.369] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[30Oct2025 19:18:26.376] [Render thread/INFO] [mixin/]: Mixing OptionsMixin from flywheel.backend.mixins.json into net.minecraft.client.Options
+[30Oct2025 19:18:26.425] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
+[30Oct2025 19:18:26.452] [Render thread/INFO] [mixin/]: Mixing accessor.MouseHandlerAccessor from create.mixins.json into net.minecraft.client.MouseHandler
+[30Oct2025 19:18:26.482] [Render thread/INFO] [mixin/]: Mixing GlStateManagerMixin from flywheel.backend.mixins.json into com.mojang.blaze3d.platform.GlStateManager
+[30Oct2025 19:18:26.550] [modloading-worker-0/INFO] [com.simibubi.create.Create/]: Create 6.0.6 initializing! Commit hash: 338bfa0aec952fa51656e8f61bd621ca9b3b2e00
+[30Oct2025 19:18:26.561] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.6, for MC 1.20.1 with MCP 20230612.114412
+[30Oct2025 19:18:26.561] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.6 Initialized
+[30Oct2025 19:18:26.573] [modloading-worker-0/INFO] [mixin/]: Mixing client.MultiPlayerGameModeMixin from rsrifle.mixins.json into net.minecraft.client.multiplayer.MultiPlayerGameMode
+[30Oct2025 19:18:26.575] [modloading-worker-0/INFO] [mixin/]: Mixing client.ShaderInstanceMixin from rbh.mixins.json into net.minecraft.client.renderer.ShaderInstance
+[30Oct2025 19:18:26.590] [modloading-worker-0/INFO] [mixin/]: Mixing LevelRendererAccessor from flywheel.backend.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[30Oct2025 19:18:26.592] [modloading-worker-0/INFO] [mixin/]: Mixing fix.FixFabulousDepthMixin from flywheel.impl.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[30Oct2025 19:18:26.592] [modloading-worker-0/INFO] [mixin/]: Mixing visualmanage.LevelRendererMixin from flywheel.impl.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[30Oct2025 19:18:26.593] [modloading-worker-0/INFO] [mixin/]: Mixing client.LevelRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[30Oct2025 19:18:26.593] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.LevelRendererAccessor from create.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[30Oct2025 19:18:26.598] [modloading-worker-0/INFO] [mixin/]: Mixing client.LevelRendererMixin from create.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[30Oct2025 19:18:26.598] [modloading-worker-0/INFO] [mixin/]: Renaming synthetic method lambda$create$onDestroyBlockProgress$0(J)Ljava/util/SortedSet; to md3e9b8b$lambda$create$onDestroyBlockProgress$0$0 in create.mixins.json:client.LevelRendererMixin
+[30Oct2025 19:18:26.600] [modloading-worker-0/INFO] [mixin/]: Mixing LevelRendererMixin from flywheel.impl.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[30Oct2025 19:18:26.661] [modloading-worker-0/INFO] [mixin/]: Mixing client.CameraMixin from create.mixins.json into net.minecraft.client.Camera
+[30Oct2025 19:18:26.671] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.FontAccessor from create.mixins.json into net.minecraft.client.gui.Font
+[30Oct2025 19:18:26.716] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.BlockLootSubProviderAccessor from create.mixins.json into net.minecraft.data.loot.BlockLootSubProvider
+[30Oct2025 19:18:26.716] [modloading-worker-0/INFO] [mixin/]: Renaming @Accessor method create$HAS_SILK_TOUCH()Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder; to create$HAS_SILK_TOUCH_$md$3e9b8b$0 in create.mixins.json:accessor.BlockLootSubProviderAccessor
+[30Oct2025 19:18:26.753] [modloading-worker-0/INFO] [mixin/]: Mixing client.accessor.RenderTypeAccessor from ponder-common.mixins.json into net.minecraft.client.renderer.RenderType
+[30Oct2025 19:18:26.754] [modloading-worker-0/INFO] [mixin/]: Renaming @Invoker method catnip$create(Ljava/lang/String;Lcom/mojang/blaze3d/vertex/VertexFormat;Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;IZZLnet/minecraft/client/renderer/RenderType$CompositeState;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType; to catnip$create_$md$3e9b8b$0 in ponder-common.mixins.json:client.accessor.RenderTypeAccessor
+[30Oct2025 19:18:26.767] [modloading-worker-0/INFO] [mixin/]: Mixing client.GameRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.GameRenderer
+[30Oct2025 19:18:26.773] [modloading-worker-0/INFO] [mixin/]: Mixing client.accessor.GameRendererAccessor from ponder-common.mixins.json into net.minecraft.client.renderer.GameRenderer
+[30Oct2025 19:18:26.777] [modloading-worker-0/INFO] [mixin/]: Mixing client.GameRendererMixin from create.mixins.json into net.minecraft.client.renderer.GameRenderer
+[30Oct2025 19:18:27.433] [modloading-worker-0/INFO] [mixin/]: Mixing client.accessor.ParticleEngineAccessor from ponder.mixins.json into net.minecraft.client.particle.ParticleEngine
+[30Oct2025 19:18:27.527] [modloading-worker-0/INFO] [mixin/]: Mixing client.PlayerRendererMixin from rsrifle.mixins.json into net.minecraft.client.renderer.entity.player.PlayerRenderer
+[30Oct2025 19:18:27.528] [modloading-worker-0/INFO] [mixin/]: Mixing client.PlayerRendererMixin from create.mixins.json into net.minecraft.client.renderer.entity.player.PlayerRenderer
+[30Oct2025 19:18:27.993] [Render thread/INFO] [mixin/]: Mixing client.HumanoidModelMixin from create.mixins.json into net.minecraft.client.model.HumanoidModel
+[30Oct2025 19:18:27.999] [Render thread/INFO] [mixin/]: Mixing accessor.AgeableListModelAccessor from create.mixins.json into net.minecraft.client.model.AgeableListModel
+[30Oct2025 19:18:28.054] [Render thread/INFO] [mixin/]: Mixing accessor.ItemModelGeneratorsAccessor from create.mixins.json into net.minecraft.data.models.ItemModelGenerators
+[30Oct2025 19:18:28.054] [Render thread/INFO] [mixin/]: Renaming @Accessor method create$getGENERATED_TRIM_MODELS()Ljava/util/List; to create$getGENERATED_TRIM_MODELS_$md$3e9b8b$0 in create.mixins.json:accessor.ItemModelGeneratorsAccessor
+[30Oct2025 19:18:28.197] [Render thread/INFO] [mixin/]: Mixing client.TextureManagerMixin from geckolib.mixins.json into net.minecraft.client.renderer.texture.TextureManager
+[30Oct2025 19:18:28.284] [Render thread/INFO] [mixin/]: Mixing client.ItemInHandRendererMixin from rsrifle.mixins.json into net.minecraft.client.renderer.ItemInHandRenderer
+[30Oct2025 19:18:28.289] [Render thread/INFO] [mixin/]: Mixing client.ItemInHandRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.ItemInHandRenderer
+[30Oct2025 19:18:28.365] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [rsrifle]
+[30Oct2025 19:18:28.369] [Render thread/INFO] [mixin/]: Mixing accessor.GameTestHelperAccessor from create.mixins.json into net.minecraft.gametest.framework.GameTestHelper
+[30Oct2025 19:18:28.403] [Render thread/INFO] [mixin/]: Mixing accessor.HumanoidArmorLayerAccessor from create.mixins.json into net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer
+[30Oct2025 19:18:28.403] [Render thread/INFO] [mixin/]: Renaming @Accessor method create$getArmorLocationCache()Ljava/util/Map; to create$getArmorLocationCache_$md$3e9b8b$0 in create.mixins.json:accessor.HumanoidArmorLayerAccessor
+[30Oct2025 19:18:28.411] [Render thread/INFO] [mixin/]: Mixing client.HumanoidArmorLayerMixin from create.mixins.json into net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer
+[30Oct2025 19:18:28.422] [Render thread/INFO] [mixin/]: Mixing client.ArrowRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.entity.ArrowRenderer
+[30Oct2025 19:18:28.569] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
+[30Oct2025 19:18:28.612] [Worker-Main-10/INFO] [mixin/]: Mixing accessor.FluidInteractionRegistryAccessor from create.mixins.json into net.minecraftforge.fluids.FluidInteractionRegistry
+[30Oct2025 19:18:28.612] [Worker-Main-10/INFO] [mixin/]: Renaming @Accessor method getInteractions()Ljava/util/Map; to getInteractions_$md$3e9b8b$0 in create.mixins.json:accessor.FluidInteractionRegistryAccessor
+[30Oct2025 19:18:28.621] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[30Oct2025 19:18:28.656] [Worker-Main-7/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[30Oct2025 19:18:28.965] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.4.6 Target: 47.4.10
+[30Oct2025 19:18:29.943] [Worker-Main-5/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model rsrifle:singularity_rifle#inventory:
     minecraft:textures/atlas/blocks.png:rbh:item/texture
-[22Oct2025 18:58:40.142] [Worker-Main-3/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model rbh:singularity_rifle#inventory:
-    minecraft:textures/atlas/blocks.png:rbh:item/texture
-[22Oct2025 18:58:40.326] [Worker-Main-4/INFO] [PonderIndex/]: Registering Ponder Scenes took 50.46 ms
-[22Oct2025 18:58:40.329] [Worker-Main-4/INFO] [PonderIndex/]: Registering Ponder Tags took 2.884 ms
-[22Oct2025 18:58:41.463] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[22Oct2025 18:58:41.463] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[22Oct2025 18:58:41.502] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device Built-in Audio Analog Stereo
-[22Oct2025 18:58:41.503] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[22Oct2025 18:58:41.572] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[22Oct2025 18:58:41.580] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[22Oct2025 18:58:41.584] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[22Oct2025 18:58:41.584] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[22Oct2025 18:58:41.585] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[22Oct2025 18:58:41.588] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[22Oct2025 18:58:41.591] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[22Oct2025 18:58:41.592] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[22Oct2025 18:58:41.592] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[22Oct2025 18:58:41.608] [Render thread/INFO] [mixin/]: Mixing ModelPartAccessor from flywheel.impl.mixins.json into net.minecraft.client.model.geom.ModelPart
-[22Oct2025 18:58:41.663] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[22Oct2025 18:58:41.681] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rbh:rendertype_black_hole could not find uniform named GameTime in the specified shader program.
-[22Oct2025 18:58:41.681] [Render thread/INFO] [com.mod.rbh.shaders.RBInternalShaders/]: registered internal shaders
-[22Oct2025 18:58:41.682] [Render thread/INFO] [mixin/]: Mixing client.PostChainMixin from rbh.mixins.json into net.minecraft.client.renderer.PostChain
-[22Oct2025 18:58:41.689] [Render thread/INFO] [mixin/]: Mixing client.PostPassMixin from rbh.mixins.json into net.minecraft.client.renderer.PostPass
-[22Oct2025 18:58:41.690] [Render thread/INFO] [mixin/]: Renaming synthetic method lambda$new$0(Lnet/minecraft/client/renderer/PostPass;)V to mdacec1d$lambda$new$0$0 in rbh.mixins.json:client.PostPassMixin
-[22Oct2025 18:58:41.704] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleScreenCenter in the specified shader program.
-[22Oct2025 18:58:41.704] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleRadius in the specified shader program.
-[22Oct2025 18:58:41.704] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named Radius in the specified shader program.
-[22Oct2025 18:58:41.706] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[22Oct2025 18:58:41.707] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[22Oct2025 18:58:41.707] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[22Oct2025 18:58:41.735] [Render thread/INFO] [flywheel/backend/shaders/]: Loaded 77 shader sources in 23.603 ms
-[22Oct2025 18:58:41.756] [Render thread/INFO] [com.simibubi.create.Create/]: Loaded 56 train hat configurations.
-[22Oct2025 18:58:42.197] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
-[22Oct2025 18:58:48.768] [Render thread/INFO] [net.minecraft.world.level.storage.LevelStorageSource/]: Deleting level New World (3)
-[22Oct2025 18:58:48.768] [Render thread/INFO] [net.minecraft.world.level.storage.LevelStorageSource/]: Attempt 1...
-[22Oct2025 18:58:49.666] [Render thread/INFO] [com.simibubi.create.Create/]: Created 157 recipes which will be injected into the game
-[22Oct2025 18:58:49.670] [Render thread/INFO] [com.simibubi.create.Create/]: Created 0 tags which will be injected into the game
-[22Oct2025 18:58:49.677] [Render thread/INFO] [net.minecraft.server.MinecraftServer/]: Found new data pack create:dynamic_data, loading it automatically
-[22Oct2025 18:58:50.065] [Render thread/INFO] [mixin/]: Mixing TestCommandMixin from create.mixins.json into net.minecraft.gametest.framework.TestCommand
-[22Oct2025 18:58:50.364] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Skipping loading recipe rbh:singularity_battery.json as it's serializer returned null
-[22Oct2025 18:58:50.366] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Skipping loading recipe rsrifle:singularity_battery.json as it's serializer returned null
-[22Oct2025 18:58:50.379] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 22 recipes
-[22Oct2025 18:58:50.425] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2393 advancements
-[22Oct2025 18:58:52.417] [Render thread/INFO] [com.simibubi.create.Create/]: Created 157 recipes which will be injected into the game
-[22Oct2025 18:58:52.418] [Render thread/INFO] [com.simibubi.create.Create/]: Created 0 tags which will be injected into the game
-[22Oct2025 18:58:52.486] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
-[22Oct2025 18:58:52.486] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[22Oct2025 18:58:52.559] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file ./saves/New World (3)/serverconfig/forge-server.toml is not correct. Correcting
-[22Oct2025 18:58:52.559] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.559] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringBlockEntities was corrected from null to its default, false. 
-[22Oct2025 18:58:52.559] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringEntities was corrected from null to its default, false. 
-[22Oct2025 18:58:52.559] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.fullBoundingBoxLadders was corrected from null to its default, false. 
-[22Oct2025 18:58:52.559] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.zombieBaseSummonChance was corrected from null to its default, 0.1. 
-[22Oct2025 18:58:52.559] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.zombieBabyChance was corrected from null to its default, 0.05. 
-[22Oct2025 18:58:52.559] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.permissionHandler was corrected from null to its default, forge:default_handler. 
-[22Oct2025 18:58:52.559] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.advertiseDedicatedServerToLan was corrected from null to its default, true. 
-[22Oct2025 18:58:52.559] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.useItemWithDurationZero was corrected from null to its default, false. 
-[22Oct2025 18:58:52.560] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file ./saves/New World (3)/serverconfig/create-server.toml is not correct. Correcting
-[22Oct2025 18:58:52.560] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key infrastructure was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.560] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key infrastructure.tickrateSyncTimer was corrected from null to its default, 20. 
-[22Oct2025 18:58:52.560] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes.bulkPressing was corrected from null to its default, false. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes.bulkCutting was corrected from null to its default, false. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes.allowBrewingInMixer was corrected from null to its default, true. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes.allowShapelessInMixer was corrected from null to its default, true. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes.allowShapedSquareInPress was corrected from null to its default, true. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes.allowRegularCraftingInCrafter was corrected from null to its default, true. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes.maxFireworkIngredientsInCrafter was corrected from null to its default, 9. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes.allowStonecuttingOnSaw was corrected from null to its default, true. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes.allowCastingBySpout was corrected from null to its default, true. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes.displayLogStrippingRecipes was corrected from null to its default, true. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes.lightSourceCountForRefinedRadiance was corrected from null to its default, 10. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes.enableRefinedRadianceRecipe was corrected from null to its default, true. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key recipes.enableShadowSteelRecipe was corrected from null to its default, true. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.disableStress was corrected from null to its default, false. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.maxBeltLength was corrected from null to its default, 20. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.maxChainConveyorLength was corrected from null to its default, 32. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.maxChainConveyorConnections was corrected from null to its default, 4. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.crushingDamage was corrected from null to its default, 4. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.maxRotationSpeed was corrected from null to its default, 256. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.ignoreDeployerAttacks was corrected from null to its default, CREEPERS. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.kineticValidationFrequency was corrected from null to its default, 60. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.crankHungerMultiplier was corrected from null to its default, 0.009999999776482582. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.minimumWindmillSails was corrected from null to its default, 8. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.windmillSailsPerRPM was corrected from null to its default, 8. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.maxEjectorDistance was corrected from null to its default, 32. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.ejectorScanInterval was corrected from null to its default, 120. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.encasedFan was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.encasedFan.fanPushDistance was corrected from null to its default, 20. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.encasedFan.fanPullDistance was corrected from null to its default, 20. 
-[22Oct2025 18:58:52.561] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.encasedFan.fanBlockCheckRate was corrected from null to its default, 30. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.encasedFan.fanRotationArgmax was corrected from null to its default, 256. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.encasedFan.fanProcessingTime was corrected from null to its default, 150. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.maxBlocksMoved was corrected from null to its default, 2048. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.maxChassisRange was corrected from null to its default, 16. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.maxPistonPoles was corrected from null to its default, 64. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.maxRopeLength was corrected from null to its default, 384. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.maxCartCouplingLength was corrected from null to its default, 32. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.rollerFillDepth was corrected from null to its default, 12. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.survivalContraptionPickup was corrected from null to its default, true. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.movableSpawners was corrected from null to its default, NO_PICKUP. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.amethystMovement was corrected from null to its default, NO_PICKUP. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.movableObsidian was corrected from null to its default, UNMOVABLE. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.movableReinforcedDeepslate was corrected from null to its default, UNMOVABLE. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.moveItemsToStorage was corrected from null to its default, true. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.harvestPartiallyGrown was corrected from null to its default, false. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.harvesterReplants was corrected from null to its default, true. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.minecartContraptionInContainers was corrected from null to its default, false. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.stabiliseStableContraptions was corrected from null to its default, false. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.contraptions.syncPlayerPickupHitboxWithContraptionHitbox was corrected from null to its default, false. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stats was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stats.mediumSpeed was corrected from null to its default, 30.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stats.fastSpeed was corrected from null to its default, 100.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stats.mediumStressImpact was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stats.highStressImpact was corrected from null to its default, 8.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stats.mediumCapacity was corrected from null to its default, 256.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stats.highCapacity was corrected from null to its default, 1024.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2 was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.brass_encased_shaft was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.turntable was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.clutch was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_mixer was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.gearbox was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_bearing was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.copper_backtank was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.hose_pulley was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.display_board was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.crushing_wheel was corrected from null to its default, 8.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.adjustable_chain_gearshift was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.562] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.millstone was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.rotation_speed_controller was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.sticky_mechanical_piston was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_crafter was corrected from null to its default, 2.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.deployer was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.elevator_pulley was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.stressometer was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.cogwheel was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.encased_chain_drive was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.belt was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.brass_encased_large_cogwheel was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.weighted_ejector was corrected from null to its default, 2.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.chain_conveyor was corrected from null to its default, 1.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_saw was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.flywheel was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_piston was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.speedometer was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.brass_encased_cogwheel was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.clockwork_bearing was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_press was corrected from null to its default, 8.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_drill was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.andesite_encased_shaft was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.netherite_backtank was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_arm was corrected from null to its default, 2.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.sequenced_gearshift was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.andesite_encased_large_cogwheel was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.shaft was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.cuckoo_clock was corrected from null to its default, 1.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.gearshift was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.rope_pulley was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.andesite_encased_cogwheel was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.large_cogwheel was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.encased_fan was corrected from null to its default, 2.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mysterious_cuckoo_clock was corrected from null to its default, 1.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.gantry_shaft was corrected from null to its default, 0.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.impact.mechanical_pump was corrected from null to its default, 4.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity.steam_engine was corrected from null to its default, 1024.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity.water_wheel was corrected from null to its default, 32.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity.copper_valve_handle was corrected from null to its default, 8.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity.hand_crank was corrected from null to its default, 8.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity.creative_motor was corrected from null to its default, 16384.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity.large_water_wheel was corrected from null to its default, 128.0. 
-[22Oct2025 18:58:52.563] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key kinetics.stressValues.v2.capacity.windmill_bearing was corrected from null to its default, 512.0. 
-[22Oct2025 18:58:52.565] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key fluids was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.565] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key fluids.fluidTankCapacity was corrected from null to its default, 8. 
-[22Oct2025 18:58:52.565] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key fluids.fluidTankMaxHeight was corrected from null to its default, 32. 
-[22Oct2025 18:58:52.565] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key fluids.mechanicalPumpRange was corrected from null to its default, 16. 
-[22Oct2025 18:58:52.565] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key fluids.hosePulleyRange was corrected from null to its default, 128. 
-[22Oct2025 18:58:52.565] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key fluids.hosePulleyBlockThreshold was corrected from null to its default, 10000. 
-[22Oct2025 18:58:52.565] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key fluids.fillInfinite was corrected from null to its default, false. 
-[22Oct2025 18:58:52.565] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key fluids.bottomlessFluidMode was corrected from null to its default, ALLOW_BY_TAG. 
-[22Oct2025 18:58:52.565] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key fluids.fluidFillPlaceFluidSourceBlocks was corrected from null to its default, true. 
-[22Oct2025 18:58:52.565] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key fluids.pipesPlaceFluidSourceBlocks was corrected from null to its default, true. 
-[22Oct2025 18:58:52.566] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.566] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics.defaultExtractionTimer was corrected from null to its default, 8. 
-[22Oct2025 18:58:52.566] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics.psiTimeout was corrected from null to its default, 60. 
-[22Oct2025 18:58:52.566] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics.mechanicalArmRange was corrected from null to its default, 5. 
-[22Oct2025 18:58:52.566] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics.packagePortRange was corrected from null to its default, 5. 
-[22Oct2025 18:58:52.566] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics.linkRange was corrected from null to its default, 256. 
-[22Oct2025 18:58:52.566] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics.displayLinkRange was corrected from null to its default, 64. 
-[22Oct2025 18:58:52.566] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics.vaultCapacity was corrected from null to its default, 20. 
-[22Oct2025 18:58:52.566] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics.chainConveyorCapacity was corrected from null to its default, 20. 
-[22Oct2025 18:58:52.566] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics.brassTunnelTimer was corrected from null to its default, 10. 
-[22Oct2025 18:58:52.566] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics.factoryGaugeTimer was corrected from null to its default, 100. 
-[22Oct2025 18:58:52.566] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key logistics.seatHostileMobs was corrected from null to its default, true. 
-[22Oct2025 18:58:52.567] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key schematics was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.567] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key schematics.creativePrintIncludesAir was corrected from null to its default, false. 
-[22Oct2025 18:58:52.567] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key schematics.maxSchematics was corrected from null to its default, 10. 
-[22Oct2025 18:58:52.567] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key schematics.maxTotalSchematicSize was corrected from null to its default, 256. 
-[22Oct2025 18:58:52.567] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key schematics.maxSchematicPacketSize was corrected from null to its default, 1024. 
-[22Oct2025 18:58:52.567] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key schematics.schematicIdleTimeout was corrected from null to its default, 600. 
-[22Oct2025 18:58:52.567] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key schematics.schematicannon was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.567] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key schematics.schematicannon.schematicannonDelay was corrected from null to its default, 10. 
-[22Oct2025 18:58:52.567] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key schematics.schematicannon.schematicannonShotsPerGunpowder was corrected from null to its default, 400. 
-[22Oct2025 18:58:52.568] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key equipment was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.568] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key equipment.maxSymmetryWandRange was corrected from null to its default, 50. 
-[22Oct2025 18:58:52.568] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key equipment.placementAssistRange was corrected from null to its default, 12. 
-[22Oct2025 18:58:52.568] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key equipment.toolboxRange was corrected from null to its default, 10. 
-[22Oct2025 18:58:52.568] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key equipment.airInBacktank was corrected from null to its default, 900. 
-[22Oct2025 18:58:52.568] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key equipment.enchantedBacktankCapacity was corrected from null to its default, 300. 
-[22Oct2025 18:58:52.568] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key equipment.maxExtendoGripActions was corrected from null to its default, 1000. 
-[22Oct2025 18:58:52.568] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key equipment.maxPotatoCannonShots was corrected from null to its default, 200. 
-[22Oct2025 18:58:52.569] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key trains was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.569] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key trains.trainsCauseDamage was corrected from null to its default, true. 
-[22Oct2025 18:58:52.569] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key trains.maxTrackPlacementLength was corrected from null to its default, 32. 
-[22Oct2025 18:58:52.569] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key trains.maxAssemblyLength was corrected from null to its default, 128. 
-[22Oct2025 18:58:52.569] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key trains.maxBogeyCount was corrected from null to its default, 20. 
-[22Oct2025 18:58:52.569] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key trains.manualTrainSpeedModifier was corrected from null to its default, 0.75. 
-[22Oct2025 18:58:52.569] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key trains.trainStats was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.569] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key trains.trainStats.trainTopSpeed was corrected from null to its default, 28.0. 
-[22Oct2025 18:58:52.569] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key trains.trainStats.trainTurningTopSpeed was corrected from null to its default, 14.0. 
-[22Oct2025 18:58:52.569] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key trains.trainStats.trainAcceleration was corrected from null to its default, 3.0. 
-[22Oct2025 18:58:52.569] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key trains.poweredTrainStats was corrected from null to its default, SimpleCommentedConfig:{}. 
-[22Oct2025 18:58:52.569] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key trains.poweredTrainStats.poweredTrainTopSpeed was corrected from null to its default, 40.0. 
-[22Oct2025 18:58:52.569] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key trains.poweredTrainStats.poweredTrainTurningTopSpeed was corrected from null to its default, 20.0. 
-[22Oct2025 18:58:52.569] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key trains.poweredTrainStats.poweredTrainAcceleration was corrected from null to its default, 3.0. 
-[22Oct2025 18:58:52.598] [Server thread/INFO] [mixin/]: Mixing MapItemSavedDataMixin from create.mixins.json into net.minecraft.world.level.saveddata.maps.MapItemSavedData
-[22Oct2025 18:58:52.697] [Server thread/INFO] [mixin/]: Mixing light.LightEngineAccessor from flywheel.backend.mixins.json into net.minecraft.world.level.lighting.LightEngine
-[22Oct2025 18:58:52.704] [Server thread/INFO] [mixin/]: Mixing light.SkyLightSectionStorageMixin from flywheel.backend.mixins.json into net.minecraft.world.level.lighting.SkyLightSectionStorage
-[22Oct2025 18:58:52.707] [Server thread/INFO] [mixin/]: Mixing light.SkyDataLayerStorageMapAccessor from flywheel.backend.mixins.json into net.minecraft.world.level.lighting.SkyLightSectionStorage$SkyDataLayerStorageMap
-[22Oct2025 18:58:53.551] [Worker-Main-9/INFO] [mixin/]: Mixing accessor.NbtAccounterAccessor from create.mixins.json into net.minecraft.nbt.NbtAccounter
-[22Oct2025 18:58:54.426] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[22Oct2025 18:58:54.777] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[22Oct2025 18:58:54.960] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[22Oct2025 18:58:55.457] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[22Oct2025 18:58:55.952] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 3%
-[22Oct2025 18:58:56.448] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 5%
-[22Oct2025 18:58:57.385] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 10%
-[22Oct2025 18:58:57.453] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 10%
-[22Oct2025 18:58:57.957] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 15%
-[22Oct2025 18:58:58.447] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 18%
-[22Oct2025 18:58:58.955] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 23%
-[22Oct2025 18:58:59.450] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 29%
-[22Oct2025 18:58:59.953] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 35%
-[22Oct2025 18:59:00.449] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 42%
-[22Oct2025 18:59:00.954] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 48%
-[22Oct2025 18:59:01.490] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 50%
-[22Oct2025 18:59:01.948] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 56%
-[22Oct2025 18:59:02.454] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 61%
-[22Oct2025 18:59:02.950] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 68%
-[22Oct2025 18:59:03.454] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 75%
-[22Oct2025 18:59:03.957] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 82%
-[22Oct2025 18:59:04.450] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 88%
-[22Oct2025 18:59:04.949] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 94%
-[22Oct2025 18:59:05.253] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[22Oct2025 18:59:05.254] [Server thread/INFO] [com.mod.rbh.ReinforcedBlackHoles/]: HELLO from server starting
-[22Oct2025 18:59:05.267] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 10825 ms
-[22Oct2025 18:59:05.323] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 23, from 10
-[22Oct2025 18:59:05.324] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[22Oct2025 18:59:05.366] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
-[22Oct2025 18:59:05.413] [Netty Server IO #1/INFO] [mixin/]: Mixing ClientboundMapItemDataPacketMixin from create.mixins.json into net.minecraft.network.protocol.game.ClientboundMapItemDataPacket
-[22Oct2025 18:59:05.675] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
-[22Oct2025 18:59:05.692] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:aa4e7ad4] logged in with entity id 262 at (55.5, 70.0, 29.5)
-[22Oct2025 18:59:05.703] [Render thread/INFO] [mixin/]: Mixing ClientChunkCacheMixin from flywheel.impl.mixins.json into net.minecraft.client.multiplayer.ClientChunkCache
-[22Oct2025 18:59:05.735] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[22Oct2025 18:59:05.736] [Render thread/INFO] [mixin/]: Mixing visualmanage.RebuildTaskMixin from flywheel.impl.mixins.json into net.minecraft.client.renderer.chunk.ChunkRenderDispatcher$RenderChunk$RebuildTask
-[22Oct2025 18:59:05.838] [Server thread/INFO] [mixin/]: Mixing ProjectileUtilMixin from create.mixins.json into net.minecraft.world.entity.projectile.ProjectileUtil
-[22Oct2025 18:59:05.943] [Render thread/INFO] [flywheel/]: Started 6 worker threads
-[22Oct2025 18:59:05.967] [Render thread/INFO] [mixin/]: Mixing ArmorTrimMixin from create.mixins.json into net.minecraft.world.item.armortrim.ArmorTrim
-[22Oct2025 18:59:05.968] [Render thread/INFO] [mixin/]: Renaming synthetic method lambda$new$0(Ljava/lang/Boolean;Lnet/minecraft/world/item/ArmorMaterial;)Lnet/minecraft/resources/ResourceLocation; to mdacec1d$lambda$new$0$0 in create.mixins.json:ArmorTrimMixin
-[22Oct2025 18:59:06.205] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2 advancements
-[22Oct2025 18:59:11.459] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 8 advancements
-[22Oct2025 18:59:28.569] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleScreenCenter in the specified shader program.
-[22Oct2025 18:59:28.569] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleRadius in the specified shader program.
-[22Oct2025 18:59:28.569] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named Radius in the specified shader program.
-[22Oct2025 18:59:36.039] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleScreenCenter in the specified shader program.
-[22Oct2025 18:59:36.039] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleRadius in the specified shader program.
-[22Oct2025 18:59:36.039] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named Radius in the specified shader program.
-[22Oct2025 18:59:38.610] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleScreenCenter in the specified shader program.
-[22Oct2025 18:59:38.610] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleRadius in the specified shader program.
-[22Oct2025 18:59:38.610] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named Radius in the specified shader program.
-[22Oct2025 18:59:54.326] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleScreenCenter in the specified shader program.
-[22Oct2025 18:59:54.326] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleRadius in the specified shader program.
-[22Oct2025 18:59:54.326] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named Radius in the specified shader program.
-[22Oct2025 19:00:00.953] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[22Oct2025 19:00:00.954] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[22Oct2025 19:00:00.959] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[22Oct2025 19:00:00.959] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[22Oct2025 19:00:00.961] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
-[22Oct2025 19:00:00.961] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[22Oct2025 19:00:01.737] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[22Oct2025 19:00:01.910] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[22Oct2025 19:00:01.911] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[22Oct2025 19:00:01.931] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World (3)): All chunks are saved
-[22Oct2025 19:00:01.931] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[22Oct2025 19:00:01.931] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[22Oct2025 19:00:01.931] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[30Oct2025 19:18:30.115] [Worker-Main-2/INFO] [PonderIndex/]: Registering Ponder Scenes took 42.25 ms
+[30Oct2025 19:18:30.118] [Worker-Main-2/INFO] [PonderIndex/]: Registering Ponder Tags took 2.783 ms
+[30Oct2025 19:18:31.155] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[30Oct2025 19:18:31.155] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[30Oct2025 19:18:31.183] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device Built-in Audio Analog Stereo
+[30Oct2025 19:18:31.183] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[30Oct2025 19:18:31.247] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[30Oct2025 19:18:31.254] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[30Oct2025 19:18:31.256] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[30Oct2025 19:18:31.256] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[30Oct2025 19:18:31.257] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[30Oct2025 19:18:31.260] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[30Oct2025 19:18:31.263] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[30Oct2025 19:18:31.263] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[30Oct2025 19:18:31.263] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[30Oct2025 19:18:31.279] [Render thread/INFO] [mixin/]: Mixing ModelPartAccessor from flywheel.impl.mixins.json into net.minecraft.client.model.geom.ModelPart
+[30Oct2025 19:18:31.324] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[30Oct2025 19:18:31.340] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rbh:rendertype_black_hole could not find uniform named GameTime in the specified shader program.
+[30Oct2025 19:18:31.340] [Render thread/INFO] [com.mod.rbh.shaders.RBInternalShaders/]: registered internal shaders
+[30Oct2025 19:18:31.341] [Render thread/INFO] [mixin/]: Mixing client.PostChainMixin from rbh.mixins.json into net.minecraft.client.renderer.PostChain
+[30Oct2025 19:18:31.346] [Render thread/INFO] [mixin/]: Mixing client.PostPassMixin from rbh.mixins.json into net.minecraft.client.renderer.PostPass
+[30Oct2025 19:18:31.346] [Render thread/INFO] [mixin/]: Renaming synthetic method lambda$new$0(Lnet/minecraft/client/renderer/PostPass;)V to md3e9b8b$lambda$new$0$0 in rbh.mixins.json:client.PostPassMixin
+[30Oct2025 19:18:31.357] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleScreenCenter in the specified shader program.
+[30Oct2025 19:18:31.357] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleRadius in the specified shader program.
+[30Oct2025 19:18:31.357] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named Radius in the specified shader program.
+[30Oct2025 19:18:31.360] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[30Oct2025 19:18:31.361] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[30Oct2025 19:18:31.361] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[30Oct2025 19:18:31.375] [Render thread/INFO] [flywheel/backend/shaders/]: Loaded 77 shader sources in 10.712 ms
+[30Oct2025 19:18:31.390] [Render thread/INFO] [com.simibubi.create.Create/]: Loaded 56 train hat configurations.
+[30Oct2025 19:18:31.548] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[30Oct2025 19:18:45.174] [Render thread/INFO] [com.simibubi.create.Create/]: Created 157 recipes which will be injected into the game
+[30Oct2025 19:18:45.178] [Render thread/INFO] [com.simibubi.create.Create/]: Created 0 tags which will be injected into the game
+[30Oct2025 19:18:45.179] [Render thread/INFO] [mixin/]: Mixing accessor.NbtAccounterAccessor from create.mixins.json into net.minecraft.nbt.NbtAccounter
+[30Oct2025 19:18:45.198] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[30Oct2025 19:18:46.275] [Render thread/INFO] [mixin/]: Mixing TestCommandMixin from create.mixins.json into net.minecraft.gametest.framework.TestCommand
+[30Oct2025 19:18:46.508] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe rsrifle:create/singularity_battery
+com.google.gson.JsonSyntaxException: Unknown item 'rbh:singularity_battery_empty'
+	at net.minecraft.world.item.crafting.ShapedRecipe.lambda$itemFromJson$2(ShapedRecipe.java:307) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
+	at net.minecraft.world.item.crafting.ShapedRecipe.itemFromJson(ShapedRecipe.java:306) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.world.item.crafting.Ingredient.valueFromJson(Ingredient.java:219) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraftforge.common.crafting.VanillaIngredientSerializer.parse(VanillaIngredientSerializer.java:27) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraftforge.common.crafting.CraftingHelper.getIngredient(CraftingHelper.java:148) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.world.item.crafting.Ingredient.fromJson(Ingredient.java:194) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.world.item.crafting.Ingredient.fromJson(Ingredient.java:189) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at com.simibubi.create.content.processing.sequenced.SequencedAssemblyRecipeSerializer.readFromJson(SequencedAssemblyRecipeSerializer.java:32) ~[create-328085-6641603_mapped_parchment_2023.08.06-1.20.1.jar:6.0.6]
+	at com.simibubi.create.content.processing.sequenced.SequencedAssemblyRecipeSerializer.fromJson(SequencedAssemblyRecipeSerializer.java:74) ~[create-328085-6641603_mapped_parchment_2023.08.06-1.20.1.jar:6.0.6]
+	at com.simibubi.create.content.processing.sequenced.SequencedAssemblyRecipeSerializer.fromJson(SequencedAssemblyRecipeSerializer.java:14) ~[create-328085-6641603_mapped_parchment_2023.08.06-1.20.1.jar:6.0.6]
+	at net.minecraftforge.common.extensions.IForgeRecipeSerializer.fromJson(IForgeRecipeSerializer.java:23) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.world.item.crafting.RecipeManager.fromJson(RecipeManager.java:180) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:73) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:34) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$1(SimplePreparableReloadListener.java:12) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718) ~[?:?]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?]
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:65) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:166) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:22) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:132) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:145) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadWorldDataBlocking(WorldOpenFlows.java:163) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadWorldStem(WorldOpenFlows.java:113) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.doLoadLevel(WorldOpenFlows.java:181) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.doLoadLevel(WorldOpenFlows.java:169) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadLevel(WorldOpenFlows.java:65) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.loadWorld(WorldSelectionList.java:602) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.joinWorld(WorldSelectionList.java:501) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.mouseClicked(WorldSelectionList.java:440) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.components.AbstractSelectionList.mouseClicked(AbstractSelectionList.java:319) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.components.events.ContainerEventHandler.mouseClicked(ContainerEventHandler.java:53) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.MouseHandler.lambda$onPress$0(MouseHandler.java:97) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:455) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.MouseHandler.onPress(MouseHandler.java:94) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.MouseHandler.lambda$setup$4(MouseHandler.java:199) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:106) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:198) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) ~[lwjgl-glfw-3.3.1.jar:build 7]
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.1.jar:build 7]
+	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3474) ~[lwjgl-glfw-3.3.1.jar:build 7]
+	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:207) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1199) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:723) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:218) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.4.6.jar:?]
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.4.6.jar:?]
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.devService(ForgeClientUserdevLaunchHandler.java:19) ~[fmlloader-1.20.1-47.4.6.jar:?]
+	at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.4.6.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
+[30Oct2025 19:18:46.542] [Render thread/ERROR] [net.minecraft.world.item.crafting.RecipeManager/]: Parsing error loading recipe rsrifle:rifle_dye
+com.google.gson.JsonSyntaxException: Invalid or unsupported recipe type 'rbh:dye_rifle'
+	at net.minecraft.world.item.crafting.RecipeManager.lambda$fromJson$9(RecipeManager.java:179) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
+	at net.minecraft.world.item.crafting.RecipeManager.fromJson(RecipeManager.java:178) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:73) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.world.item.crafting.RecipeManager.apply(RecipeManager.java:34) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$1(SimplePreparableReloadListener.java:12) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718) ~[?:?]
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?]
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:65) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:166) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:22) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:132) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:145) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadWorldDataBlocking(WorldOpenFlows.java:163) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadWorldStem(WorldOpenFlows.java:113) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.doLoadLevel(WorldOpenFlows.java:181) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.doLoadLevel(WorldOpenFlows.java:169) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldOpenFlows.loadLevel(WorldOpenFlows.java:65) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.loadWorld(WorldSelectionList.java:602) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.joinWorld(WorldSelectionList.java:501) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.worldselection.WorldSelectionList$WorldListEntry.mouseClicked(WorldSelectionList.java:440) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.components.AbstractSelectionList.mouseClicked(AbstractSelectionList.java:319) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.components.events.ContainerEventHandler.mouseClicked(ContainerEventHandler.java:53) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.MouseHandler.lambda$onPress$0(MouseHandler.java:97) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:455) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.MouseHandler.onPress(MouseHandler.java:94) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.MouseHandler.lambda$setup$4(MouseHandler.java:199) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:106) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.MouseHandler.lambda$setup$5(MouseHandler.java:198) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at org.lwjgl.glfw.GLFWMouseButtonCallbackI.callback(GLFWMouseButtonCallbackI.java:43) ~[lwjgl-glfw-3.3.1.jar:build 7]
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.1.jar:build 7]
+	at org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3474) ~[lwjgl-glfw-3.3.1.jar:build 7]
+	at com.mojang.blaze3d.systems.RenderSystem.limitDisplayFPS(RenderSystem.java:207) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1199) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:723) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:218) ~[forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.4.6.jar:?]
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.4.6.jar:?]
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.devService(ForgeClientUserdevLaunchHandler.java:19) ~[fmlloader-1.20.1-47.4.6.jar:?]
+	at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.4.6.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
+[30Oct2025 19:18:46.548] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Skipping loading recipe rsrifle:singularity_battery.json as it's serializer returned null
+[30Oct2025 19:18:46.560] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 22 recipes
+[30Oct2025 19:18:46.601] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2391 advancements
+[30Oct2025 19:18:47.247] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
+[30Oct2025 19:18:47.247] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[30Oct2025 19:18:47.330] [Server thread/INFO] [mixin/]: Mixing MapItemSavedDataMixin from create.mixins.json into net.minecraft.world.level.saveddata.maps.MapItemSavedData
+[30Oct2025 19:18:47.432] [Server thread/INFO] [mixin/]: Mixing light.LightEngineAccessor from flywheel.backend.mixins.json into net.minecraft.world.level.lighting.LightEngine
+[30Oct2025 19:18:47.441] [Server thread/INFO] [mixin/]: Mixing light.SkyLightSectionStorageMixin from flywheel.backend.mixins.json into net.minecraft.world.level.lighting.SkyLightSectionStorage
+[30Oct2025 19:18:47.444] [Server thread/INFO] [mixin/]: Mixing light.SkyDataLayerStorageMapAccessor from flywheel.backend.mixins.json into net.minecraft.world.level.lighting.SkyLightSectionStorage$SkyDataLayerStorageMap
+[30Oct2025 19:18:48.015] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[30Oct2025 19:18:49.193] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[30Oct2025 19:18:49.193] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[30Oct2025 19:18:49.210] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[30Oct2025 19:18:49.527] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[30Oct2025 19:18:49.696] [Server thread/INFO] [mixin/]: Mixing ProjectileUtilMixin from create.mixins.json into net.minecraft.world.entity.projectile.ProjectileUtil
+[30Oct2025 19:18:49.991] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[30Oct2025 19:18:50.000] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 1978 ms
+[30Oct2025 19:18:50.096] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 23, from 10
+[30Oct2025 19:18:50.097] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[30Oct2025 19:18:50.134] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[30Oct2025 19:18:50.183] [Netty Server IO #1/INFO] [mixin/]: Mixing ClientboundMapItemDataPacketMixin from create.mixins.json into net.minecraft.network.protocol.game.ClientboundMapItemDataPacket
+[30Oct2025 19:18:50.400] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[30Oct2025 19:18:50.417] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:e443ef6c] logged in with entity id 229 at (100.69481266146907, 79.62321944273815, 29.143641986980253)
+[30Oct2025 19:18:50.440] [Render thread/INFO] [mixin/]: Mixing ClientChunkCacheMixin from flywheel.impl.mixins.json into net.minecraft.client.multiplayer.ClientChunkCache
+[30Oct2025 19:18:50.459] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[30Oct2025 19:18:50.467] [Render thread/INFO] [mixin/]: Mixing visualmanage.RebuildTaskMixin from flywheel.impl.mixins.json into net.minecraft.client.renderer.chunk.ChunkRenderDispatcher$RenderChunk$RebuildTask
+[30Oct2025 19:18:50.668] [Render thread/INFO] [flywheel/]: Started 6 worker threads
+[30Oct2025 19:18:50.690] [Render thread/INFO] [mixin/]: Mixing ArmorTrimMixin from create.mixins.json into net.minecraft.world.item.armortrim.ArmorTrim
+[30Oct2025 19:18:50.690] [Render thread/INFO] [mixin/]: Renaming synthetic method lambda$new$0(Ljava/lang/Boolean;Lnet/minecraft/world/item/ArmorMaterial;)Lnet/minecraft/resources/ResourceLocation; to md3e9b8b$lambda$new$0$0 in create.mixins.json:ArmorTrimMixin
+[30Oct2025 19:18:50.929] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 8 advancements
+[30Oct2025 19:18:53.073] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleScreenCenter in the specified shader program.
+[30Oct2025 19:18:53.073] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleRadius in the specified shader program.
+[30Oct2025 19:18:53.073] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named Radius in the specified shader program.
+[30Oct2025 19:18:59.919] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleScreenCenter in the specified shader program.
+[30Oct2025 19:18:59.919] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleRadius in the specified shader program.
+[30Oct2025 19:18:59.919] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named Radius in the specified shader program.
+[30Oct2025 19:19:01.790] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[30Oct2025 19:19:01.794] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[30Oct2025 19:19:01.817] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[30Oct2025 19:19:01.817] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether

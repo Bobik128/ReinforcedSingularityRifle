@@ -2,7 +2,7 @@ package com.mod.rsrifle.utils;
 
 import com.mod.rsrifle.items.SingularityRifle;
 import com.mod.rsrifle.sound.EntityBoundSound;
-import com.mod.rsrifle.sound.RBHSounds;
+import com.mod.rsrifle.sound.RSRifleSounds;
 import net.minecraft.client.Minecraft;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
@@ -37,7 +37,7 @@ public class FirearmModeClient {
         }
 
         if (FirearmDataUtils.getAction(itemStack) == SingularityRifle.Action.RELOAD && !reloadSounds.containsKey(id)) {
-            EntityBoundSound si = new EntityBoundSound(RBHSounds.RIFLE_RELOAD.get(), SoundSource.NEUTRAL, entity, 1.0f);
+            EntityBoundSound si = new EntityBoundSound(RSRifleSounds.RIFLE_RELOAD.get(), SoundSource.NEUTRAL, entity, 1.0f);
             reloadSounds.put(GeoItem.getId(itemStack), si);
             Minecraft.getInstance().getSoundManager().play(si);
         }
