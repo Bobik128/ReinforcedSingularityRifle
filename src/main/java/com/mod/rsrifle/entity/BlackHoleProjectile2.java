@@ -2,6 +2,7 @@ package com.mod.rsrifle.entity;
 
 import com.mod.rbh.entity.IBlackHole;
 import com.mod.rbh.entity.RBHEntityTypes;
+import com.mod.rsrifle.RegisterDamageTypes;
 import com.mod.rsrifle.items.SingularityRifle;
 import com.mod.rbh.shaders.PostEffectRegistry;
 import com.mod.rsrifle.sound.RSRifleSounds;
@@ -12,6 +13,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MoverType;
@@ -161,6 +163,8 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
      */
     protected void onHitEntity(EntityHitResult pResult) {
         super.onHitEntity(pResult);
+        Entity entity = pResult.getEntity();
+        entity.hurt(RegisterDamageTypes.causeHoleHitDamage(this), 10000.0f);
         if (!this.level().isClientSide) {
             this.explode();
         }
@@ -180,7 +184,6 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
         this.level().explode(this, this.getX(), this.getY(), this.getZ(), 8.0F * this.getSize() / SingularityRifle.MAX_SIZE, Level.ExplosionInteraction.TNT);
         this.discard();
     }
-
 
     private void dealExplosionDamage() {
         float f = 5.0F;
