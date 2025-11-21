@@ -20,6 +20,8 @@ public class RSRifleClientForge {
         forgeBus.addListener(RSRifleClientForge::onMouseInput);
         forgeBus.addListener(RSRifleClientForge::onKeyInput);
         forgeBus.addListener(RSRifleClientForge::onComputeFov);
+        forgeBus.addListener(RSRifleClientForge::onRenderEntity);
+        forgeBus.addListener(RSRifleClientForge::onCameraAngles);
         forgeBus.addListener(RSRifleClientForge::onRenderGuiOverlay);
         forgeBus.addListener(RifleHoleEffectInstanceHolder::resetEffectCounter);
     }
@@ -49,6 +51,14 @@ public class RSRifleClientForge {
         if (event.getOverlay().overlay() == VanillaGuiOverlay.HOTBAR.type().overlay()) {
         }
         // TODO crosshair
+    }
+
+    private static void onRenderEntity(final RenderLivingEvent.Pre<?, ?> event) {
+        RSRifleClient.onRenderEntity(event);
+    }
+
+    public static void onCameraAngles(ViewportEvent.ComputeCameraAngles event) {
+        RSRifleClient.onCameraAngles(event);
     }
 
     private static void onClientTick(TickEvent.ClientTickEvent event) {

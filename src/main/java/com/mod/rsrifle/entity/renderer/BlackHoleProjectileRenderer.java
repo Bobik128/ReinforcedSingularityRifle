@@ -2,6 +2,7 @@ package com.mod.rsrifle.entity.renderer;
 
 import com.mod.rbh.entity.renderer.BlackHoleRenderer;
 import com.mod.rbh.shaders.PostEffectRegistry;
+import com.mod.rsrifle.client.StarburstRenderer;
 import com.mod.rsrifle.entity.BlackHoleProjectile2;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.logging.LogUtils;
@@ -27,6 +28,16 @@ public class BlackHoleProjectileRenderer<T extends BlackHoleProjectile2> extends
     @Override
     public void render(@NotNull T entity, float pEntityYaw, float pPartialTick, @NotNull PoseStack poseStack, MultiBufferSource buffer, int pPackedLight) {
         if (entity.getEffectInstance() == null) return;
+        int et = entity.getExplodingTime();
+        if (et > -1) {
+            poseStack.pushPose();
+
+            poseStack.translate(0, entity.getSize()/2, 0);
+
+            StarburstRenderer.renderStarburst(poseStack, buffer, ((float) (et + pPartialTick) / entity.maxExplodingTime), entity.getColor(), 432L, 30, 80, 0);
+
+            poseStack.popPose();
+        }
         BlackHoleRenderer.renderBlackHoleElliptical(poseStack, entity.getEffectInstance(), PostEffectRegistry.RenderPhase.AFTER_LEVEL, pPackedLight, entity.getEffectSize(), entity.getSize(), entity.shouldBeRainbow(), entity.getColor(), entity.getEffectExponent(), entity.getStretchDir(), entity.getStretchStrength());
     }
 }

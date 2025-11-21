@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 public class RendererRegistry {
         @SubscribeEvent
         public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event) {
-            event.registerEntityRenderer(RSRifleEntityTypes.BLACK_HOLE_PROJECTILE.get(), BlackHoleProjectileRenderer::new);
+            event.registerEntityRenderer(RSRifleEntityTypes.BLACK_HOLE_PROJECTILE2.get(), BlackHoleProjectileRenderer::new);
             event.registerEntityRenderer(RSRifleEntityTypes.RIFLE_ITEM.get(), ItemEntityRenderer::new);
         }
 }

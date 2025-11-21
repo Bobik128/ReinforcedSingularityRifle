@@ -1,7 +1,6 @@
 package com.mod.rsrifle.entity;
 
 import com.mod.rbh.entity.IBlackHole;
-import com.mod.rbh.entity.RBHEntityTypes;
 import com.mod.rsrifle.RegisterDamageTypes;
 import com.mod.rsrifle.items.SingularityRifle;
 import com.mod.rbh.shaders.PostEffectRegistry;
@@ -46,17 +45,21 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
             SynchedEntityData.defineId(BlackHoleProjectile2.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Boolean> RAINBOW =
             SynchedEntityData.defineId(BlackHoleProjectile2.class, EntityDataSerializers.BOOLEAN);
+    private static final EntityDataAccessor<Integer> EXPLODING_TIME =
+            SynchedEntityData.defineId(BlackHoleProjectile2.class, EntityDataSerializers.INT);
 
     public static final int RENDER_DISTANCE = 120;
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public int life = 0;
     public int lifetime = 1000;
+    public final int maxExplodingTime = 3;
+    public boolean exploding = false;
 
     @OnlyIn(Dist.CLIENT) public PostEffectRegistry.HoleEffectInstance effectInstance;
 
     public BlackHoleProjectile2(Vec3 pos, Level level, float size, float effectSize) {
-        this(RBHEntityTypes.BLACK_HOLE_PROJECTILE.get(), level);
+        this(RSRifleEntityTypes.BLACK_HOLE_PROJECTILE2.get(), level);
         this.setPos(pos);
         this.setSize(size);
         this.setEffectSize(effectSize);
@@ -96,6 +99,7 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
         this.entityData.define(STRETCH_DIR, new Vector3f(1.0f, 0.0f, 0.0f));
         this.entityData.define(STRETCH_STRENGTH, 0.0f);
         this.entityData.define(COLOR, 0xFFFF00);
+        this.entityData.define(EXPLODING_TIME, -1);
         this.entityData.define(RAINBOW, false);
     }
 
@@ -126,36 +130,42 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
     public void tick() {
         super.tick();
 
-        Vec3 vec33 = this.getDeltaMovement();
-        this.move(MoverType.SELF, vec33);
-        this.setDeltaMovement(vec33);
+        if (exploding) {
+            setExplodingTime(getExplodingTime() + 1);
+            if (getExplodingTime() > maxExplodingTime) discard();
+            setDeltaMovement(Vec3.ZERO);
+        } else {
 
-        if (!this.level().isClientSide) {
-            if (!lastDeltaDir.equals(vec33)) {
-                this.setStretchDir(vec33.toVector3f().normalize());
-                this.setStretchStrength((float) vec33.length() * 3);
+            Vec3 vec33 = this.getDeltaMovement();
+            this.move(MoverType.SELF, vec33);
+            this.setDeltaMovement(vec33);
+
+            if (!this.level().isClientSide) {
+                if (!lastDeltaDir.equals(vec33)) {
+                    this.setStretchDir(vec33.toVector3f().normalize());
+                    this.setStretchStrength((float) vec33.length() * 3);
+                }
+                lastDeltaDir = vec33;
             }
-            lastDeltaDir = vec33;
+
+            HitResult hitresult = ProjectileUtil.getHitResultOnMoveVector(this, this::canHitEntity);
+            if (!this.noPhysics) {
+                this.onHit(hitresult);
+                this.hasImpulse = true;
+            }
+
+            this.updateRotation();
+            if (this.life == 0 && !this.isSilent()) {
+                for (int i = 0; i < 2; i++)
+                    this.level().playSound((Player) null, this.getX(), this.getY(), this.getZ(), RSRifleSounds.RIFLE_SHOOT.get(), SoundSource.AMBIENT, 6.0F, 1.1F);
+            }
+
+            ++this.life;
+
+            if (!this.level().isClientSide && this.life > this.lifetime) {
+                this.explode();
+            }
         }
-
-        HitResult hitresult = ProjectileUtil.getHitResultOnMoveVector(this, this::canHitEntity);
-        if (!this.noPhysics) {
-            this.onHit(hitresult);
-            this.hasImpulse = true;
-        }
-
-        this.updateRotation();
-        if (this.life == 0 && !this.isSilent()) {
-            for (int i = 0; i < 2; i++)
-                this.level().playSound((Player)null, this.getX(), this.getY(), this.getZ(), RSRifleSounds.RIFLE_SHOOT.get(), SoundSource.AMBIENT, 6.0F, 1.1F);
-        }
-
-        ++this.life;
-
-        if (!this.level().isClientSide && this.life > this.lifetime) {
-            this.explode();
-        }
-
     }
 
     /**
@@ -182,7 +192,7 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
 
     private void explode() {
         this.level().explode(this, this.getX(), this.getY(), this.getZ(), 8.0F * this.getSize() / SingularityRifle.MAX_SIZE, Level.ExplosionInteraction.TNT);
-        this.discard();
+        this.exploding = true;
     }
 
     private void dealExplosionDamage() {
@@ -267,6 +277,14 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
 
     public int getColor() {
         return this.entityData.get(COLOR);
+    }
+
+    public void setExplodingTime(int value) {
+        this.entityData.set(EXPLODING_TIME, value);
+    }
+
+    public int getExplodingTime() {
+        return this.entityData.get(EXPLODING_TIME);
     }
 
     public void setRainbow(boolean value) {
