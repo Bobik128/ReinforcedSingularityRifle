@@ -37,7 +37,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .requires(Items.EXPERIENCE_BOTTLE)
                     .unlockedBy(getHasName(RSRifleItems.SINGULARITY_BATTERY_EMPTY.get()), has(RSRifleItems.SINGULARITY_BATTERY_EMPTY.get()))
                     .save(writer))
-                .build(pWriter, ResourceLocation.fromNamespaceAndPath(ReinforcedSingularityRifle.MODID, "singularity_battery.json"));
+                .build(pWriter, ResourceLocation.fromNamespaceAndPath(ReinforcedSingularityRifle.MODID, "singularity_battery"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, RSRifleItems.SINGULARITY_RIFLE.get())
                 .pattern("NA ")

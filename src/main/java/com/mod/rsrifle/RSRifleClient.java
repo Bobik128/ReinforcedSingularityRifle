@@ -109,27 +109,27 @@ public class RSRifleClient {
     }
 
     public static void onRenderEntity(RenderLivingEvent.Pre<?, ?> event) {
-        PoseStack poseStack = event.getPoseStack();
-
-        float tiltDeg = WobbleMath.getTilt(event.getPartialTick());
-
-//        poseStack.translate(0.0D, 1.0D, 0.0D);
-//        poseStack.mulPose(com.mojang.math.Axis.XP.rotationDegrees(tiltDeg));
-//        poseStack.translate(0.0D, -1.0D, 0.0D);
-
-        poseStack.pushPose();
-        poseStack.translate(0, 1, 0);
-        StarburstRenderer.renderStarburst(poseStack, event.getMultiBufferSource(), (float) Math.abs(Math.sin((double) System.currentTimeMillis() / 500)), 0xCCAA00FF, 432L, 30, 80, 10.f);
-        poseStack.popPose();
+//        PoseStack poseStack = event.getPoseStack();
+//
+//        float tiltDeg = WobbleMath.getTilt(event.getPartialTick());
+//
+////        poseStack.translate(0.0D, 1.0D, 0.0D);
+////        poseStack.mulPose(com.mojang.math.Axis.XP.rotationDegrees(tiltDeg));
+////        poseStack.translate(0.0D, -1.0D, 0.0D);
+//
+//        poseStack.pushPose();
+//        poseStack.translate(0, 1, 0);
+//        StarburstRenderer.renderStarburst(poseStack, event.getMultiBufferSource(), (float) Math.abs(Math.sin((double) System.currentTimeMillis() / 500)), 0xCCAA00FF, 432L, 30, 80, 10.f);
+//        poseStack.popPose();
     }
 
     public static void onCameraAngles(ViewportEvent.ComputeCameraAngles event) {
-        Minecraft mc = Minecraft.getInstance();
-        if (mc.player == null) return;
-        if (event.getCamera().getEntity() != mc.player) return;
-
-        float tiltDeg = WobbleMath.getTilt(event.getPartialTick());
-
+//        Minecraft mc = Minecraft.getInstance();
+//        if (mc.player == null) return;
+//        if (event.getCamera().getEntity() != mc.player) return;
+//
+//        float tiltDeg = WobbleMath.getTilt(event.getPartialTick());
+//
 //        event.setRoll(event.getRoll() - tiltDeg);
 //        event.setPitch(event.getPitch() + tiltDeg);
     }

@@ -371,6 +371,7 @@ public class FirearmMode {
 //                Vec3 additionalOffset = lookVector.multiply(0.5f, 0.5f, 0.5f);
                 BlackHoleProjectile2 hole = new BlackHoleProjectile2(entity.getEyePosition().add(entity.getLookAngle().scale(0.5f)), entity.level(), SingularityRifle.MAX_SIZE * modifier, SingularityRifle.MAX_EFFECT_SIZE * modifier, ((SingularityRifle) itemStack.getItem()).shouldBeColorful(itemStack));
                 entity.level().addFreshEntity(hole);
+                hole.setOwner(entity);
                 hole.shoot(lookVector.x, lookVector.y, lookVector.z, 6.0f, 0.01f);
                 if (entity.level() instanceof ServerLevel) RSRifleNetwork.sendToAllInDimension(new ClientboundShootPacket(GeoItem.getId(itemStack), FirearmDataUtils.getChargeLevel(itemStack)), entity.level());
                 FirearmDataUtils.setChargeLevel(itemStack, 0);

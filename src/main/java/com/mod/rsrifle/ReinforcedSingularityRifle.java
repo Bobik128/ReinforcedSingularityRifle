@@ -48,7 +48,7 @@ public class ReinforcedSingularityRifle
 
         MinecraftForge.EVENT_BUS.register(this);
 
-        context.registerConfig(ModConfig.Type.CLIENT, ClientConfig.SPEC);
+        context.registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC);
 
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> RSRifleClientForge.init(modEventBus, forgeBus));
     }

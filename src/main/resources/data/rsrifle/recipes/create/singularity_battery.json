@@ -7,12 +7,12 @@
     }
   ],
   "ingredient": {
-    "item": "rbh:singularity_battery_empty"
+    "item": "rsrifle:singularity_battery_empty"
   },
   "loops": 1,
   "results": [
     {
-      "item": "rbh:singularity_battery"
+      "item": "rsrifle:singularity_battery"
     }
   ],
   "sequence": [
@@ -20,7 +20,7 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "rbh:singularity_battery_incomplete"
+          "item": "rsrifle:singularity_battery_incomplete"
         },
         [
           {
@@ -30,7 +30,7 @@
       ],
       "results": [
         {
-          "item": "rbh:singularity_battery_incomplete"
+          "item": "rsrifle:singularity_battery_incomplete"
         }
       ]
     },
@@ -38,7 +38,7 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "rbh:singularity_battery_incomplete"
+          "item": "rsrifle:singularity_battery_incomplete"
         },
         [
           {
@@ -48,12 +48,12 @@
       ],
       "results": [
         {
-          "item": "rbh:singularity_battery_incomplete"
+          "item": "rsrifle:singularity_battery_incomplete"
         }
       ]
     }
   ],
   "transitionalItem": {
-    "item": "rbh:singularity_battery_incomplete"
+    "item": "rsrifle:singularity_battery_incomplete"
   }
 }

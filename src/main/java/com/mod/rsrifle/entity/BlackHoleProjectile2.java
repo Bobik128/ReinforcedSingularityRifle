@@ -1,6 +1,7 @@
 package com.mod.rsrifle.entity;
 
 import com.mod.rbh.entity.IBlackHole;
+import com.mod.rsrifle.CommonConfig;
 import com.mod.rsrifle.RegisterDamageTypes;
 import com.mod.rsrifle.items.SingularityRifle;
 import com.mod.rbh.shaders.PostEffectRegistry;
@@ -11,7 +12,9 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -21,14 +24,14 @@ import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.EntityHitResult;
-import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.phys.*;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 import org.slf4j.Logger;
+
+import java.util.List;
 
 public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
     private static final EntityDataAccessor<Float> SIZE =
@@ -191,39 +194,102 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
     }
 
     private void explode() {
-        this.level().explode(this, this.getX(), this.getY(), this.getZ(), 8.0F * this.getSize() / SingularityRifle.MAX_SIZE, Level.ExplosionInteraction.TNT);
+        this.level().broadcastEntityEvent(this, (byte)17);
+        this.gameEvent(GameEvent.EXPLODE, this.getOwner());
+
+        if (CommonConfig.destroyBlocks) {
+            this.level().explode(this, this.getX(), this.getY(), this.getZ(), 8.0F * this.getSize() / SingularityRifle.MAX_SIZE, Level.ExplosionInteraction.TNT);
+        } else {
+            dealExplosionDamage();
+            this.level().playSound(
+                    null,
+                    this.getX(),
+                    this.getY(),
+                    this.getZ(),
+                    SoundEvents.GENERIC_EXPLODE,
+                    SoundSource.BLOCKS,
+                    4.0F,
+                    1.0F
+            );
+
+        }
         this.exploding = true;
     }
 
     private void dealExplosionDamage() {
-        float f = 5.0F;
+        if (this.level().isClientSide) return;
 
-        if (f > 0.0F) {
+        // Same as explosion radius
+        float radius = 5.0F;
+        double radiusSq = radius * radius;
+        Vec3 center = this.position();
 
-            double d0 = 5.0D;
-            Vec3 vec3 = this.position();
+        // Vanilla-style bounding box
+        List<LivingEntity> targets = this.level().getEntitiesOfClass(
+                LivingEntity.class,
+                this.getBoundingBox().inflate(radius)
+        );
 
-            for(LivingEntity livingentity : this.level().getEntitiesOfClass(LivingEntity.class, this.getBoundingBox().inflate(5.0D))) {
-                if (!(this.distanceToSqr(livingentity) > 25.0D)) {
-                    boolean flag = false;
+        for (LivingEntity target : targets) {
 
-                    for(int i = 0; i < 2; ++i) {
-                        Vec3 vec31 = new Vec3(livingentity.getX(), livingentity.getY(0.5D * (double)i), livingentity.getZ());
-                        HitResult hitresult = this.level().clip(new ClipContext(vec3, vec31, ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, this));
-                        if (hitresult.getType() == HitResult.Type.MISS) {
-                            flag = true;
-                            break;
-                        }
+            // Distance check
+            double distSq = target.distanceToSqr(center);
+            if (distSq > radiusSq) continue;
+
+            // Explosion exposure (line of sight)
+            double exposure = getExposure(center, target);
+
+            if (exposure > 0) {
+
+                // Vanilla explosion damage scaling
+                double dist = Math.sqrt(distSq);
+                double distanceFactor = 1.0 - (dist / radius);
+
+                float damage = (float)((distanceFactor * exposure) * radius * 2.0);
+
+                target.hurt(
+                        this.damageSources().mobProjectile(this, (LivingEntity)this.getOwner()),
+                        damage
+                );
+            }
+        }
+    }
+
+    private double getExposure(Vec3 explosionPos, Entity entity) {
+        AABB box = entity.getBoundingBox();
+        double stepX = 1.0 / ((box.getXsize() * 2.0) + 1.0);
+        double stepY = 1.0 / ((box.getYsize() * 2.0) + 1.0);
+        double stepZ = 1.0 / ((box.getZsize() * 2.0) + 1.0);
+
+        double visible = 0;
+        double total = 0;
+
+        for (double x = 0.0; x <= 1.0; x += stepX) {
+            for (double y = 0.0; y <= 1.0; y += stepY) {
+                for (double z = 0.0; z <= 1.0; z += stepZ) {
+                    Vec3 sample = new Vec3(
+                            Mth.lerp(x, box.minX, box.maxX),
+                            Mth.lerp(y, box.minY, box.maxY),
+                            Mth.lerp(z, box.minZ, box.maxZ)
+                    );
+
+                    BlockHitResult hit = this.level().clip(
+                            new ClipContext(sample, explosionPos,
+                                    ClipContext.Block.COLLIDER,
+                                    ClipContext.Fluid.NONE,
+                                    this)
+                    );
+
+                    if (hit.getType() == HitResult.Type.MISS) {
+                        visible++;
                     }
 
-                    if (flag) {
-                        float f1 = f * (float)Math.sqrt((5.0D - (double)this.distanceTo(livingentity)) / 5.0D);
-                        livingentity.hurt(this.damageSources().mobProjectile(this, (LivingEntity) this.getOwner()), f1);
-                    }
+                    total++;
                 }
             }
         }
 
+        return visible / total;
     }
 
     public void setSize(float value) {

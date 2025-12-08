@@ -26,7 +26,7 @@ import java.util.concurrent.CompletableFuture;
 
 @Mod.EventBusSubscriber(modid = ReinforcedSingularityRifle.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RegisterDamageTypes {
-    public static final ResourceKey<DamageType> HOLE_HIT = ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.fromNamespaceAndPath("rbrifle", "hole_hit"));
+    public static final ResourceKey<DamageType> HOLE_HIT = ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.fromNamespaceAndPath("rsrifle", "hole_hit"));
 
     static class CustomEntityDamageSource extends DamageSource {
         public CustomEntityDamageSource(Holder<DamageType> damageTypeIn, @Nullable Entity damageSourceEntityIn) {

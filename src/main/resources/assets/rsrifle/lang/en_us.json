@@ -10,6 +10,9 @@
   "rifle.bat2_charge": "Battery 2 power",
   "battery.charge_level": "Power level",
 
+  "death.attack.hole_hit.0": "%1$s was deatomized",
+  "death.attack.hole_hit.1": "%1$s has become part of a black hole",
+  "death.attack.hole_hit.2": "%1$s didn't stand a chance",
 
   "death.attack.hole_hit.attacker_0": "%1$s was deatomized by %2$s",
   "death.attack.hole_hit.attacker_1": "%1$s has become part of %2$s's black hole",

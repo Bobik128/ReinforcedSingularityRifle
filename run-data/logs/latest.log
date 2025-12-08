@@ -1,155 +1,149 @@
-[22Oct2025 18:51:30.097] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, /home/tomas/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 47.4.6, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, rsrifle, --all, --output, /home/tomas/IdeaProjects/ReinforcedSingularityRifle/src/generated/resources, --existing, /home/tomas/IdeaProjects/ReinforcedSingularityRifle/src/main/resources, --mixin.config, rsrifle.mixins.json]
-[22Oct2025 18:51:30.099] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.15 by Eclipse Adoptium; OS Linux arch amd64 version 6.16.10-200.fc42.x86_64
-[22Oct2025 18:51:30.156] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[22Oct2025 18:51:30.183] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/tomas/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23116!/ Service=ModLauncher Env=CLIENT
-[22Oct2025 18:51:30.367] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.4.6/9e86bf67e222253576e982856d9958695725adb5/javafmllanguage-1.20.1-47.4.6.jar is missing mods.toml file
-[22Oct2025 18:51:30.367] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.4.6/56100545804adc991cc48ab68b86ba46c5873246/lowcodelanguage-1.20.1-47.4.6.jar is missing mods.toml file
-[22Oct2025 18:51:30.368] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.4.6/fd228d7d879a9da774eda022ea3092cedb5178f1/mclanguage-1.20.1-47.4.6.jar is missing mods.toml file
-[22Oct2025 18:51:30.369] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.4.6/cefc55ada370ce2f23f92834530eb967c0de1fdd/fmlcore-1.20.1-47.4.6.jar is missing mods.toml file
-[22Oct2025 18:51:30.542] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: mixinextras-forge-0.5.0.jar. Using Mod File: /home/tomas/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-forge/0.5.0/cebe4d98a42a4a32ebf0ddec7b93d5bdbdad009/mixinextras-forge-0.5.0.jar
-[22Oct2025 18:51:30.542] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 5 dependencies adding them to mods collection
-[22Oct2025 18:51:31.235] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by rsrifle.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
-[22Oct2025 18:51:31.236] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[22Oct2025 18:51:31.247] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, /home/tomas/.gradle/caches/forge_gradle/assets, --assetIndex, 5, --mod, rsrifle, --all, --output, /home/tomas/IdeaProjects/ReinforcedSingularityRifle/src/generated/resources, --existing, /home/tomas/IdeaProjects/ReinforcedSingularityRifle/src/main/resources]
-[22Oct2025 18:51:31.261] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
-[22Oct2025 18:51:31.262] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
-[22Oct2025 18:51:31.265] [main/INFO] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
-[22Oct2025 18:51:31.265] [main/INFO] [mixin/]: Selecting config rsrifle.mixins.json
-[22Oct2025 18:51:31.267] [main/WARN] [mixin/]: Reference map 'rsrifle.refmap.json' for rsrifle.mixins.json could not be read. If this is a development environment you can ignore this message
-[22Oct2025 18:51:31.268] [main/INFO] [mixin/]: Selecting config flywheel.backend.mixins.json
-[22Oct2025 18:51:31.384] [main/INFO] [mixin/]: Remapping refMap backend-flywheel.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
-[22Oct2025 18:51:31.384] [main/INFO] [mixin/]: Selecting config flywheel.impl.mixins.json
-[22Oct2025 18:51:31.385] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
-[22Oct2025 18:51:31.385] [main/INFO] [mixin/]: Selecting config geckolib.mixins.json
-[22Oct2025 18:51:31.386] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
-[22Oct2025 18:51:31.386] [main/INFO] [mixin/]: Selecting config ponder.mixins.json
-[22Oct2025 18:51:31.386] [main/INFO] [mixin/]: Remapping refMap ponder.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
-[22Oct2025 18:51:31.386] [main/INFO] [mixin/]: Selecting config ponder-common.mixins.json
-[22Oct2025 18:51:31.387] [main/INFO] [mixin/]: Remapping refMap ponder.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
-[22Oct2025 18:51:31.387] [main/INFO] [mixin/]: Selecting config create.mixins.json
-[22Oct2025 18:51:31.391] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
-[22Oct2025 18:51:31.391] [main/INFO] [mixin/]: Selecting config rbh.mixins.json
-[22Oct2025 18:51:31.392] [main/INFO] [mixin/]: Remapping refMap rbh.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
-[22Oct2025 18:51:31.392] [main/INFO] [mixin/]: Selecting config mixinextras.init.mixins.json
-[22Oct2025 18:51:31.445] [main/INFO] [mixin/]: Preparing rsrifle.mixins.json (6)
-[22Oct2025 18:51:31.494] [main/INFO] [mixin/]: Preparing flywheel.backend.mixins.json (8)
-[22Oct2025 18:51:31.530] [main/INFO] [mixin/]: Preparing flywheel.impl.mixins.json (15)
-[22Oct2025 18:51:31.639] [main/INFO] [mixin/]: Preparing geckolib.mixins.json (1)
-[22Oct2025 18:51:31.641] [main/INFO] [mixin/]: Preparing ponder.mixins.json (1)
-[22Oct2025 18:51:31.644] [main/INFO] [mixin/]: Preparing ponder-common.mixins.json (6)
-[22Oct2025 18:51:31.660] [main/INFO] [mixin/]: Preparing rbh.mixins.json (11)
-[22Oct2025 18:51:31.668] [main/INFO] [mixin/]: Preparing mixinextras.init.mixins.json (0)
-[22Oct2025 18:51:31.668] [main/INFO] [mixin/]: Preparing create.mixins.json (53)
-[22Oct2025 18:51:31.752] [main/WARN] [mixin/]: Error loading class: journeymap/client/ui/fullscreen/Fullscreen (java.lang.ClassNotFoundException: journeymap.client.ui.fullscreen.Fullscreen)
-[22Oct2025 18:51:31.752] [main/WARN] [mixin/]: @Mixin target journeymap.client.ui.fullscreen.Fullscreen was not found create.mixins.json:compat.JourneyFullscreenMapMixin
-[22Oct2025 18:51:31.775] [main/INFO] [mixin/]: Prepared 100 mixins in 0.509 sec (5.1ms avg) (0ms load, 0ms transform, 0ms plugin)
-[22Oct2025 18:51:31.894] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [rsrifle]
-[22Oct2025 18:51:31.898] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
-[22Oct2025 18:51:31.909] [main/INFO] [mixin/]: Mixing BuiltInRegistriesMixin from create.mixins.json into net.minecraft.core.registries.BuiltInRegistries
-[22Oct2025 18:51:31.911] [main/INFO] [mixin/]: Renaming synthetic method lambda$create$ourRegistriesAreNotEmpty$0(Ljava/util/function/Consumer;Lnet/minecraft/core/Registry;)V to md3c7e6d$lambda$create$ourRegistriesAreNotEmpty$0$0 in create.mixins.json:BuiltInRegistriesMixin
-[22Oct2025 18:51:31.921] [main/INFO] [mixin/]: Mixing accessor.BuiltInRegistriesAccessor from create.mixins.json into net.minecraft.core.registries.BuiltInRegistries
-[22Oct2025 18:51:31.922] [main/INFO] [mixin/]: Renaming @Accessor method create$getWRITABLE_REGISTRY()Lnet/minecraft/core/WritableRegistry; to create$getWRITABLE_REGISTRY_$md$3c7e6d$1 in create.mixins.json:accessor.BuiltInRegistriesAccessor
-[22Oct2025 18:51:32.023] [main/INFO] [mixin/]: Mixing BlockMixin from create.mixins.json into net.minecraft.world.level.block.Block
-[22Oct2025 18:51:32.043] [main/INFO] [mixin/]: Mixing accessor.StateHolderAccessor from create.mixins.json into net.minecraft.world.level.block.state.StateHolder
-[22Oct2025 18:51:32.065] [main/INFO] [mixin/]: Mixing accessor.EntityAccessor from ponder-common.mixins.json into net.minecraft.world.entity.Entity
-[22Oct2025 18:51:32.068] [main/INFO] [mixin/]: Mixing client.EntityContraptionInteractionMixin from create.mixins.json into net.minecraft.world.entity.Entity
-[22Oct2025 18:51:32.069] [main/INFO] [mixin/]: Renaming synthetic method lambda$create$onSpawnSprintParticle$4(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;Lcom/simibubi/create/content/contraptions/Contraption;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V to md3c7e6d$lambda$create$onSpawnSprintParticle$4$0 in create.mixins.json:client.EntityContraptionInteractionMixin
-[22Oct2025 18:51:32.069] [main/INFO] [mixin/]: Renaming synthetic method lambda$create$onMove$3(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/Entity;Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)Z to md3c7e6d$lambda$create$onMove$3$1 in create.mixins.json:client.EntityContraptionInteractionMixin
-[22Oct2025 18:51:32.069] [main/INFO] [mixin/]: Renaming synthetic method lambda$create$contraptionStepSounds$2(Lorg/apache/commons/lang3/mutable/MutableBoolean;Lcom/simibubi/create/content/contraptions/Contraption;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V to md3c7e6d$lambda$create$contraptionStepSounds$2$2 in create.mixins.json:client.EntityContraptionInteractionMixin
-[22Oct2025 18:51:32.069] [main/INFO] [mixin/]: Renaming synthetic method lambda$create$forCollision$1(Lnet/minecraft/world/phys/Vec3;Lorg/apache/logging/log4j/util/TriConsumer;Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)V to md3c7e6d$lambda$create$forCollision$1$3 in create.mixins.json:client.EntityContraptionInteractionMixin
-[22Oct2025 18:51:32.069] [main/INFO] [mixin/]: Renaming synthetic method lambda$create$getIntersectionContraptionsStream$0(Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)Z to md3c7e6d$lambda$create$getIntersectionContraptionsStream$0$4 in create.mixins.json:client.EntityContraptionInteractionMixin
-[22Oct2025 18:51:32.097] [main/INFO] [mixin/]: Mixing EntityMixin from create.mixins.json into net.minecraft.world.entity.Entity
-[22Oct2025 18:51:32.163] [main/INFO] [mixin/]: Mixing CustomItemUseEffectsMixin from create.mixins.json into net.minecraft.world.entity.LivingEntity
-[22Oct2025 18:51:32.172] [main/INFO] [mixin/]: Mixing LavaSwimmingMixin from create.mixins.json into net.minecraft.world.entity.LivingEntity
-[22Oct2025 18:51:32.175] [main/INFO] [mixin/]: Mixing accessor.LivingEntityAccessor from create.mixins.json into net.minecraft.world.entity.LivingEntity
-[22Oct2025 18:51:32.222] [main/INFO] [mixin/]: Mixing LevelMixin from flywheel.impl.mixins.json into net.minecraft.world.level.Level
-[22Oct2025 18:51:32.231] [main/INFO] [mixin/]: Mixing accessor.ServerLevelAccessor from create.mixins.json into net.minecraft.server.level.ServerLevel
-[22Oct2025 18:51:32.249] [main/INFO] [mixin/]: Mixing PlayerMixin from create.mixins.json into net.minecraft.world.entity.player.Player
-[22Oct2025 18:51:32.296] [main/INFO] [mixin/]: Mixing EntityTypeMixin from flywheel.impl.mixins.json into net.minecraft.world.entity.EntityType
-[22Oct2025 18:51:32.307] [main/INFO] [mixin/]: Mixing BlockEntityTypeMixin from flywheel.impl.mixins.json into net.minecraft.world.level.block.entity.BlockEntityType
-[22Oct2025 18:51:32.440] [main/INFO] [mixin/]: Mixing accessor.DispenserBlockAccessor from create.mixins.json into net.minecraft.world.level.block.DispenserBlock
-[22Oct2025 18:51:32.461] [main/INFO] [mixin/]: Mixing accessor.CropBlockAccessor from create.mixins.json into net.minecraft.world.level.block.CropBlock
-[22Oct2025 18:51:32.509] [main/INFO] [mixin/]: Mixing ShulkerBoxBlockMixin from create.mixins.json into net.minecraft.world.level.block.ShulkerBoxBlock
-[22Oct2025 18:51:32.518] [main/INFO] [mixin/]: Mixing accessor.ConcretePowderBlockAccessor from create.mixins.json into net.minecraft.world.level.block.ConcretePowderBlock
-[22Oct2025 18:51:32.538] [main/INFO] [mixin/]: Mixing BeehiveBlockMixin from create.mixins.json into net.minecraft.world.level.block.BeehiveBlock
-[22Oct2025 18:51:32.577] [main/INFO] [mixin/]: Mixing WaterWheelFluidSpreadMixin from create.mixins.json into net.minecraft.world.level.material.FlowingFluid
-[22Oct2025 18:51:32.585] [main/INFO] [mixin/]: Mixing accessor.FlowingFluidAccessor from create.mixins.json into net.minecraft.world.level.material.FlowingFluid
-[22Oct2025 18:51:32.634] [main/INFO] [mixin/]: Mixing visualmanage.BlockEntityMixin from flywheel.impl.mixins.json into net.minecraft.world.level.block.entity.BlockEntity
-[22Oct2025 18:51:32.640] [main/INFO] [mixin/]: Mixing accessor.FallingBlockEntityAccessor from create.mixins.json into net.minecraft.world.entity.item.FallingBlockEntity
-[22Oct2025 18:51:32.641] [main/INFO] [mixin/]: Renaming @Invoker method create$callInit(Lnet/minecraft/world/level/Level;DDDLnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/entity/item/FallingBlockEntity; to create$callInit_$md$3c7e6d$0 in create.mixins.json:accessor.FallingBlockEntityAccessor
-[22Oct2025 18:51:33.000] [main/INFO] [mixin/]: Mixing SmithingMenuMixin from create.mixins.json into net.minecraft.world.inventory.SmithingMenu
-[22Oct2025 18:51:33.003] [main/INFO] [mixin/]: Renaming synthetic method lambda$create$preventUnbreakingOnBacktanks$0(Lnet/minecraft/world/item/ItemStack;Ljava/util/Map;Lnet/minecraft/world/item/enchantment/Enchantment;Ljava/lang/Integer;)V to md3c7e6d$lambda$create$preventUnbreakingOnBacktanks$0$0 in create.mixins.json:SmithingMenuMixin
-[22Oct2025 18:51:33.167] [main/INFO] [mixin/]: Mixing BlockItemMixin from create.mixins.json into net.minecraft.world.item.BlockItem
-[22Oct2025 18:51:33.199] [main/INFO] [mixin/]: Mixing accessor.SuspiciousStewItemAccessor from create.mixins.json into net.minecraft.world.item.SuspiciousStewItem
-[22Oct2025 18:51:33.199] [main/INFO] [mixin/]: Renaming @Invoker method create$listPotionEffects(Lnet/minecraft/world/item/ItemStack;Ljava/util/function/Consumer;)V to create$listPotionEffects_$md$3c7e6d$0 in create.mixins.json:accessor.SuspiciousStewItemAccessor
-[22Oct2025 18:51:33.573] [main/INFO] [mixin/]: Mixing accessor.UseOnContextAccessor from create.mixins.json into net.minecraft.world.item.context.UseOnContext
-[22Oct2025 18:51:33.652] [main/INFO] [mixin/]: Mixing visualmanage.LevelChunkMixin from flywheel.impl.mixins.json into net.minecraft.world.level.chunk.LevelChunk
-[22Oct2025 18:51:33.696] [main/INFO] [mixin/]: Mixing accessor.MobEffectInstanceAccessor from create.mixins.json into net.minecraft.world.effect.MobEffectInstance
-[22Oct2025 18:51:33.726] [main/INFO] [mixin/]: Mixing accessor.AbstractProjectileDispenseBehaviorAccessor from create.mixins.json into net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior
-[22Oct2025 18:51:33.832] [main/INFO] [mixin/]: Mixing LootingEnchantFunctionMixin from create.mixins.json into net.minecraft.world.level.storage.loot.functions.LootingEnchantFunction
-[22Oct2025 18:51:34.221] [modloading-worker-0/INFO] [com.simibubi.create.Create/]: Create 6.0.6 initializing! Commit hash: 338bfa0aec952fa51656e8f61bd621ca9b3b2e00
-[22Oct2025 18:51:34.225] [modloading-worker-0/INFO] [mixin/]: Mixing client.MinecraftMixin from rsrifle.mixins.json into net.minecraft.client.Minecraft
-[22Oct2025 18:51:34.227] [modloading-worker-0/INFO] [mixin/]: Mixing MinecraftMixin from flywheel.impl.mixins.json into net.minecraft.client.Minecraft
-[22Oct2025 18:51:34.228] [modloading-worker-0/INFO] [mixin/]: Mixing client.WindowResizeMixin from ponder-common.mixins.json into net.minecraft.client.Minecraft
-[22Oct2025 18:51:34.229] [modloading-worker-0/INFO] [mixin/]: Mixing client.MinecraftMixin from rbh.mixins.json into net.minecraft.client.Minecraft
-[22Oct2025 18:51:34.266] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.6, for MC 1.20.1 with MCP 20230612.114412
-[22Oct2025 18:51:34.267] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.6 Initialized
-[22Oct2025 18:51:34.272] [modloading-worker-0/INFO] [mixin/]: Mixing client.MultiPlayerGameModeMixin from rsrifle.mixins.json into net.minecraft.client.multiplayer.MultiPlayerGameMode
-[22Oct2025 18:51:34.273] [modloading-worker-0/INFO] [mixin/]: Mixing client.MultiPlayerGameModeMixin from rbh.mixins.json into net.minecraft.client.multiplayer.MultiPlayerGameMode
-[22Oct2025 18:51:34.279] [modloading-worker-0/INFO] [mixin/]: Mixing client.HeavyBootsOnPlayerMixin from create.mixins.json into net.minecraft.client.player.LocalPlayer
-[22Oct2025 18:51:34.286] [modloading-worker-0/INFO] [mixin/]: Mixing AbstractClientPlayerAccessor from flywheel.backend.mixins.json into net.minecraft.client.player.AbstractClientPlayer
-[22Oct2025 18:51:34.294] [modloading-worker-0/INFO] [mixin/]: Mixing OptionsMixin from flywheel.backend.mixins.json into net.minecraft.client.Options
-[22Oct2025 18:51:34.306] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.FontAccessor from create.mixins.json into net.minecraft.client.gui.Font
-[22Oct2025 18:51:34.311] [modloading-worker-0/INFO] [mixin/]: Mixing LevelRendererAccessor from flywheel.backend.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[22Oct2025 18:51:34.313] [modloading-worker-0/INFO] [mixin/]: Mixing fix.FixFabulousDepthMixin from flywheel.impl.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[22Oct2025 18:51:34.313] [modloading-worker-0/INFO] [mixin/]: Mixing visualmanage.LevelRendererMixin from flywheel.impl.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[22Oct2025 18:51:34.313] [modloading-worker-0/INFO] [mixin/]: Mixing client.LevelRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[22Oct2025 18:51:34.314] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.LevelRendererAccessor from create.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[22Oct2025 18:51:34.318] [modloading-worker-0/INFO] [mixin/]: Mixing client.LevelRendererMixin from create.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[22Oct2025 18:51:34.318] [modloading-worker-0/INFO] [mixin/]: Renaming synthetic method lambda$create$onDestroyBlockProgress$0(J)Ljava/util/SortedSet; to md3c7e6d$lambda$create$onDestroyBlockProgress$0$0 in create.mixins.json:client.LevelRendererMixin
-[22Oct2025 18:51:34.320] [modloading-worker-0/INFO] [mixin/]: Mixing LevelRendererMixin from flywheel.impl.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[22Oct2025 18:51:34.384] [modloading-worker-0/INFO] [mixin/]: Mixing client.GuiMixin from rsrifle.mixins.json into net.minecraft.client.gui.Gui
-[22Oct2025 18:51:34.385] [modloading-worker-0/INFO] [mixin/]: Mixing client.GuiMixin from rbh.mixins.json into net.minecraft.client.gui.Gui
-[22Oct2025 18:51:34.386] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.GuiAccessor from create.mixins.json into net.minecraft.client.gui.Gui
-[22Oct2025 18:51:34.407] [modloading-worker-0/INFO] [mixin/]: Mixing PoseStackAccessor from flywheel.impl.mixins.json into com.mojang.blaze3d.vertex.PoseStack
-[22Oct2025 18:51:34.409] [modloading-worker-0/INFO] [mixin/]: Mixing PoseStackMixin from flywheel.impl.mixins.json into com.mojang.blaze3d.vertex.PoseStack
-[22Oct2025 18:51:34.410] [modloading-worker-0/INFO] [mixin/]: Mixing fix.FixNormalScalingMixin from flywheel.impl.mixins.json into com.mojang.blaze3d.vertex.PoseStack
-[22Oct2025 18:51:34.418] [modloading-worker-0/INFO] [mixin/]: Mixing client.CameraMixin from create.mixins.json into net.minecraft.client.Camera
-[22Oct2025 18:51:34.419] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
-[22Oct2025 18:51:34.435] [modloading-worker-0/INFO] [mixin/]: Mixing client.ShaderInstanceMixin from rbh.mixins.json into net.minecraft.client.renderer.ShaderInstance
-[22Oct2025 18:51:34.473] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.BlockLootSubProviderAccessor from create.mixins.json into net.minecraft.data.loot.BlockLootSubProvider
-[22Oct2025 18:51:34.473] [modloading-worker-0/INFO] [mixin/]: Renaming @Accessor method create$HAS_SILK_TOUCH()Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder; to create$HAS_SILK_TOUCH_$md$3c7e6d$0 in create.mixins.json:accessor.BlockLootSubProviderAccessor
-[22Oct2025 18:51:34.501] [modloading-worker-0/INFO] [mixin/]: Mixing client.accessor.RenderTypeAccessor from ponder-common.mixins.json into net.minecraft.client.renderer.RenderType
-[22Oct2025 18:51:34.502] [modloading-worker-0/INFO] [mixin/]: Renaming @Invoker method catnip$create(Ljava/lang/String;Lcom/mojang/blaze3d/vertex/VertexFormat;Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;IZZLnet/minecraft/client/renderer/RenderType$CompositeState;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType; to catnip$create_$md$3c7e6d$0 in ponder-common.mixins.json:client.accessor.RenderTypeAccessor
-[22Oct2025 18:51:34.511] [modloading-worker-0/INFO] [mixin/]: Mixing client.GameRendererMixin from rsrifle.mixins.json into net.minecraft.client.renderer.GameRenderer
-[22Oct2025 18:51:34.515] [modloading-worker-0/INFO] [mixin/]: Mixing client.accessor.GameRendererAccessor from ponder-common.mixins.json into net.minecraft.client.renderer.GameRenderer
-[22Oct2025 18:51:34.517] [modloading-worker-0/INFO] [mixin/]: Mixing client.GameRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.GameRenderer
-[22Oct2025 18:51:34.518] [modloading-worker-0/INFO] [mixin/]: Mixing client.GameRendererMixin from create.mixins.json into net.minecraft.client.renderer.GameRenderer
-[22Oct2025 18:51:34.520] [modloading-worker-0/WARN] [mixin/]: Method overwrite conflict for getFovPublic in rbh.mixins.json:client.GameRendererMixin, previously written by com.mod.rsrifle.mixin.client.GameRendererMixin. Skipping method.
-[22Oct2025 18:51:35.093] [modloading-worker-0/INFO] [mixin/]: Mixing client.accessor.ParticleEngineAccessor from ponder.mixins.json into net.minecraft.client.particle.ParticleEngine
-[22Oct2025 18:51:35.189] [modloading-worker-0/INFO] [mixin/]: Mixing client.PlayerRendererMixin from rsrifle.mixins.json into net.minecraft.client.renderer.entity.player.PlayerRenderer
-[22Oct2025 18:51:35.191] [modloading-worker-0/INFO] [mixin/]: Mixing client.PlayerRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.entity.player.PlayerRenderer
-[22Oct2025 18:51:35.191] [modloading-worker-0/INFO] [mixin/]: Mixing client.PlayerRendererMixin from create.mixins.json into net.minecraft.client.renderer.entity.player.PlayerRenderer
-[22Oct2025 18:51:35.692] [main/INFO] [mixin/]: Mixing client.HumanoidModelMixin from create.mixins.json into net.minecraft.client.model.HumanoidModel
-[22Oct2025 18:51:35.698] [main/INFO] [mixin/]: Mixing accessor.AgeableListModelAccessor from create.mixins.json into net.minecraft.client.model.AgeableListModel
-[22Oct2025 18:51:35.708] [main/INFO] [mixin/]: Mixing accessor.ItemModelGeneratorsAccessor from create.mixins.json into net.minecraft.data.models.ItemModelGenerators
-[22Oct2025 18:51:35.708] [main/INFO] [mixin/]: Renaming @Accessor method create$getGENERATED_TRIM_MODELS()Ljava/util/List; to create$getGENERATED_TRIM_MODELS_$md$3c7e6d$0 in create.mixins.json:accessor.ItemModelGeneratorsAccessor
-[22Oct2025 18:51:35.851] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/tomas/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1/forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/assets/.mcassetsroot' uses unexpected schema
-[22Oct2025 18:51:35.852] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/tomas/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1/forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/data/.mcassetsroot' uses unexpected schema
-[22Oct2025 18:51:35.852] [Worker-Main-1/INFO] [mixin/]: Mixing MapItemSavedDataMixin from create.mixins.json into net.minecraft.world.level.saveddata.maps.MapItemSavedData
-[22Oct2025 18:51:35.982] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[22Oct2025 18:51:36.004] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 21 ms
-[22Oct2025 18:51:36.004] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: rsrifle
-[22Oct2025 18:51:36.005] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: rsrifle finished after 0 ms
-[22Oct2025 18:51:36.005] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: rsrifle
-[22Oct2025 18:51:36.009] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: rsrifle finished after 3 ms
-[22Oct2025 18:51:36.009] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id rsrifle
-[22Oct2025 18:51:36.051] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id rsrifle finished after 42 ms
-[22Oct2025 18:51:36.051] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id rsrifle
-[22Oct2025 18:51:36.052] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id rsrifle finished after 0 ms
-[22Oct2025 18:51:36.052] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : rsrifle
-[22Oct2025 18:51:36.054] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : rsrifle finished after 1 ms
-[22Oct2025 18:51:36.054] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:point_of_interest_type mod id rsrifle
-[22Oct2025 18:51:36.060] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:point_of_interest_type mod id rsrifle finished after 6 ms
-[22Oct2025 18:51:36.060] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 77 ms
-[22Oct2025 18:51:36.063] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 10, old count: 0, new count: 11, removed stale: 0, written: 10
+[08Dec2025 21:08:28.996] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, /home/tomas/.gradle/caches/forge_gradle/assets, --gameDir, ., --fml.forgeVersion, 47.4.6, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, rsrifle, --all, --output, /home/tomas/IdeaProjects/ReinforcedSingularityRifle/src/generated/resources, --existing, /home/tomas/IdeaProjects/ReinforcedSingularityRifle/src/main/resources, --mixin.config, rsrifle.mixins.json]
+[08Dec2025 21:08:28.999] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.15 by Eclipse Adoptium; OS Linux arch amd64 version 6.17.9-300.fc43.x86_64
+[08Dec2025 21:08:29.061] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[08Dec2025 21:08:29.090] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/tomas/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23116!/ Service=ModLauncher Env=CLIENT
+[08Dec2025 21:08:29.264] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.4.6/9e86bf67e222253576e982856d9958695725adb5/javafmllanguage-1.20.1-47.4.6.jar is missing mods.toml file
+[08Dec2025 21:08:29.265] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.4.6/56100545804adc991cc48ab68b86ba46c5873246/lowcodelanguage-1.20.1-47.4.6.jar is missing mods.toml file
+[08Dec2025 21:08:29.266] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.4.6/fd228d7d879a9da774eda022ea3092cedb5178f1/mclanguage-1.20.1-47.4.6.jar is missing mods.toml file
+[08Dec2025 21:08:29.267] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/tomas/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.4.6/cefc55ada370ce2f23f92834530eb967c0de1fdd/fmlcore-1.20.1-47.4.6.jar is missing mods.toml file
+[08Dec2025 21:08:29.427] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: mixinextras-forge-0.5.0.jar. Using Mod File: /home/tomas/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-forge/0.5.0/cebe4d98a42a4a32ebf0ddec7b93d5bdbdad009/mixinextras-forge-0.5.0.jar
+[08Dec2025 21:08:29.427] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 5 dependencies adding them to mods collection
+[08Dec2025 21:08:30.148] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by rsrifle.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[08Dec2025 21:08:30.148] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[08Dec2025 21:08:30.162] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, /home/tomas/.gradle/caches/forge_gradle/assets, --assetIndex, 5, --mod, rsrifle, --all, --output, /home/tomas/IdeaProjects/ReinforcedSingularityRifle/src/generated/resources, --existing, /home/tomas/IdeaProjects/ReinforcedSingularityRifle/src/main/resources]
+[08Dec2025 21:08:30.179] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
+[08Dec2025 21:08:30.180] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
+[08Dec2025 21:08:30.187] [main/INFO] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[08Dec2025 21:08:30.187] [main/INFO] [mixin/]: Selecting config rsrifle.mixins.json
+[08Dec2025 21:08:30.189] [main/WARN] [mixin/]: Reference map 'rsrifle.refmap.json' for rsrifle.mixins.json could not be read. If this is a development environment you can ignore this message
+[08Dec2025 21:08:30.190] [main/INFO] [mixin/]: Selecting config flywheel.backend.mixins.json
+[08Dec2025 21:08:30.331] [main/INFO] [mixin/]: Remapping refMap backend-flywheel.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
+[08Dec2025 21:08:30.332] [main/INFO] [mixin/]: Selecting config flywheel.impl.mixins.json
+[08Dec2025 21:08:30.332] [main/INFO] [mixin/]: Remapping refMap flywheel.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
+[08Dec2025 21:08:30.333] [main/INFO] [mixin/]: Selecting config rbh.mixins.json
+[08Dec2025 21:08:30.333] [main/INFO] [mixin/]: Remapping refMap rbh.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
+[08Dec2025 21:08:30.333] [main/INFO] [mixin/]: Selecting config geckolib.mixins.json
+[08Dec2025 21:08:30.334] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
+[08Dec2025 21:08:30.334] [main/INFO] [mixin/]: Selecting config ponder.mixins.json
+[08Dec2025 21:08:30.334] [main/INFO] [mixin/]: Remapping refMap ponder.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
+[08Dec2025 21:08:30.334] [main/INFO] [mixin/]: Selecting config ponder-common.mixins.json
+[08Dec2025 21:08:30.335] [main/INFO] [mixin/]: Remapping refMap ponder.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
+[08Dec2025 21:08:30.335] [main/INFO] [mixin/]: Selecting config create.mixins.json
+[08Dec2025 21:08:30.339] [main/INFO] [mixin/]: Remapping refMap create.refmap.json using /home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/createSrgToMcp/output.srg
+[08Dec2025 21:08:30.340] [main/INFO] [mixin/]: Selecting config mixinextras.init.mixins.json
+[08Dec2025 21:08:30.396] [main/INFO] [mixin/]: Preparing rsrifle.mixins.json (5)
+[08Dec2025 21:08:30.448] [main/INFO] [mixin/]: Preparing flywheel.backend.mixins.json (8)
+[08Dec2025 21:08:30.484] [main/INFO] [mixin/]: Preparing flywheel.impl.mixins.json (15)
+[08Dec2025 21:08:30.593] [main/INFO] [mixin/]: Preparing rbh.mixins.json (7)
+[08Dec2025 21:08:30.604] [main/INFO] [mixin/]: Preparing geckolib.mixins.json (1)
+[08Dec2025 21:08:30.606] [main/INFO] [mixin/]: Preparing ponder.mixins.json (1)
+[08Dec2025 21:08:30.609] [main/INFO] [mixin/]: Preparing ponder-common.mixins.json (6)
+[08Dec2025 21:08:30.632] [main/INFO] [mixin/]: Preparing mixinextras.init.mixins.json (0)
+[08Dec2025 21:08:30.632] [main/INFO] [mixin/]: Preparing create.mixins.json (53)
+[08Dec2025 21:08:30.729] [main/WARN] [mixin/]: Error loading class: journeymap/client/ui/fullscreen/Fullscreen (java.lang.ClassNotFoundException: journeymap.client.ui.fullscreen.Fullscreen)
+[08Dec2025 21:08:30.729] [main/WARN] [mixin/]: @Mixin target journeymap.client.ui.fullscreen.Fullscreen was not found create.mixins.json:compat.JourneyFullscreenMapMixin
+[08Dec2025 21:08:30.750] [main/INFO] [mixin/]: Prepared 95 mixins in 0.563 sec (5.9ms avg) (0ms load, 0ms transform, 0ms plugin)
+[08Dec2025 21:08:30.875] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [rsrifle]
+[08Dec2025 21:08:30.878] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
+[08Dec2025 21:08:30.886] [main/INFO] [mixin/]: Mixing BuiltInRegistriesMixin from create.mixins.json into net.minecraft.core.registries.BuiltInRegistries
+[08Dec2025 21:08:30.888] [main/INFO] [mixin/]: Renaming synthetic method lambda$create$ourRegistriesAreNotEmpty$0(Ljava/util/function/Consumer;Lnet/minecraft/core/Registry;)V to md9d65b5$lambda$create$ourRegistriesAreNotEmpty$0$0 in create.mixins.json:BuiltInRegistriesMixin
+[08Dec2025 21:08:30.895] [main/INFO] [mixin/]: Mixing accessor.BuiltInRegistriesAccessor from create.mixins.json into net.minecraft.core.registries.BuiltInRegistries
+[08Dec2025 21:08:30.900] [main/INFO] [mixin/]: Renaming @Accessor method create$getWRITABLE_REGISTRY()Lnet/minecraft/core/WritableRegistry; to create$getWRITABLE_REGISTRY_$md$9d65b5$1 in create.mixins.json:accessor.BuiltInRegistriesAccessor
+[08Dec2025 21:08:31.002] [main/INFO] [mixin/]: Mixing BlockMixin from create.mixins.json into net.minecraft.world.level.block.Block
+[08Dec2025 21:08:31.023] [main/INFO] [mixin/]: Mixing accessor.StateHolderAccessor from create.mixins.json into net.minecraft.world.level.block.state.StateHolder
+[08Dec2025 21:08:31.048] [main/INFO] [mixin/]: Mixing accessor.EntityAccessor from ponder-common.mixins.json into net.minecraft.world.entity.Entity
+[08Dec2025 21:08:31.051] [main/INFO] [mixin/]: Mixing client.EntityContraptionInteractionMixin from create.mixins.json into net.minecraft.world.entity.Entity
+[08Dec2025 21:08:31.052] [main/INFO] [mixin/]: Renaming synthetic method lambda$create$onSpawnSprintParticle$4(Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;Lcom/simibubi/create/content/contraptions/Contraption;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V to md9d65b5$lambda$create$onSpawnSprintParticle$4$0 in create.mixins.json:client.EntityContraptionInteractionMixin
+[08Dec2025 21:08:31.052] [main/INFO] [mixin/]: Renaming synthetic method lambda$create$onMove$3(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/Entity;Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)Z to md9d65b5$lambda$create$onMove$3$1 in create.mixins.json:client.EntityContraptionInteractionMixin
+[08Dec2025 21:08:31.052] [main/INFO] [mixin/]: Renaming synthetic method lambda$create$contraptionStepSounds$2(Lorg/apache/commons/lang3/mutable/MutableBoolean;Lcom/simibubi/create/content/contraptions/Contraption;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V to md9d65b5$lambda$create$contraptionStepSounds$2$2 in create.mixins.json:client.EntityContraptionInteractionMixin
+[08Dec2025 21:08:31.052] [main/INFO] [mixin/]: Renaming synthetic method lambda$create$forCollision$1(Lnet/minecraft/world/phys/Vec3;Lorg/apache/logging/log4j/util/TriConsumer;Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)V to md9d65b5$lambda$create$forCollision$1$3 in create.mixins.json:client.EntityContraptionInteractionMixin
+[08Dec2025 21:08:31.053] [main/INFO] [mixin/]: Renaming synthetic method lambda$create$getIntersectionContraptionsStream$0(Lcom/simibubi/create/content/contraptions/AbstractContraptionEntity;)Z to md9d65b5$lambda$create$getIntersectionContraptionsStream$0$4 in create.mixins.json:client.EntityContraptionInteractionMixin
+[08Dec2025 21:08:31.082] [main/INFO] [mixin/]: Mixing EntityMixin from create.mixins.json into net.minecraft.world.entity.Entity
+[08Dec2025 21:08:31.166] [main/INFO] [mixin/]: Mixing CustomItemUseEffectsMixin from create.mixins.json into net.minecraft.world.entity.LivingEntity
+[08Dec2025 21:08:31.182] [main/INFO] [mixin/]: Mixing LavaSwimmingMixin from create.mixins.json into net.minecraft.world.entity.LivingEntity
+[08Dec2025 21:08:31.189] [main/INFO] [mixin/]: Mixing accessor.LivingEntityAccessor from create.mixins.json into net.minecraft.world.entity.LivingEntity
+[08Dec2025 21:08:31.267] [main/INFO] [mixin/]: Mixing LevelMixin from flywheel.impl.mixins.json into net.minecraft.world.level.Level
+[08Dec2025 21:08:31.284] [main/INFO] [mixin/]: Mixing accessor.ServerLevelAccessor from create.mixins.json into net.minecraft.server.level.ServerLevel
+[08Dec2025 21:08:31.313] [main/INFO] [mixin/]: Mixing PlayerMixin from create.mixins.json into net.minecraft.world.entity.player.Player
+[08Dec2025 21:08:31.398] [main/INFO] [mixin/]: Mixing EntityTypeMixin from flywheel.impl.mixins.json into net.minecraft.world.entity.EntityType
+[08Dec2025 21:08:31.413] [main/INFO] [mixin/]: Mixing BlockEntityTypeMixin from flywheel.impl.mixins.json into net.minecraft.world.level.block.entity.BlockEntityType
+[08Dec2025 21:08:31.569] [main/INFO] [mixin/]: Mixing accessor.DispenserBlockAccessor from create.mixins.json into net.minecraft.world.level.block.DispenserBlock
+[08Dec2025 21:08:31.591] [main/INFO] [mixin/]: Mixing accessor.CropBlockAccessor from create.mixins.json into net.minecraft.world.level.block.CropBlock
+[08Dec2025 21:08:31.635] [main/INFO] [mixin/]: Mixing ShulkerBoxBlockMixin from create.mixins.json into net.minecraft.world.level.block.ShulkerBoxBlock
+[08Dec2025 21:08:31.643] [main/INFO] [mixin/]: Mixing accessor.ConcretePowderBlockAccessor from create.mixins.json into net.minecraft.world.level.block.ConcretePowderBlock
+[08Dec2025 21:08:31.663] [main/INFO] [mixin/]: Mixing BeehiveBlockMixin from create.mixins.json into net.minecraft.world.level.block.BeehiveBlock
+[08Dec2025 21:08:31.699] [main/INFO] [mixin/]: Mixing WaterWheelFluidSpreadMixin from create.mixins.json into net.minecraft.world.level.material.FlowingFluid
+[08Dec2025 21:08:31.707] [main/INFO] [mixin/]: Mixing accessor.FlowingFluidAccessor from create.mixins.json into net.minecraft.world.level.material.FlowingFluid
+[08Dec2025 21:08:31.756] [main/INFO] [mixin/]: Mixing visualmanage.BlockEntityMixin from flywheel.impl.mixins.json into net.minecraft.world.level.block.entity.BlockEntity
+[08Dec2025 21:08:31.762] [main/INFO] [mixin/]: Mixing accessor.FallingBlockEntityAccessor from create.mixins.json into net.minecraft.world.entity.item.FallingBlockEntity
+[08Dec2025 21:08:31.762] [main/INFO] [mixin/]: Renaming @Invoker method create$callInit(Lnet/minecraft/world/level/Level;DDDLnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/entity/item/FallingBlockEntity; to create$callInit_$md$9d65b5$0 in create.mixins.json:accessor.FallingBlockEntityAccessor
+[08Dec2025 21:08:32.128] [main/INFO] [mixin/]: Mixing SmithingMenuMixin from create.mixins.json into net.minecraft.world.inventory.SmithingMenu
+[08Dec2025 21:08:32.129] [main/INFO] [mixin/]: Renaming synthetic method lambda$create$preventUnbreakingOnBacktanks$0(Lnet/minecraft/world/item/ItemStack;Ljava/util/Map;Lnet/minecraft/world/item/enchantment/Enchantment;Ljava/lang/Integer;)V to md9d65b5$lambda$create$preventUnbreakingOnBacktanks$0$0 in create.mixins.json:SmithingMenuMixin
+[08Dec2025 21:08:32.234] [main/INFO] [mixin/]: Mixing BlockItemMixin from create.mixins.json into net.minecraft.world.item.BlockItem
+[08Dec2025 21:08:32.259] [main/INFO] [mixin/]: Mixing accessor.SuspiciousStewItemAccessor from create.mixins.json into net.minecraft.world.item.SuspiciousStewItem
+[08Dec2025 21:08:32.260] [main/INFO] [mixin/]: Renaming @Invoker method create$listPotionEffects(Lnet/minecraft/world/item/ItemStack;Ljava/util/function/Consumer;)V to create$listPotionEffects_$md$9d65b5$0 in create.mixins.json:accessor.SuspiciousStewItemAccessor
+[08Dec2025 21:08:32.624] [main/INFO] [mixin/]: Mixing accessor.UseOnContextAccessor from create.mixins.json into net.minecraft.world.item.context.UseOnContext
+[08Dec2025 21:08:32.706] [main/INFO] [mixin/]: Mixing visualmanage.LevelChunkMixin from flywheel.impl.mixins.json into net.minecraft.world.level.chunk.LevelChunk
+[08Dec2025 21:08:32.747] [main/INFO] [mixin/]: Mixing accessor.MobEffectInstanceAccessor from create.mixins.json into net.minecraft.world.effect.MobEffectInstance
+[08Dec2025 21:08:32.776] [main/INFO] [mixin/]: Mixing accessor.AbstractProjectileDispenseBehaviorAccessor from create.mixins.json into net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior
+[08Dec2025 21:08:32.873] [main/INFO] [mixin/]: Mixing LootingEnchantFunctionMixin from create.mixins.json into net.minecraft.world.level.storage.loot.functions.LootingEnchantFunction
+[08Dec2025 21:08:33.261] [modloading-worker-0/INFO] [com.simibubi.create.Create/]: Create 6.0.6 initializing! Commit hash: 338bfa0aec952fa51656e8f61bd621ca9b3b2e00
+[08Dec2025 21:08:33.267] [modloading-worker-0/INFO] [mixin/]: Mixing client.MinecraftMixin from rsrifle.mixins.json into net.minecraft.client.Minecraft
+[08Dec2025 21:08:33.270] [modloading-worker-0/INFO] [mixin/]: Mixing MinecraftMixin from flywheel.impl.mixins.json into net.minecraft.client.Minecraft
+[08Dec2025 21:08:33.272] [modloading-worker-0/INFO] [mixin/]: Mixing client.WindowResizeMixin from ponder-common.mixins.json into net.minecraft.client.Minecraft
+[08Dec2025 21:08:33.299] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.6, for MC 1.20.1 with MCP 20230612.114412
+[08Dec2025 21:08:33.299] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.6 Initialized
+[08Dec2025 21:08:33.311] [modloading-worker-0/INFO] [mixin/]: Mixing client.MultiPlayerGameModeMixin from rsrifle.mixins.json into net.minecraft.client.multiplayer.MultiPlayerGameMode
+[08Dec2025 21:08:33.314] [modloading-worker-0/INFO] [mixin/]: Mixing client.ShaderInstanceMixin from rbh.mixins.json into net.minecraft.client.renderer.ShaderInstance
+[08Dec2025 21:08:33.321] [modloading-worker-0/INFO] [mixin/]: Mixing client.HeavyBootsOnPlayerMixin from create.mixins.json into net.minecraft.client.player.LocalPlayer
+[08Dec2025 21:08:33.333] [modloading-worker-0/INFO] [mixin/]: Mixing AbstractClientPlayerAccessor from flywheel.backend.mixins.json into net.minecraft.client.player.AbstractClientPlayer
+[08Dec2025 21:08:33.346] [modloading-worker-0/INFO] [mixin/]: Mixing OptionsMixin from flywheel.backend.mixins.json into net.minecraft.client.Options
+[08Dec2025 21:08:33.365] [modloading-worker-0/INFO] [mixin/]: Mixing LevelRendererAccessor from flywheel.backend.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[08Dec2025 21:08:33.368] [modloading-worker-0/INFO] [mixin/]: Mixing fix.FixFabulousDepthMixin from flywheel.impl.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[08Dec2025 21:08:33.368] [modloading-worker-0/INFO] [mixin/]: Mixing visualmanage.LevelRendererMixin from flywheel.impl.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[08Dec2025 21:08:33.368] [modloading-worker-0/INFO] [mixin/]: Mixing client.LevelRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[08Dec2025 21:08:33.369] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.LevelRendererAccessor from create.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[08Dec2025 21:08:33.376] [modloading-worker-0/INFO] [mixin/]: Mixing client.LevelRendererMixin from create.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[08Dec2025 21:08:33.376] [modloading-worker-0/INFO] [mixin/]: Renaming synthetic method lambda$create$onDestroyBlockProgress$0(J)Ljava/util/SortedSet; to md9d65b5$lambda$create$onDestroyBlockProgress$0$0 in create.mixins.json:client.LevelRendererMixin
+[08Dec2025 21:08:33.379] [modloading-worker-0/INFO] [mixin/]: Mixing LevelRendererMixin from flywheel.impl.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[08Dec2025 21:08:33.448] [modloading-worker-0/INFO] [mixin/]: Mixing client.GuiMixin from rsrifle.mixins.json into net.minecraft.client.gui.Gui
+[08Dec2025 21:08:33.449] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.GuiAccessor from create.mixins.json into net.minecraft.client.gui.Gui
+[08Dec2025 21:08:33.462] [modloading-worker-0/INFO] [mixin/]: Mixing PoseStackAccessor from flywheel.impl.mixins.json into com.mojang.blaze3d.vertex.PoseStack
+[08Dec2025 21:08:33.464] [modloading-worker-0/INFO] [mixin/]: Mixing PoseStackMixin from flywheel.impl.mixins.json into com.mojang.blaze3d.vertex.PoseStack
+[08Dec2025 21:08:33.465] [modloading-worker-0/INFO] [mixin/]: Mixing fix.FixNormalScalingMixin from flywheel.impl.mixins.json into com.mojang.blaze3d.vertex.PoseStack
+[08Dec2025 21:08:33.473] [modloading-worker-0/INFO] [mixin/]: Mixing client.CameraMixin from create.mixins.json into net.minecraft.client.Camera
+[08Dec2025 21:08:33.473] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
+[08Dec2025 21:08:33.480] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.FontAccessor from create.mixins.json into net.minecraft.client.gui.Font
+[08Dec2025 21:08:33.503] [modloading-worker-0/INFO] [mixin/]: Mixing client.GameRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.GameRenderer
+[08Dec2025 21:08:33.507] [modloading-worker-0/INFO] [mixin/]: Mixing client.accessor.GameRendererAccessor from ponder-common.mixins.json into net.minecraft.client.renderer.GameRenderer
+[08Dec2025 21:08:33.509] [modloading-worker-0/INFO] [mixin/]: Mixing client.GameRendererMixin from create.mixins.json into net.minecraft.client.renderer.GameRenderer
+[08Dec2025 21:08:33.540] [modloading-worker-0/INFO] [mixin/]: Mixing accessor.BlockLootSubProviderAccessor from create.mixins.json into net.minecraft.data.loot.BlockLootSubProvider
+[08Dec2025 21:08:33.541] [modloading-worker-0/INFO] [mixin/]: Renaming @Accessor method create$HAS_SILK_TOUCH()Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder; to create$HAS_SILK_TOUCH_$md$9d65b5$0 in create.mixins.json:accessor.BlockLootSubProviderAccessor
+[08Dec2025 21:08:33.573] [modloading-worker-0/INFO] [mixin/]: Mixing client.accessor.RenderTypeAccessor from ponder-common.mixins.json into net.minecraft.client.renderer.RenderType
+[08Dec2025 21:08:33.574] [modloading-worker-0/INFO] [mixin/]: Renaming @Invoker method catnip$create(Ljava/lang/String;Lcom/mojang/blaze3d/vertex/VertexFormat;Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;IZZLnet/minecraft/client/renderer/RenderType$CompositeState;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType; to catnip$create_$md$9d65b5$0 in ponder-common.mixins.json:client.accessor.RenderTypeAccessor
+[08Dec2025 21:08:34.148] [modloading-worker-0/INFO] [mixin/]: Mixing client.accessor.ParticleEngineAccessor from ponder.mixins.json into net.minecraft.client.particle.ParticleEngine
+[08Dec2025 21:08:34.254] [modloading-worker-0/INFO] [mixin/]: Mixing client.PlayerRendererMixin from rsrifle.mixins.json into net.minecraft.client.renderer.entity.player.PlayerRenderer
+[08Dec2025 21:08:34.256] [modloading-worker-0/INFO] [mixin/]: Mixing client.PlayerRendererMixin from create.mixins.json into net.minecraft.client.renderer.entity.player.PlayerRenderer
+[08Dec2025 21:08:34.729] [main/INFO] [mixin/]: Mixing client.HumanoidModelMixin from create.mixins.json into net.minecraft.client.model.HumanoidModel
+[08Dec2025 21:08:34.734] [main/INFO] [mixin/]: Mixing accessor.AgeableListModelAccessor from create.mixins.json into net.minecraft.client.model.AgeableListModel
+[08Dec2025 21:08:34.744] [main/INFO] [mixin/]: Mixing accessor.ItemModelGeneratorsAccessor from create.mixins.json into net.minecraft.data.models.ItemModelGenerators
+[08Dec2025 21:08:34.744] [main/INFO] [mixin/]: Renaming @Accessor method create$getGENERATED_TRIM_MODELS()Ljava/util/List; to create$getGENERATED_TRIM_MODELS_$md$9d65b5$0 in create.mixins.json:accessor.ItemModelGeneratorsAccessor
+[08Dec2025 21:08:34.929] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/tomas/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1/forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/assets/.mcassetsroot' uses unexpected schema
+[08Dec2025 21:08:34.929] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/tomas/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1/forge-1.20.1-47.4.6_mapped_parchment_2023.08.06-1.20.1-recomp.jar%23181!/data/.mcassetsroot' uses unexpected schema
+[08Dec2025 21:08:34.936] [Worker-Main-1/INFO] [mixin/]: Mixing MapItemSavedDataMixin from create.mixins.json into net.minecraft.world.level.saveddata.maps.MapItemSavedData
+[08Dec2025 21:08:35.122] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[08Dec2025 21:08:35.135] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 11 ms
+[08Dec2025 21:08:35.135] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: rsrifle
+[08Dec2025 21:08:35.135] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: rsrifle finished after 0 ms
+[08Dec2025 21:08:35.135] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: rsrifle
+[08Dec2025 21:08:35.139] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: rsrifle finished after 4 ms
+[08Dec2025 21:08:35.139] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id rsrifle
+[08Dec2025 21:08:35.157] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id rsrifle finished after 17 ms
+[08Dec2025 21:08:35.157] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id rsrifle
+[08Dec2025 21:08:35.157] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id rsrifle finished after 0 ms
+[08Dec2025 21:08:35.157] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : rsrifle
+[08Dec2025 21:08:35.159] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : rsrifle finished after 1 ms
+[08Dec2025 21:08:35.159] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:point_of_interest_type mod id rsrifle
+[08Dec2025 21:08:35.167] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:point_of_interest_type mod id rsrifle finished after 7 ms
+[08Dec2025 21:08:35.167] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 44 ms
+[08Dec2025 21:08:35.170] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 10, old count: 0, new count: 11, removed stale: 0, written: 10

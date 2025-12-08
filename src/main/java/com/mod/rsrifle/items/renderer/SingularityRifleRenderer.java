@@ -1,5 +1,6 @@
 package com.mod.rsrifle.items.renderer;
 
+import com.mod.rbh.api.IGameRenderer;
 import com.mod.rbh.compat.ShaderCompat;
 import com.mod.rbh.entity.renderer.BlackHoleRenderer;
 import com.mod.rbh.shaders.PostEffectRegistry;
@@ -341,7 +342,7 @@ public class SingularityRifleRenderer extends GeoItemRenderer<SingularityRifle> 
                     .rotate(new Quaternionf(cam.rotation()).conjugate());
 
             // projection compensation for position (you already had this)
-            Matrix4f levelProj = mc.gameRenderer.getProjectionMatrix(com.mod.rsrifle.api.IGameRenderer.get().getFovPublic());
+            Matrix4f levelProj = mc.gameRenderer.getProjectionMatrix(IGameRenderer.get().getFovPublic());
             float m00h = handProj.m00(), m11h = handProj.m11();
             float m00l = levelProj.m00(), m11l = levelProj.m11();
             if (Float.isFinite(m00h) && Float.isFinite(m00l) && m00l != 0f) relNow.x *= (m00h / m00l);
