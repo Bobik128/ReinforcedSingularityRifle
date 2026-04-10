@@ -19,9 +19,13 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MoverType;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.npc.InventoryCarrier;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
@@ -31,7 +35,10 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 import org.slf4j.Logger;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
     private static final EntityDataAccessor<Float> SIZE =
@@ -52,6 +59,8 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
             SynchedEntityData.defineId(BlackHoleProjectile2.class, EntityDataSerializers.INT);
 
     public static final int RENDER_DISTANCE = 120;
+    public static final float DAMAGE_SIZE_MULTIPLIER = (float) (10_000/SingularityRifle.MAX_SIZE);
+    protected static final float MAX_ITEM_REMOVE_PERCENT = 0.6f;
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public int life = 0;
@@ -172,14 +181,99 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
     }
 
     /**
-     * Called when the arrow hits an entity
+     * Called when the Hole hits an entity
      */
     protected void onHitEntity(EntityHitResult pResult) {
         super.onHitEntity(pResult);
         Entity entity = pResult.getEntity();
-        entity.hurt(RegisterDamageTypes.causeHoleHitDamage(this), 10000.0f);
+        if (entity instanceof Player plr) {
+            removeItemsFromInvDepOnSize(plr, (float) (this.getSize() / SingularityRifle.MAX_SIZE) * MAX_ITEM_REMOVE_PERCENT);
+        }
+        entity.hurt(RegisterDamageTypes.causeHoleHitDamage(this), this.getEffectSize() * DAMAGE_SIZE_MULTIPLIER);
         if (!this.level().isClientSide) {
             this.explode();
+        }
+    }
+
+    private void removeItemsFromInvDepOnSize(Player player, float fraction) {
+        if (player.level().isClientSide) return; // server only
+
+        class SlotRef {
+            List<ItemStack> list;
+            int index;
+
+            SlotRef(List<ItemStack> list, int index) {
+                this.list = list;
+                this.index = index;
+            }
+
+            ItemStack get() {
+                return list.get(index);
+            }
+
+            void set(ItemStack stack) {
+                list.set(index, stack);
+            }
+        }
+
+        List<SlotRef> allSlots = new ArrayList<>();
+        var inv = player.getInventory();
+
+        // collect all non-empty slots
+        for (int i = 0; i < inv.items.size(); i++)
+            if (!inv.items.get(i).isEmpty())
+                allSlots.add(new SlotRef(inv.items, i));
+
+        for (int i = 0; i < inv.armor.size(); i++)
+            if (!inv.armor.get(i).isEmpty())
+                allSlots.add(new SlotRef(inv.armor, i));
+
+        for (int i = 0; i < inv.offhand.size(); i++)
+            if (!inv.offhand.get(i).isEmpty())
+                allSlots.add(new SlotRef(inv.offhand, i));
+
+        if (allSlots.isEmpty()) return;
+
+        // shuffle and pick fraction
+        Collections.shuffle(allSlots);
+        int count = Math.round(allSlots.size() * fraction);
+
+        var level = player.level();
+        var rand = player.getRandom();
+
+        for (int i = 0; i < count; i++) {
+            SlotRef ref = allSlots.get(i);
+            ItemStack stack = ref.get();
+
+            if (stack.isEmpty()) continue;
+
+            if (rand.nextBoolean()) {
+                // DROP with random motion
+                ItemStack dropStack = stack.copy();
+
+                ItemEntity itemEntity = new ItemEntity(
+                        level,
+                        player.getX(),
+                        player.getY() + 1.0,
+                        player.getZ(),
+                        dropStack
+                );
+
+                // random direction
+                double vx = (rand.nextDouble() - 0.5) * 0.8; // left/right
+                double vy = rand.nextDouble() * 0.6 + 0.2;   // upward bias
+                double vz = (rand.nextDouble() - 0.5) * 0.8; // forward/back
+
+                itemEntity.setDeltaMovement(vx, vy, vz);
+
+                // optional: slight pickup delay so player can't instantly regrab
+                itemEntity.setPickUpDelay(20);
+
+                level.addFreshEntity(itemEntity);
+            }
+
+            // remove stack (destroy if not dropped)
+            ref.set(ItemStack.EMPTY);
         }
     }
 
