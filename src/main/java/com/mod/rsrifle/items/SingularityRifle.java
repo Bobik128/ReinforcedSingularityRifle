@@ -24,15 +24,15 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoItem;
 import software.bernie.geckolib.animatable.SingletonGeoAnimatable;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.object.PlayState;
+import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animation.AnimationController;
+import software.bernie.geckolib.animation.PlayState;
+import software.bernie.geckolib.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import javax.annotation.Nullable;
@@ -78,55 +78,42 @@ public class SingularityRifle extends Item implements GeoItem, FovModifyingItem,
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
     }
 
-    public void initializeClient(Consumer<IClientItemExtensions> consumer) {
-        consumer.accept(new IClientItemExtensions() {
-            private SingularityRifleRenderer renderer;
-
-            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
-                if (this.renderer == null) {
-                    this.renderer = new SingularityRifleRenderer();
-                }
-
-                return this.renderer;
-            }
-        });
-    }
     @Override
-    public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         int bat1Eng = FirearmDataUtils.getBattery1Energy(stack);
         int bat2Eng = FirearmDataUtils.getBattery2Energy(stack);
         int chargeLevel = FirearmDataUtils.getChargeLevel(stack);
 
-        tooltip.add(Component.translatable("rifle.charge_level")
+        tooltipComponents.add(Component.translatable("rifle.charge_level")
                 .append(": ").withStyle(ChatFormatting.BLUE)
                 .append(Component.literal(chargeLevel + "/" + MAX_CHARGE_LEVEL).withStyle(ChatFormatting.WHITE)));
 
-        tooltip.add(Component.translatable("rifle.bat1_charge")
+        tooltipComponents.add(Component.translatable("rifle.bat1_charge")
                 .append(": ").withStyle(ChatFormatting.GRAY)
                 .append(Component.literal(bat1Eng + "/" + SingularityBattery.MAX_ENERGY).withStyle(ChatFormatting.WHITE)));
 
-        tooltip.add(Component.translatable("rifle.bat2_charge")
+        tooltipComponents.add(Component.translatable("rifle.bat2_charge")
                 .append(": ").withStyle(ChatFormatting.GRAY)
                 .append(Component.literal(bat2Eng + "/" + SingularityBattery.MAX_ENERGY).withStyle(ChatFormatting.WHITE)));
 
-        tooltip.add(Component.empty());
+        tooltipComponents.add(Component.empty());
 
         // === Show keybind hints ===
         if (Screen.hasShiftDown()) {
-            tooltip.add(Component.literal("▶ ")
+            tooltipComponents.add(Component.literal("▶ ")
                     .append(Component.literal("[" + RSRifleClient.RELOAD_RIFLE.getTranslatedKeyMessage().getString() + "]"))
                     .append(" Reload")
                     .withStyle(ChatFormatting.YELLOW));
 
-            tooltip.add(Component.literal("▶ ")
+            tooltipComponents.add(Component.literal("▶ ")
                     .append(Component.literal("[" + RSRifleClient.CHARGE_RIFLE.getTranslatedKeyMessage().getString() + "]"))
                     .append(" Charge")
                     .withStyle(ChatFormatting.GOLD));
         } else {
-            tooltip.add(Component.literal("Hold §eShift§r for controls").withStyle(ChatFormatting.DARK_GRAY));
+            tooltipComponents.add(Component.literal("Hold §eShift§r for controls").withStyle(ChatFormatting.DARK_GRAY));
         }
-
     }
+
     @Override
     public boolean canAttackBlock(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer) {
         return false;
@@ -214,7 +201,7 @@ public class SingularityRifle extends Item implements GeoItem, FovModifyingItem,
     }
 
     @Override
-    public boolean onEntitySwing(ItemStack stack, LivingEntity entity) {
+    public boolean onEntitySwing(ItemStack stack, LivingEntity entity, InteractionHand hand) {
         return true;
     }
 
@@ -274,7 +261,10 @@ public class SingularityRifle extends Item implements GeoItem, FovModifyingItem,
         return mode.isAiming(itemStack, entity);
     }
 
-    @Override public int getUseDuration(@NotNull ItemStack itemStack) { return 72000; }
+    @Override
+    public int getUseDuration(ItemStack stack, LivingEntity entity) {
+        return 72000;
+    }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {

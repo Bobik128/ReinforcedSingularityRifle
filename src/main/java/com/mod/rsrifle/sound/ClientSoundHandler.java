@@ -5,31 +5,47 @@ import com.mod.rsrifle.items.SingularityRifle;
 import com.mod.rsrifle.utils.FirearmMode;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
 
 public class ClientSoundHandler {
     private static ItemHoldLoopingSound currentLoopSound = null;
 
-    public static void onClientTick(TickEvent.ClientTickEvent event) {
-        if (event.phase != TickEvent.ClientTickEvent.Phase.END) return;
-        Minecraft mc = Minecraft.getInstance();
-        if (mc.player == null) return;
+    public static void onClientTick(ClientTickEvent.Post event) {
+        Minecraft minecraft = Minecraft.getInstance();
 
-        boolean holding = mc.player.getMainHandItem().getItem() instanceof SingularityRifle;
-        ItemStack stack = mc.player.getMainHandItem();
+        if (minecraft.player == null) {
+            stopCurrentLoop();
+            return;
+        }
 
-        if (holding) {
+        ItemStack stack = minecraft.player.getMainHandItem();
+        boolean holdingRifle = stack.getItem() instanceof SingularityRifle;
+
+        if (holdingRifle) {
+            float volume = FirearmMode.getVolume(stack);
+
             if (currentLoopSound == null || currentLoopSound.isStopped()) {
                 currentLoopSound = new ItemHoldLoopingSound(
-                        RSRifleSounds.ELECTRIC_BUZZ_STEREO.get(), mc.player, RSRifleItems.SINGULARITY_RIFLE.get(), FirearmMode.getVolume(stack) + 0.01f);
-                mc.getSoundManager().play(currentLoopSound);
+                        RSRifleSounds.ELECTRIC_BUZZ_STEREO.get(),
+                        minecraft.player,
+                        RSRifleItems.SINGULARITY_RIFLE.get(),
+                        volume + 0.01f
+                );
+
+                minecraft.getSoundManager().play(currentLoopSound);
             }
-            currentLoopSound.setVolume(FirearmMode.getVolume(stack));
+
+            currentLoopSound.setVolume(volume);
         } else {
-            if (currentLoopSound != null && !currentLoopSound.isStopped()) {
-                currentLoopSound.remove();
-                currentLoopSound = null;
-            }
+            stopCurrentLoop();
         }
+    }
+
+    private static void stopCurrentLoop() {
+        if (currentLoopSound != null && !currentLoopSound.isStopped()) {
+            currentLoopSound.remove();
+        }
+
+        currentLoopSound = null;
     }
 }

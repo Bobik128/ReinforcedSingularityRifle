@@ -1,0 +1,210 @@
+---- Minecraft Crash Report ----
+// I'm sorry, Dave.
+
+Time: 2026-06-04 10:14:18
+Description: Unexpected error
+
+java.lang.UnsupportedOperationException: Payload rsrifle:firearm_action may not be sent to the server!
+	at TRANSFORMER/neoforge@21.1.228/net.neoforged.neoforge.network.registration.NetworkRegistry.checkPacket(NetworkRegistry.java:468) ~[neoforge-21.1.228.jar%23178!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl.send(ClientCommonPacketListenerImpl.java:322) ~[neoforge-21.1.228.jar%23177!/:?] {re:classloading,pl:runtimedistcleaner:A,re:mixin,pl:runtimedistcleaner:A}
+	at TRANSFORMER/neoforge@21.1.228/net.neoforged.neoforge.common.extensions.IClientCommonPacketListenerExtension.send(IClientCommonPacketListenerExtension.java:24) ~[neoforge-21.1.228.jar%23178!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.228/net.neoforged.neoforge.network.PacketDistributor.sendToServer(PacketDistributor.java:41) ~[neoforge-21.1.228.jar%23178!/:?] {re:classloading}
+	at TRANSFORMER/rsrifle@1.0.0/com.mod.rsrifle.network.RSRifleClientNetwork.sendToServer(RSRifleClientNetwork.java:8) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/rsrifle@1.0.0/com.mod.rsrifle.RSRifleClient.onKeyInput(RSRifleClient.java:119) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/rsrifle@1.0.0/com.mod.rsrifle.RSRifleClientNeoForge.onKeyInput(RSRifleClientNeoForge.java:79) ~[%23179!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%23138!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%23138!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:328) ~[bus-8.0.5.jar%23138!/:?] {}
+	at TRANSFORMER/neoforge@21.1.228/net.neoforged.neoforge.client.ClientHooks.onKeyInput(ClientHooks.java:681) ~[neoforge-21.1.228.jar%23178!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.KeyboardHandler.keyPress(KeyboardHandler.java:485) ~[neoforge-21.1.228.jar%23177!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.KeyboardHandler.lambda$setup$8(KeyboardHandler.java:515) ~[neoforge-21.1.228.jar%23177!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:98) ~[neoforge-21.1.228.jar%23177!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.KeyboardHandler.lambda$setup$9(KeyboardHandler.java:515) ~[neoforge-21.1.228.jar%23177!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFWKeyCallbackI.callback(GLFWKeyCallbackI.java:44) ~[lwjgl-glfw-3.3.3.jar%23160!/:build 5] {}
+	at MC-BOOTSTRAP/org.lwjgl@3.3.3+5/org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.3.jar%23172!/:build 5] {}
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3438) ~[lwjgl-glfw-3.3.3.jar%23160!/:build 5] {}
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:134) ~[neoforge-21.1.228.jar%23177!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:flywheel.backend.mixins.json:RenderSystemMixin from mod flywheel,pl:mixin:APP:ponder-common.mixins.json:client.accessor.RenderSystemAccessor from mod ponder,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:143) ~[neoforge-21.1.228.jar%23177!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:flywheel.backend.mixins.json:RenderSystemMixin from mod flywheel,pl:mixin:APP:ponder-common.mixins.json:client.accessor.RenderSystemAccessor from mod ponder,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.platform.Window.updateDisplay(Window.java:296) ~[neoforge-21.1.228.jar%23177!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1223) ~[neoforge-21.1.228.jar%23177!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:813) ~[neoforge-21.1.228.jar%23177!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:230) ~[neoforge-21.1.228.jar%23177!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.42.jar%23134!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:124) ~[loader-4.0.42.jar%23134!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.NeoForgeClientDevLaunchHandler.runService(NeoForgeClientDevLaunchHandler.java:23) ~[loader-4.0.42.jar%23134!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.42.jar%23134!/:4.0] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%23114!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%23114!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%23114!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%23114!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%23114!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%23114!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%23114!/:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at TRANSFORMER/neoforge@21.1.228/net.neoforged.neoforge.network.registration.NetworkRegistry.checkPacket(NetworkRegistry.java:468) ~[neoforge-21.1.228.jar%23178!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.multiplayer.ClientCommonPacketListenerImpl.send(ClientCommonPacketListenerImpl.java:322) ~[neoforge-21.1.228.jar%23177!/:?] {re:classloading,pl:runtimedistcleaner:A,re:mixin,pl:runtimedistcleaner:A}
+	at TRANSFORMER/neoforge@21.1.228/net.neoforged.neoforge.common.extensions.IClientCommonPacketListenerExtension.send(IClientCommonPacketListenerExtension.java:24) ~[neoforge-21.1.228.jar%23178!/:?] {re:classloading}
+	at TRANSFORMER/neoforge@21.1.228/net.neoforged.neoforge.network.PacketDistributor.sendToServer(PacketDistributor.java:41) ~[neoforge-21.1.228.jar%23178!/:?] {re:classloading}
+	at TRANSFORMER/rsrifle@1.0.0/com.mod.rsrifle.network.RSRifleClientNetwork.sendToServer(RSRifleClientNetwork.java:8) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/rsrifle@1.0.0/com.mod.rsrifle.RSRifleClient.onKeyInput(RSRifleClient.java:119) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/rsrifle@1.0.0/com.mod.rsrifle.RSRifleClientNeoForge.onKeyInput(RSRifleClientNeoForge.java:79) ~[%23179!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%23138!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%23138!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:328) ~[bus-8.0.5.jar%23138!/:?] {}
+	at TRANSFORMER/neoforge@21.1.228/net.neoforged.neoforge.client.ClientHooks.onKeyInput(ClientHooks.java:681) ~[neoforge-21.1.228.jar%23178!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.KeyboardHandler.keyPress(KeyboardHandler.java:485) ~[neoforge-21.1.228.jar%23177!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.KeyboardHandler.lambda$setup$8(KeyboardHandler.java:515) ~[neoforge-21.1.228.jar%23177!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:98) ~[neoforge-21.1.228.jar%23177!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.KeyboardHandler.lambda$setup$9(KeyboardHandler.java:515) ~[neoforge-21.1.228.jar%23177!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFWKeyCallbackI.callback(GLFWKeyCallbackI.java:44) ~[lwjgl-glfw-3.3.3.jar%23160!/:build 5] {}
+	at MC-BOOTSTRAP/org.lwjgl@3.3.3+5/org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.3.jar%23172!/:build 5] {}
+	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3438) ~[lwjgl-glfw-3.3.3.jar%23160!/:build 5] {}
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.pollEvents(RenderSystem.java:134) ~[neoforge-21.1.228.jar%23177!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:flywheel.backend.mixins.json:RenderSystemMixin from mod flywheel,pl:mixin:APP:ponder-common.mixins.json:client.accessor.RenderSystemAccessor from mod ponder,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:143) ~[neoforge-21.1.228.jar%23177!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:APP:flywheel.backend.mixins.json:RenderSystemMixin from mod flywheel,pl:mixin:APP:ponder-common.mixins.json:client.accessor.RenderSystemAccessor from mod ponder,pl:mixin:A,pl:runtimedistcleaner:A}
+-- Uptime --
+Details:
+	JVM uptime: 94.551s
+	Wall uptime: 85.997s
+	High-res time: 93.470s
+	Client ticks: 1274 ticks / 63.700s
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.fillReport(Minecraft.java:2409) ~[neoforge-21.1.228.jar%23177!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.emergencySaveAndCrash(Minecraft.java:874) ~[neoforge-21.1.228.jar%23177!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:834) ~[neoforge-21.1.228.jar%23177!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:A,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:230) ~[neoforge-21.1.228.jar%23177!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.42.jar%23134!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:124) ~[loader-4.0.42.jar%23134!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.NeoForgeClientDevLaunchHandler.runService(NeoForgeClientDevLaunchHandler.java:23) ~[loader-4.0.42.jar%23134!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.42.jar%23134!/:4.0] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%23114!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%23114!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%23114!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%23114!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%23114!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%23114!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%23114!/:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?] {}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [LocalPlayer['Dev'/11, l='ClientLevel', x=-203.13, y=75.00, z=166.79]]
+	Chunk stats: 961, 341
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (-208,80,176), Section: (at 0,0,0 in -13,5,11; chunk contains blocks -208,-64,176 to -193,319,191), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,-64,0 to -1,319,511)
+	Level time: 778 game time, 778 day time
+	Server brand: neoforge
+	Server type: Integrated singleplayer server
+	Tracked entity count: 139
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: vanilla, mod_resources, mod/flywheel, mod/rbh, mod/geckolib, mod/ponder, mod/create, mod/rsrifle, mod/neoforge
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Linux (amd64) version 7.0.10-201.fc44.x86_64
+	Java Version: 21.0.11, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 538101288 bytes (513 MiB) / 1723858944 bytes (1644 MiB) up to 8342470656 bytes (7956 MiB)
+	CPUs: 8
+	Processor Vendor: GenuineIntel
+	Processor Name: 11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz
+	Identifier: Intel64 Family 6 Model 140 Stepping 1
+	Microarchitecture: Tiger Lake
+	Frequency (GHz): 3.00
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 8
+	Graphics card #0 name: TigerLake-LP GT2 [Iris Xe Graphics]
+	Graphics card #0 vendor: Intel Corporation (0x8086)
+	Graphics card #0 VRAM (MiB): 256.00
+	Graphics card #0 deviceId: 0x9a49
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 24097.86
+	Virtual memory used (MiB): 14455.15
+	Swap memory total (MiB): 8192.00
+	Swap memory used (MiB): 6.88
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 3176.83, total: 3181.17
+	Space in storage for workdir (MiB): available: 142454.03, total: 385284.44
+	JVM Flags: 0 total; 
+	Launched Version: 21.1.228
+	Backend library: LWJGL version 3.3.3+5
+	Backend API: Mesa Intel(R) Iris(R) Xe Graphics (TGL GT2) GL version 4.6 (Core Profile) Mesa 26.0.6 (git-0e095aab43), Intel
+	Window size: 3072x1590
+	GFLW Platform: x11
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Is Modded: Definitely; Client brand changed to 'neoforge'; Server brand changed to 'neoforge'
+	Universe: 400921fb54442d18
+	Type: Integrated Server (map_client.txt)
+	Graphics mode: fancy
+	Render Distance: 12/12 chunks
+	Resource Packs: vanilla, mod_resources, mod/flywheel, mod/rbh (incompatible), mod/geckolib, mod/ponder (incompatible), mod/create (incompatible), mod/rsrifle (incompatible), mod/neoforge
+	Current Language: en_us
+	Locale: en_US
+	System encoding: UTF-8
+	File encoding: UTF-8
+	CPU: 8x 11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/11, l='ServerLevel[neoforge test]', x=-203.13, y=75.00, z=166.79]]
+	Active Data Packs: create:dynamic_data, vanilla, mod_data, mod/flywheel (incompatible), mod/rbh (incompatible), mod/geckolib, mod/ponder (incompatible), mod/create (incompatible), mod/rsrifle (incompatible), mod/neoforge
+	Available Data Packs: bundle, trade_rebalance, vanilla, mod/create (incompatible), mod/flywheel (incompatible), mod/geckolib, mod/neoforge, mod/ponder (incompatible), mod/rbh (incompatible), mod/rsrifle (incompatible), mod_data, create:dynamic_data
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: -40340414415209610
+	ModLauncher: 11.0.5+main.901c6ea8
+	ModLauncher launch target: forgeclientdev
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.42.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.42.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.42.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.5.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.5.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		create-328085-7963363.jar                         |Create                        |create                        |6.0.10              |Manifest: NOSIGNATURE
+		flywheel-neoforge-1.21.1-1.0.6.jar                |Flywheel                      |flywheel                      |1.0.6               |Manifest: NOSIGNATURE
+		geckolib-388172-7707149.jar                       |GeckoLib 4                    |geckolib                      |4.8.4               |Manifest: NOSIGNATURE
+		neoforge-21.1.228.jar                             |Minecraft                     |minecraft                     |1.21.1              |Manifest: NOSIGNATURE
+		neoforge-21.1.228.jar                             |NeoForge                      |neoforge                      |21.1.228            |Manifest: NOSIGNATURE
+		ponder-neoforge-1.0.82+mc1.21.1.jar               |Ponder                        |ponder                        |1.0.82+mc1.21.1     |Manifest: NOSIGNATURE
+		reinforced-black-holes-1367499-8194775.jar        |Reinforced Black Holes        |rbh                           |1.1.3               |Manifest: NOSIGNATURE
+		main                                              |Reinforced Singularity Rifle  |rsrifle                       |1.0.0               |Manifest: NOSIGNATURE
+	Crash Report UUID: 0a1c135d-01e3-4629-ab7b-02432031467d
+	FML: 4.0.42
+	NeoForge: 21.1.228
+	Flywheel Backend: flywheel:instancing

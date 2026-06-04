@@ -1,7 +1,7 @@
 package com.mod.rsrifle.compat;
 
-import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import net.minecraftforge.fml.ModList;
+import net.neoforged.fml.ModList;
+import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 public class CreateCompat implements IConditionBuilder {
     public static final String CREATE_MODID = "create";

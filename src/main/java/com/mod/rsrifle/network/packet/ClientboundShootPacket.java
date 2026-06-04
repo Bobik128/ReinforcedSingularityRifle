@@ -1,28 +1,35 @@
 package com.mod.rsrifle.network.packet;
 
+import com.mod.rsrifle.ReinforcedSingularityRifle;
 import com.mod.rsrifle.client.RifleShootAnimHelper;
-import com.mod.rsrifle.network.RSRiflePacket;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.network.PacketListener;
-import net.minecraft.server.level.ServerPlayer;
+import io.netty.buffer.ByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
 
-import javax.annotation.Nullable;
-import java.util.concurrent.Executor;
+public record ClientboundShootPacket(long shoterId, int chargeLevel) implements CustomPacketPayload {
+    public static final Type<ClientboundShootPacket> TYPE =
+            new Type<>(ResourceLocation.fromNamespaceAndPath(ReinforcedSingularityRifle.MODID, "shoot"));
 
-public record ClientboundShootPacket(long shoterId, int chargeLevel) implements RSRiflePacket {
-
-    public ClientboundShootPacket(FriendlyByteBuf buf) {
-        this(buf.readVarLong(), buf.readVarInt());
-    }
+    public static final StreamCodec<ByteBuf, ClientboundShootPacket> STREAM_CODEC =
+            StreamCodec.composite(
+                    ByteBufCodecs.VAR_LONG,
+                    ClientboundShootPacket::shoterId,
+                    ByteBufCodecs.VAR_INT,
+                    ClientboundShootPacket::chargeLevel,
+                    ClientboundShootPacket::new
+            );
 
     @Override
-    public void rootEncode(FriendlyByteBuf buf) {
-        buf.writeVarLong(shoterId);
-        buf.writeVarInt(chargeLevel);
+    public Type<? extends CustomPacketPayload> type() {
+        return TYPE;
     }
 
-    @Override
-    public void handle(Executor exec, PacketListener listener, @Nullable ServerPlayer sender) {
-        exec.execute(() -> RifleShootAnimHelper.addShootingRifle(shoterId, chargeLevel));
+    public static void handle(ClientboundShootPacket packet, IPayloadContext context) {
+        context.enqueueWork(() ->
+                RifleShootAnimHelper.addShootingRifle(packet.shoterId(), packet.chargeLevel())
+        );
     }
 }

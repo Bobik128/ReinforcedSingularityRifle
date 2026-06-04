@@ -1,8 +1,8 @@
 package com.mod.rsrifle.client;
 
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import software.bernie.geckolib.animatable.GeoItem;
 
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import java.util.Map;
 
 @OnlyIn(Dist.CLIENT)
 public class RifleShootAnimHelper {
-    public static Map<Long, Integer> shootingRifles = new HashMap<>();
+    public static final Map<Long, Integer> shootingRifles = new HashMap<>();
 
     public static void addShootingRifle(long id, int chargeLevel) {
         shootingRifles.put(id, chargeLevel);
@@ -21,7 +21,7 @@ public class RifleShootAnimHelper {
     }
 
     public static int getChargeLevel(ItemStack stack) {
-        return shootingRifles.get(GeoItem.getId(stack));
+        return shootingRifles.getOrDefault(GeoItem.getId(stack), 0);
     }
 
     public static void remove(ItemStack stack) {

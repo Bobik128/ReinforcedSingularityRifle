@@ -1,6 +1,7 @@
 package com.mod.rsrifle.remix;
 
 import com.mod.rsrifle.api.HoldAttackKeyInteraction;
+import com.mod.rsrifle.network.RSRifleClientNetwork;
 import com.mod.rsrifle.network.RSRifleNetwork;
 import com.mod.rsrifle.network.packet.ServerboundSetAttackKeyPacket;
 import net.minecraft.client.Minecraft;
@@ -13,7 +14,7 @@ public class RSRifleClientRemix {
 
         ItemStack mainhandItem = mc.player.getMainHandItem();
         if (mainhandItem.getItem() instanceof HoldAttackKeyInteraction hold && !hold.isHoldingAttackKey(mainhandItem, mc.player)) {
-            RSRifleNetwork.sendToServer(new ServerboundSetAttackKeyPacket(true));
+            RSRifleClientNetwork.sendToServer(new ServerboundSetAttackKeyPacket(true));
             hold.onPressAttackKey(mainhandItem, mc.player);
         }
     }
@@ -24,7 +25,7 @@ public class RSRifleClientRemix {
 
         ItemStack mainhandItem = mc.player.getMainHandItem();
         if (mainhandItem.getItem() instanceof HoldAttackKeyInteraction hold && hold.isHoldingAttackKey(mainhandItem, mc.player)) {
-            RSRifleNetwork.sendToServer(new ServerboundSetAttackKeyPacket(false));
+            RSRifleClientNetwork.sendToServer(new ServerboundSetAttackKeyPacket(false));
             hold.onReleaseAttackKey(mainhandItem, mc.player);
         }
     }

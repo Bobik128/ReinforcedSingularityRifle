@@ -1,0 +1,12 @@
+#Max lightning strikes to be rendered at once
+# Default: 50
+# Range: > 0
+strikes = 50
+#Max lightning strikes per spectral arrow (max, they can send out, does not apply for lightnings from other arrows)
+# Default: 6
+# Range: > 0
+strikes_per_arrow = 6
+#Spectral arrows lightning strikes debug options
+debug_lightning = false
+#make spectral arrows invisible
+invis_spec_arrow = false

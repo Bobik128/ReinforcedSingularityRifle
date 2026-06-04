@@ -19,76 +19,123 @@ import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.cache.object.GeoBone;
 import software.bernie.geckolib.renderer.GeoRenderer;
 import software.bernie.geckolib.renderer.layer.GeoRenderLayer;
-import software.bernie.geckolib.util.RenderUtils;
+import software.bernie.geckolib.util.RenderUtil;
 
 public class PlayerArmsRenderLayer extends GeoRenderLayer<SingularityRifle> {
-    public PlayerArmsRenderLayer(GeoRenderer<SingularityRifle> entityRendererIn) {
-        super(entityRendererIn);
-    }
 
-    private static void translate(PoseStack poseStack, GeoBone bone) {
-        RenderUtils.translateMatrixToBone(poseStack, bone.getParent());
-        RenderUtils.translateMatrixToBone(poseStack, bone);
-        RenderUtils.translateToPivotPoint(poseStack, bone);
-        RenderUtils.rotateMatrixAroundBone(poseStack, bone);
+    public PlayerArmsRenderLayer(GeoRenderer<SingularityRifle> renderer) {
+        super(renderer);
     }
 
     @Override
-    public void render(PoseStack poseStack, SingularityRifle animatable, BakedGeoModel bakedModel, RenderType renderType, MultiBufferSource bufferSource, VertexConsumer buffer, float partialTick, int packedLight, int packedOverlay) {
-        SingularityRifleRenderer renderer = (SingularityRifleRenderer) getRenderer();
+    public void render(
+            PoseStack poseStack,
+            SingularityRifle animatable,
+            BakedGeoModel bakedModel,
+            RenderType renderType,
+            MultiBufferSource bufferSource,
+            VertexConsumer buffer,
+            float partialTick,
+            int packedLight,
+            int packedOverlay
+    ) {
+        SingularityRifleRenderer renderer = (SingularityRifleRenderer) this.getRenderer();
 
-        LocalPlayer plr = Minecraft.getInstance().player;
-        if (renderer.getRenderPerspective() == ItemDisplayContext.FIRST_PERSON_RIGHT_HAND && plr != null) {
-            EntityRenderDispatcher disp = Minecraft.getInstance().getEntityRenderDispatcher();
-            PlayerRenderer playerRenderer = (PlayerRenderer) disp.getRenderer(plr);
-            PlayerModel<AbstractClientPlayer> plrModel = playerRenderer.getModel();
+        LocalPlayer player = Minecraft.getInstance().player;
 
-            getGeoModel().getBone("R_ARM").ifPresent(bone -> {
-                ModelPart arm = plrModel.rightArm;
-                ModelPart sleeve = plrModel.rightSleeve;
-
-                arm.resetPose();
-                sleeve.resetPose();
-
-                poseStack.pushPose();
-//                RenderUtils.prepMatrixForBone(poseStack, getGeoModel().getBone("rifle").get());
-//                RenderUtils.prepMatrixForBone(poseStack, bone);
-//                RenderUtils.translateAndRotateMatrixForBone(poseStack, bone);
-                translate(poseStack, bone);
-
-                poseStack.translate(-arm.x / 16, -arm.y / 16, -arm.z / 16);
-
-                poseStack.mulPose(Axis.XP.rotationDegrees(-90));
-
-                arm.render(poseStack, bufferSource.getBuffer(RenderType.entitySolid(plr.getSkinTextureLocation())), packedLight, OverlayTexture.NO_OVERLAY);
-                sleeve.render(poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(plr.getSkinTextureLocation())), packedLight, OverlayTexture.NO_OVERLAY);
-
-                poseStack.popPose();
-            });
-
-            getGeoModel().getBone("L_ARM").ifPresent(bone -> {
-                ModelPart arm = plrModel.leftArm;
-                ModelPart sleeve = plrModel.leftSleeve;
-
-                arm.resetPose();
-                sleeve.resetPose();
-
-                poseStack.pushPose();
-//                RenderUtils.prepMatrixForBone(poseStack, getGeoModel().getBone("rifle").get());
-//                RenderUtils.prepMatrixForBone(poseStack, bone);
-//                RenderUtils.translateAndRotateMatrixForBone(poseStack, bone);
-
-                translate(poseStack, bone);
-
-                poseStack.translate(-arm.x / 16, -arm.y / 16, -arm.z / 16);
-
-                poseStack.mulPose(Axis.XP.rotationDegrees(-90));
-
-                arm.render(poseStack, bufferSource.getBuffer(RenderType.entitySolid(plr.getSkinTextureLocation())), packedLight, OverlayTexture.NO_OVERLAY);
-                sleeve.render(poseStack, bufferSource.getBuffer(RenderType.entityTranslucent(plr.getSkinTextureLocation())), packedLight, OverlayTexture.NO_OVERLAY);
-
-                poseStack.popPose();
-            });
+        if (player == null) {
+            return;
         }
+
+        if (renderer.getRenderPerspective() != ItemDisplayContext.FIRST_PERSON_RIGHT_HAND) {
+            return;
+        }
+
+        EntityRenderDispatcher dispatcher = Minecraft.getInstance().getEntityRenderDispatcher();
+        PlayerRenderer playerRenderer = (PlayerRenderer) dispatcher.getRenderer(player);
+        PlayerModel<AbstractClientPlayer> playerModel = playerRenderer.getModel();
+
+        this.getGeoModel().getBone("R_ARM").ifPresent(bone ->
+                renderArm(
+                        poseStack,
+                        bufferSource,
+                        player,
+                        playerModel.rightArm,
+                        playerModel.rightSleeve,
+                        bone,
+                        packedLight
+                )
+        );
+
+        this.getGeoModel().getBone("L_ARM").ifPresent(bone ->
+                renderArm(
+                        poseStack,
+                        bufferSource,
+                        player,
+                        playerModel.leftArm,
+                        playerModel.leftSleeve,
+                        bone,
+                        packedLight
+                )
+        );
+    }
+
+    private static void renderArm(
+            PoseStack poseStack,
+            MultiBufferSource bufferSource,
+            AbstractClientPlayer player,
+            ModelPart arm,
+            ModelPart sleeve,
+            GeoBone bone,
+            int packedLight
+    ) {
+        arm.resetPose();
+        sleeve.resetPose();
+
+        poseStack.pushPose();
+
+        translateToBoneChain(poseStack, bone);
+
+        poseStack.translate(
+                -arm.x / 16.0f,
+                -arm.y / 16.0f,
+                -arm.z / 16.0f
+        );
+
+        poseStack.mulPose(Axis.XP.rotationDegrees(-90.0f));
+
+        arm.render(
+                poseStack,
+                bufferSource.getBuffer(RenderType.entitySolid(player.getSkin().texture())),
+                packedLight,
+                OverlayTexture.NO_OVERLAY
+        );
+
+        sleeve.render(
+                poseStack,
+                bufferSource.getBuffer(RenderType.entityTranslucent(player.getSkin().texture())),
+                packedLight,
+                OverlayTexture.NO_OVERLAY
+        );
+
+        poseStack.popPose();
+    }
+
+    private static void translateToBoneChain(PoseStack poseStack, GeoBone bone) {
+        GeoBone parent = bone.getParent();
+
+        if (parent != null) {
+            translateToBoneChain(poseStack, parent);
+        }
+
+        translateToBone(poseStack, bone);
+    }
+
+    private static void translateToBone(PoseStack poseStack, GeoBone bone) {
+        RenderUtil.translateMatrixToBone(poseStack, bone);
+        RenderUtil.translateToPivotPoint(poseStack, bone);
+        RenderUtil.rotateMatrixAroundBone(poseStack, bone);
+        RenderUtil.scaleMatrixForBone(poseStack, bone);
+        RenderUtil.translateAwayFromPivotPoint(poseStack, bone);
     }
 }

@@ -2,44 +2,70 @@ package com.mod.rsrifle.datagen.recipe;
 
 import com.mod.rsrifle.ReinforcedSingularityRifle;
 import com.mod.rsrifle.items.RSRifleItems;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.*;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
+import net.minecraft.world.item.crafting.BlastingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.common.crafting.ConditionalRecipe;
-import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import net.minecraftforge.common.crafting.conditions.ModLoadedCondition;
-import net.minecraftforge.common.crafting.conditions.NotCondition;
+import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-//    private static final List<ItemLike> ZIRCON_SMELTABLES = List.of(RBHItems.RAW_ZIRCON.get(),
-//            ModBlocks.ZIRCON_ORE.get(), ModBlocks.DEEPSLATE_ZIRCON_ORE.get());
 
-    public ModRecipeProvider(PackOutput pOutput) {
-        super(pOutput);
+    public ModRecipeProvider(
+            PackOutput output,
+            CompletableFuture<HolderLookup.Provider> lookupProvider
+    ) {
+        super(output, lookupProvider);
     }
 
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
+    protected void buildRecipes(RecipeOutput output) {
+        /*
+         * Non-Create fallback recipe.
+         *
+         * Old Forge:
+         * ConditionalRecipe.builder()
+         *
+         * NeoForge 1.21.1:
+         * output.withConditions(...)
+         */
+        ShapelessRecipeBuilder.shapeless(
+                        RecipeCategory.MISC,
+                        RSRifleItems.SINGULARITY_BATTERY.get()
+                )
+                .requires(RSRifleItems.SINGULARITY_BATTERY_EMPTY.get())
+                .requires(Items.NETHER_STAR)
+                .requires(Items.EXPERIENCE_BOTTLE)
+                .unlockedBy(
+                        getHasName(RSRifleItems.SINGULARITY_BATTERY_EMPTY.get()),
+                        has(RSRifleItems.SINGULARITY_BATTERY_EMPTY.get())
+                )
+                .save(
+                        output.withConditions(not(modLoaded("create"))),
+                        ResourceLocation.fromNamespaceAndPath(
+                                ReinforcedSingularityRifle.MODID,
+                                "singularity_battery"
+                        )
+                );
 
-        ConditionalRecipe.builder()
-                .addCondition(new NotCondition(new ModLoadedCondition("create")))
-                .addRecipe(writer -> ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RSRifleItems.SINGULARITY_BATTERY.get())
-                    .requires(RSRifleItems.SINGULARITY_BATTERY_EMPTY.get())
-                    .requires(Items.NETHER_STAR)
-                    .requires(Items.EXPERIENCE_BOTTLE)
-                    .unlockedBy(getHasName(RSRifleItems.SINGULARITY_BATTERY_EMPTY.get()), has(RSRifleItems.SINGULARITY_BATTERY_EMPTY.get()))
-                    .save(writer))
-                .build(pWriter, ResourceLocation.fromNamespaceAndPath(ReinforcedSingularityRifle.MODID, "singularity_battery"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, RSRifleItems.SINGULARITY_RIFLE.get())
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.COMBAT,
+                        RSRifleItems.SINGULARITY_RIFLE.get()
+                )
                 .pattern("NA ")
                 .pattern("SES")
                 .pattern("Bss")
@@ -49,10 +75,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', Items.AMETHYST_SHARD)
                 .define('B', Items.NETHERITE_BLOCK)
                 .define('s', RSRifleItems.SINGULARITY_BATTERY_EMPTY.get())
-                .unlockedBy(getHasName(Items.DRAGON_EGG), has(Items.DRAGON_EGG))
-                .save(pWriter);
+                .unlockedBy(
+                        getHasName(Items.DRAGON_EGG),
+                        has(Items.DRAGON_EGG)
+                )
+                .save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, RSRifleItems.SINGULARITY_BATTERY_EMPTY.get(), 2)
+        ShapedRecipeBuilder.shaped(
+                        RecipeCategory.MISC,
+                        RSRifleItems.SINGULARITY_BATTERY_EMPTY.get(),
+                        2
+                )
                 .pattern("IRI")
                 .pattern("N N")
                 .pattern("ISI")
@@ -60,40 +93,90 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('R', Items.REDSTONE_BLOCK)
                 .define('N', Items.NETHERITE_INGOT)
                 .define('S', Items.SMOOTH_STONE_SLAB)
-                .unlockedBy(getHasName(RSRifleItems.SINGULARITY_RIFLE.get()), has(RSRifleItems.SINGULARITY_RIFLE.get()))
-                .save(pWriter);
-
-//        oreSmelting(pWriter, ZIRCON_SMELTABLES, RecipeCategory.MISC, ModItems.ZIRCON.get(), 0.25f, 200, "ZIRCON");
-//        oreBlasting(pWriter, ZIRCON_SMELTABLES, RecipeCategory.MISC, ModItems.ZIRCON.get(), 0.25f, 100, "ZIRCON");
-//
-//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ZIRCON_BLOCK.get())
-//                .pattern("SSS")
-//                .pattern("SSS")
-//                .pattern("SSS")
-//                .define('S', ModItems.ZIRCON.get())
-//                .unlockedBy(getHasName(ModItems.ZIRCON.get()), has(ModItems.ZIRCON.get()))
-//                .save(pWriter);
-//
-//        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ZIRCON.get(), 9)
-//                .requires(ModBlocks.ZIRCON_BLOCK.get())
-//                .unlockedBy(getHasName(ModBlocks.ZIRCON_BLOCK.get()), has(ModBlocks.ZIRCON_BLOCK.get()))
-//                .save(pWriter);
+                .unlockedBy(
+                        getHasName(RSRifleItems.SINGULARITY_RIFLE.get()),
+                        has(RSRifleItems.SINGULARITY_RIFLE.get())
+                )
+                .save(output);
     }
 
-    protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
-        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
+    protected static void oreSmelting(
+            RecipeOutput output,
+            List<ItemLike> ingredients,
+            RecipeCategory category,
+            ItemLike result,
+            float experience,
+            int cookingTime,
+            String group
+    ) {
+        oreCooking(
+                output,
+                RecipeSerializer.SMELTING_RECIPE,
+                SmeltingRecipe::new,
+                ingredients,
+                category,
+                result,
+                experience,
+                cookingTime,
+                group,
+                "_from_smelting"
+        );
     }
 
-    protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
-        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
+    protected static void oreBlasting(
+            RecipeOutput output,
+            List<ItemLike> ingredients,
+            RecipeCategory category,
+            ItemLike result,
+            float experience,
+            int cookingTime,
+            String group
+    ) {
+        oreCooking(
+                output,
+                RecipeSerializer.BLASTING_RECIPE,
+                BlastingRecipe::new,
+                ingredients,
+                category,
+                result,
+                experience,
+                cookingTime,
+                group,
+                "_from_blasting"
+        );
     }
 
-    protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
-        for (ItemLike itemlike : pIngredients) {
-            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult,
-                            pExperience, pCookingTime, pCookingSerializer)
-                    .group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(pFinishedRecipeConsumer, ReinforcedSingularityRifle.MODID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
+    protected static <T extends AbstractCookingRecipe> void oreCooking(
+            RecipeOutput output,
+            RecipeSerializer<T> cookingSerializer,
+            AbstractCookingRecipe.Factory<T> factory,
+            List<ItemLike> ingredients,
+            RecipeCategory category,
+            ItemLike result,
+            float experience,
+            int cookingTime,
+            String group,
+            String recipeName
+    ) {
+        for (ItemLike ingredient : ingredients) {
+            SimpleCookingRecipeBuilder.generic(
+                            Ingredient.of(ingredient),
+                            category,
+                            result,
+                            experience,
+                            cookingTime,
+                            cookingSerializer,
+                            factory
+                    )
+                    .group(group)
+                    .unlockedBy(getHasName(ingredient), has(ingredient))
+                    .save(
+                            output,
+                            ResourceLocation.fromNamespaceAndPath(
+                                    ReinforcedSingularityRifle.MODID,
+                                    getItemName(result) + recipeName + "_" + getItemName(ingredient)
+                            )
+                    );
         }
     }
 }

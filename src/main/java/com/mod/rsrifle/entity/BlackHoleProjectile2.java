@@ -1,10 +1,10 @@
 package com.mod.rsrifle.entity;
 
 import com.mod.rbh.entity.IBlackHole;
+import com.mod.rbh.shaders.PostEffectRegistry;
 import com.mod.rsrifle.CommonConfig;
 import com.mod.rsrifle.RegisterDamageTypes;
 import com.mod.rsrifle.items.SingularityRifle;
-import com.mod.rbh.shaders.PostEffectRegistry;
 import com.mod.rsrifle.sound.RSRifleSounds;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.BlockPos;
@@ -20,8 +20,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MoverType;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.npc.InventoryCarrier;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
@@ -29,38 +27,49 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraft.world.phys.*;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.Vec3;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 import org.joml.Vector3f;
 import org.slf4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
     private static final EntityDataAccessor<Float> SIZE =
             SynchedEntityData.defineId(BlackHoleProjectile2.class, EntityDataSerializers.FLOAT);
+
     private static final EntityDataAccessor<Float> EFFECT_SIZE =
             SynchedEntityData.defineId(BlackHoleProjectile2.class, EntityDataSerializers.FLOAT);
+
     private static final EntityDataAccessor<Float> EFFECT_EXPONENT =
             SynchedEntityData.defineId(BlackHoleProjectile2.class, EntityDataSerializers.FLOAT);
+
     private static final EntityDataAccessor<Float> STRETCH_STRENGTH =
             SynchedEntityData.defineId(BlackHoleProjectile2.class, EntityDataSerializers.FLOAT);
+
     private static final EntityDataAccessor<Vector3f> STRETCH_DIR =
             SynchedEntityData.defineId(BlackHoleProjectile2.class, EntityDataSerializers.VECTOR3);
+
     private static final EntityDataAccessor<Integer> COLOR =
             SynchedEntityData.defineId(BlackHoleProjectile2.class, EntityDataSerializers.INT);
+
     private static final EntityDataAccessor<Boolean> RAINBOW =
             SynchedEntityData.defineId(BlackHoleProjectile2.class, EntityDataSerializers.BOOLEAN);
+
     private static final EntityDataAccessor<Integer> EXPLODING_TIME =
             SynchedEntityData.defineId(BlackHoleProjectile2.class, EntityDataSerializers.INT);
 
     public static final int RENDER_DISTANCE = 120;
-    public static final float DAMAGE_SIZE_MULTIPLIER = (float) (10_000/SingularityRifle.MAX_SIZE);
+    public static final float DAMAGE_SIZE_MULTIPLIER = 10_000.0f / SingularityRifle.MAX_SIZE;
     protected static final float MAX_ITEM_REMOVE_PERCENT = 0.6f;
+
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public int life = 0;
@@ -68,7 +77,10 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
     public final int maxExplodingTime = 3;
     public boolean exploding = false;
 
-    @OnlyIn(Dist.CLIENT) public PostEffectRegistry.HoleEffectInstance effectInstance;
+    private Vec3 lastDeltaDir = new Vec3(1.0, 0.0, 0.0);
+
+    @OnlyIn(Dist.CLIENT)
+    public PostEffectRegistry.HoleEffectInstance effectInstance;
 
     public BlackHoleProjectile2(Vec3 pos, Level level, float size, float effectSize) {
         this(RSRifleEntityTypes.BLACK_HOLE_PROJECTILE2.get(), level);
@@ -82,20 +94,24 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
         this.setRainbow(rainbow);
     }
 
-    public BlackHoleProjectile2(EntityType<? extends Projectile> pEntityType, Level pLevel) {
-        super(pEntityType, pLevel);
-        if (this.level().isClientSide) clientInit();
+    public BlackHoleProjectile2(EntityType<? extends Projectile> entityType, Level level) {
+        super(entityType, level);
+
+        if (this.level().isClientSide) {
+            clientInit();
+        }
+
         this.setNoGravity(true);
     }
 
     @OnlyIn(Dist.CLIENT)
     private void clientInit() {
-        effectInstance = PostEffectRegistry.HoleEffectInstance.createEffectInstance();
+        this.effectInstance = PostEffectRegistry.HoleEffectInstance.createEffectInstance();
     }
 
     @Override
-    public boolean shouldRenderAtSqrDistance(double pDistance) {
-        return pDistance < RENDER_DISTANCE * RENDER_DISTANCE;
+    public boolean shouldRenderAtSqrDistance(double distance) {
+        return distance < RENDER_DISTANCE * RENDER_DISTANCE;
     }
 
     @Override
@@ -104,103 +120,183 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
     }
 
     @Override
-    protected void defineSynchedData() {
-        this.entityData.define(SIZE, 0.5f);
-        this.entityData.define(EFFECT_SIZE, 2.0f);
-        this.entityData.define(EFFECT_EXPONENT, 4.0f);
-        this.entityData.define(STRETCH_DIR, new Vector3f(1.0f, 0.0f, 0.0f));
-        this.entityData.define(STRETCH_STRENGTH, 0.0f);
-        this.entityData.define(COLOR, 0xFFFF00);
-        this.entityData.define(EXPLODING_TIME, -1);
-        this.entityData.define(RAINBOW, false);
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+        builder.define(SIZE, 0.5f);
+        builder.define(EFFECT_SIZE, 2.0f);
+        builder.define(EFFECT_EXPONENT, 4.0f);
+        builder.define(STRETCH_DIR, new Vector3f(1.0f, 0.0f, 0.0f));
+        builder.define(STRETCH_STRENGTH, 0.0f);
+        builder.define(COLOR, 0xFFFF00);
+        builder.define(EXPLODING_TIME, -1);
+        builder.define(RAINBOW, false);
     }
 
     @Override
     public void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
-        tag.putFloat("Size", getSize());
-        tag.putFloat("EffectSize", getEffectSize());
+
+        tag.putFloat("Size", this.getSize());
+        tag.putFloat("EffectSize", this.getEffectSize());
+        tag.putFloat("EffectExponent", this.getEffectExponent());
+        tag.putFloat("StretchStrength", this.getStretchStrength());
+
+        Vector3f stretchDir = this.getStretchDir();
+        tag.putFloat("StretchDirX", stretchDir.x);
+        tag.putFloat("StretchDirY", stretchDir.y);
+        tag.putFloat("StretchDirZ", stretchDir.z);
+
+        tag.putInt("Color", this.getColor());
+        tag.putBoolean("Rainbow", this.shouldBeRainbow());
+        tag.putInt("ExplodingTime", this.getExplodingTime());
+        tag.putBoolean("Exploding", this.exploding);
+        tag.putInt("Life", this.life);
     }
 
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
+
         if (tag.contains("Size")) {
-            setSize(tag.getFloat("Size"));
+            this.setSize(tag.getFloat("Size"));
         }
+
         if (tag.contains("EffectSize")) {
-            setEffectSize(tag.getFloat("EffectSize"));
+            this.setEffectSize(tag.getFloat("EffectSize"));
+        }
+
+        if (tag.contains("EffectExponent")) {
+            this.setEffectExponent(tag.getFloat("EffectExponent"));
+        }
+
+        if (tag.contains("StretchStrength")) {
+            this.setStretchStrength(tag.getFloat("StretchStrength"));
+        }
+
+        if (tag.contains("StretchDirX") && tag.contains("StretchDirY") && tag.contains("StretchDirZ")) {
+            this.setStretchDir(new Vector3f(
+                    tag.getFloat("StretchDirX"),
+                    tag.getFloat("StretchDirY"),
+                    tag.getFloat("StretchDirZ")
+            ));
+        }
+
+        if (tag.contains("Color")) {
+            this.setColor(tag.getInt("Color"));
+        }
+
+        if (tag.contains("Rainbow")) {
+            this.setRainbow(tag.getBoolean("Rainbow"));
+        }
+
+        if (tag.contains("ExplodingTime")) {
+            this.setExplodingTime(tag.getInt("ExplodingTime"));
+        }
+
+        if (tag.contains("Exploding")) {
+            this.exploding = tag.getBoolean("Exploding");
+        }
+
+        if (tag.contains("Life")) {
+            this.life = tag.getInt("Life");
         }
     }
 
     @Override
-    public boolean shouldRender(double pX, double pY, double pZ) {
-        return life > 1 && super.shouldRender(pX, pY, pZ);
+    public boolean shouldRender(double x, double y, double z) {
+        return this.life > 1 && super.shouldRender(x, y, z);
     }
 
-    private Vec3 lastDeltaDir = new Vec3(1.0, 0.0, 0.0);
+    @Override
     public void tick() {
         super.tick();
 
-        if (exploding) {
-            setExplodingTime(getExplodingTime() + 1);
-            if (getExplodingTime() > maxExplodingTime) discard();
-            setDeltaMovement(Vec3.ZERO);
-        } else {
+        if (this.exploding) {
+            this.setExplodingTime(this.getExplodingTime() + 1);
 
-            Vec3 vec33 = this.getDeltaMovement();
-            this.move(MoverType.SELF, vec33);
-            this.setDeltaMovement(vec33);
-
-            if (!this.level().isClientSide) {
-                if (!lastDeltaDir.equals(vec33)) {
-                    this.setStretchDir(vec33.toVector3f().normalize());
-                    this.setStretchStrength((float) vec33.length() * 3);
-                }
-                lastDeltaDir = vec33;
+            if (this.getExplodingTime() > this.maxExplodingTime) {
+                this.discard();
             }
 
-            HitResult hitresult = ProjectileUtil.getHitResultOnMoveVector(this, this::canHitEntity);
-            if (!this.noPhysics) {
-                this.onHit(hitresult);
-                this.hasImpulse = true;
+            this.setDeltaMovement(Vec3.ZERO);
+            return;
+        }
+
+        Vec3 deltaMovement = this.getDeltaMovement();
+
+        this.move(MoverType.SELF, deltaMovement);
+        this.setDeltaMovement(deltaMovement);
+
+        if (!this.level().isClientSide) {
+            if (!this.lastDeltaDir.equals(deltaMovement) && deltaMovement.lengthSqr() > 0.000001) {
+                this.setStretchDir(deltaMovement.toVector3f().normalize());
+                this.setStretchStrength((float) deltaMovement.length() * 3.0f);
             }
 
-            this.updateRotation();
-            if (this.life == 0 && !this.isSilent()) {
-                for (int i = 0; i < 2; i++)
-                    this.level().playSound((Player) null, this.getX(), this.getY(), this.getZ(), RSRifleSounds.RIFLE_SHOOT.get(), SoundSource.AMBIENT, 6.0F, 1.1F);
-            }
+            this.lastDeltaDir = deltaMovement;
+        }
 
-            ++this.life;
+        HitResult hitResult = ProjectileUtil.getHitResultOnMoveVector(this, this::canHitEntity);
 
-            if (!this.level().isClientSide && this.life > this.lifetime) {
-                this.explode();
+        if (!this.noPhysics) {
+            this.onHit(hitResult);
+            this.hasImpulse = true;
+        }
+
+        this.updateRotation();
+
+        if (this.life == 0 && !this.isSilent()) {
+            for (int i = 0; i < 2; i++) {
+                this.level().playSound(
+                        null,
+                        this.getX(),
+                        this.getY(),
+                        this.getZ(),
+                        RSRifleSounds.RIFLE_SHOOT.get(),
+                        SoundSource.AMBIENT,
+                        6.0f,
+                        1.1f
+                );
             }
+        }
+
+        ++this.life;
+
+        if (!this.level().isClientSide && this.life > this.lifetime) {
+            this.explode();
         }
     }
 
-    /**
-     * Called when the Hole hits an entity
-     */
-    protected void onHitEntity(EntityHitResult pResult) {
-        super.onHitEntity(pResult);
-        Entity entity = pResult.getEntity();
-        if (entity instanceof Player plr) {
-            removeItemsFromInvDepOnSize(plr, (float) (this.getSize() / SingularityRifle.MAX_SIZE) * MAX_ITEM_REMOVE_PERCENT);
+    @Override
+    protected void onHitEntity(EntityHitResult result) {
+        super.onHitEntity(result);
+
+        Entity entity = result.getEntity();
+
+        if (entity instanceof Player player) {
+            this.removeItemsFromInvDepOnSize(
+                    player,
+                    (this.getSize() / SingularityRifle.MAX_SIZE) * MAX_ITEM_REMOVE_PERCENT
+            );
         }
-        entity.hurt(RegisterDamageTypes.causeHoleHitDamage(this), this.getEffectSize() * DAMAGE_SIZE_MULTIPLIER);
+
+        entity.hurt(
+                RegisterDamageTypes.causeHoleHitDamage(this),
+                this.getEffectSize() * DAMAGE_SIZE_MULTIPLIER
+        );
+
         if (!this.level().isClientSide) {
             this.explode();
         }
     }
 
     private void removeItemsFromInvDepOnSize(Player player, float fraction) {
-        if (player.level().isClientSide) return; // server only
+        if (player.level().isClientSide) {
+            return;
+        }
 
         class SlotRef {
-            List<ItemStack> list;
-            int index;
+            final List<ItemStack> list;
+            final int index;
 
             SlotRef(List<ItemStack> list, int index) {
                 this.list = list;
@@ -208,47 +304,54 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
             }
 
             ItemStack get() {
-                return list.get(index);
+                return this.list.get(this.index);
             }
 
             void set(ItemStack stack) {
-                list.set(index, stack);
+                this.list.set(this.index, stack);
             }
         }
 
         List<SlotRef> allSlots = new ArrayList<>();
-        var inv = player.getInventory();
+        var inventory = player.getInventory();
 
-        // collect all non-empty slots
-        for (int i = 0; i < inv.items.size(); i++)
-            if (!inv.items.get(i).isEmpty())
-                allSlots.add(new SlotRef(inv.items, i));
+        for (int i = 0; i < inventory.items.size(); i++) {
+            if (!inventory.items.get(i).isEmpty()) {
+                allSlots.add(new SlotRef(inventory.items, i));
+            }
+        }
 
-        for (int i = 0; i < inv.armor.size(); i++)
-            if (!inv.armor.get(i).isEmpty())
-                allSlots.add(new SlotRef(inv.armor, i));
+        for (int i = 0; i < inventory.armor.size(); i++) {
+            if (!inventory.armor.get(i).isEmpty()) {
+                allSlots.add(new SlotRef(inventory.armor, i));
+            }
+        }
 
-        for (int i = 0; i < inv.offhand.size(); i++)
-            if (!inv.offhand.get(i).isEmpty())
-                allSlots.add(new SlotRef(inv.offhand, i));
+        for (int i = 0; i < inventory.offhand.size(); i++) {
+            if (!inventory.offhand.get(i).isEmpty()) {
+                allSlots.add(new SlotRef(inventory.offhand, i));
+            }
+        }
 
-        if (allSlots.isEmpty()) return;
+        if (allSlots.isEmpty()) {
+            return;
+        }
 
-        // shuffle and pick fraction
         Collections.shuffle(allSlots);
         int count = Math.round(allSlots.size() * fraction);
 
-        var level = player.level();
-        var rand = player.getRandom();
+        Level level = player.level();
+        var random = player.getRandom();
 
         for (int i = 0; i < count; i++) {
-            SlotRef ref = allSlots.get(i);
-            ItemStack stack = ref.get();
+            SlotRef slotRef = allSlots.get(i);
+            ItemStack stack = slotRef.get();
 
-            if (stack.isEmpty()) continue;
+            if (stack.isEmpty()) {
+                continue;
+            }
 
-            if (rand.nextBoolean()) {
-                // DROP with random motion
+            if (random.nextBoolean()) {
                 ItemStack dropStack = stack.copy();
 
                 ItemEntity itemEntity = new ItemEntity(
@@ -259,42 +362,51 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
                         dropStack
                 );
 
-                // random direction
-                double vx = (rand.nextDouble() - 0.5) * 0.8; // left/right
-                double vy = rand.nextDouble() * 0.6 + 0.2;   // upward bias
-                double vz = (rand.nextDouble() - 0.5) * 0.8; // forward/back
+                double vx = (random.nextDouble() - 0.5) * 0.8;
+                double vy = random.nextDouble() * 0.6 + 0.2;
+                double vz = (random.nextDouble() - 0.5) * 0.8;
 
                 itemEntity.setDeltaMovement(vx, vy, vz);
-
-                // optional: slight pickup delay so player can't instantly regrab
                 itemEntity.setPickUpDelay(20);
 
                 level.addFreshEntity(itemEntity);
             }
 
-            // remove stack (destroy if not dropped)
-            ref.set(ItemStack.EMPTY);
+            slotRef.set(ItemStack.EMPTY);
         }
     }
 
-    protected void onHitBlock(BlockHitResult pResult) {
-        BlockPos blockpos = new BlockPos(pResult.getBlockPos());
-        this.level().getBlockState(blockpos).entityInside(this.level(), blockpos, this);
+    @Override
+    protected void onHitBlock(BlockHitResult result) {
+        BlockPos blockPos = result.getBlockPos();
+
+        this.level()
+                .getBlockState(blockPos)
+                .entityInside(this.level(), blockPos, this);
+
         if (!this.level().isClientSide()) {
             this.explode();
         }
 
-        super.onHitBlock(pResult);
+        super.onHitBlock(result);
     }
 
     private void explode() {
-        this.level().broadcastEntityEvent(this, (byte)17);
+        this.level().broadcastEntityEvent(this, (byte) 17);
         this.gameEvent(GameEvent.EXPLODE, this.getOwner());
 
         if (CommonConfig.destroyBlocks) {
-            this.level().explode(this, this.getX(), this.getY(), this.getZ(), 8.0F * this.getSize() / SingularityRifle.MAX_SIZE, Level.ExplosionInteraction.TNT);
+            this.level().explode(
+                    this,
+                    this.getX(),
+                    this.getY(),
+                    this.getZ(),
+                    8.0f * this.getSize() / SingularityRifle.MAX_SIZE,
+                    Level.ExplosionInteraction.TNT
+            );
         } else {
-            dealExplosionDamage();
+            this.dealExplosionDamage();
+
             this.level().playSound(
                     null,
                     this.getX(),
@@ -302,47 +414,56 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
                     this.getZ(),
                     SoundEvents.GENERIC_EXPLODE,
                     SoundSource.BLOCKS,
-                    4.0F,
-                    1.0F
+                    4.0f,
+                    1.0f
             );
-
         }
+
         this.exploding = true;
     }
 
     private void dealExplosionDamage() {
-        if (this.level().isClientSide) return;
+        if (this.level().isClientSide) {
+            return;
+        }
 
-        // Same as explosion radius
-        float radius = 5.0F;
+        float radius = 5.0f;
         double radiusSq = radius * radius;
         Vec3 center = this.position();
 
-        // Vanilla-style bounding box
         List<LivingEntity> targets = this.level().getEntitiesOfClass(
                 LivingEntity.class,
                 this.getBoundingBox().inflate(radius)
         );
 
         for (LivingEntity target : targets) {
-
-            // Distance check
             double distSq = target.distanceToSqr(center);
-            if (distSq > radiusSq) continue;
 
-            // Explosion exposure (line of sight)
-            double exposure = getExposure(center, target);
+            if (distSq > radiusSq) {
+                continue;
+            }
 
-            if (exposure > 0) {
+            double exposure = this.getExposure(center, target);
 
-                // Vanilla explosion damage scaling
-                double dist = Math.sqrt(distSq);
-                double distanceFactor = 1.0 - (dist / radius);
+            if (exposure <= 0.0) {
+                continue;
+            }
 
-                float damage = (float)((distanceFactor * exposure) * radius * 2.0);
+            double dist = Math.sqrt(distSq);
+            double distanceFactor = 1.0 - dist / radius;
 
+            float damage = (float) ((distanceFactor * exposure) * radius * 2.0);
+
+            Entity owner = this.getOwner();
+
+            if (owner instanceof LivingEntity livingOwner) {
                 target.hurt(
-                        this.damageSources().mobProjectile(this, (LivingEntity)this.getOwner()),
+                        this.damageSources().mobProjectile(this, livingOwner),
+                        damage
+                );
+            } else {
+                target.hurt(
+                        RegisterDamageTypes.causeHoleHitDamage(this),
                         damage
                 );
             }
@@ -351,12 +472,13 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
 
     private double getExposure(Vec3 explosionPos, Entity entity) {
         AABB box = entity.getBoundingBox();
-        double stepX = 1.0 / ((box.getXsize() * 2.0) + 1.0);
-        double stepY = 1.0 / ((box.getYsize() * 2.0) + 1.0);
-        double stepZ = 1.0 / ((box.getZsize() * 2.0) + 1.0);
 
-        double visible = 0;
-        double total = 0;
+        double stepX = 1.0 / (box.getXsize() * 2.0 + 1.0);
+        double stepY = 1.0 / (box.getYsize() * 2.0 + 1.0);
+        double stepZ = 1.0 / (box.getZsize() * 2.0 + 1.0);
+
+        double visible = 0.0;
+        double total = 0.0;
 
         for (double x = 0.0; x <= 1.0; x += stepX) {
             for (double y = 0.0; y <= 1.0; y += stepY) {
@@ -368,10 +490,13 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
                     );
 
                     BlockHitResult hit = this.level().clip(
-                            new ClipContext(sample, explosionPos,
+                            new ClipContext(
+                                    sample,
+                                    explosionPos,
                                     ClipContext.Block.COLLIDER,
                                     ClipContext.Fluid.NONE,
-                                    this)
+                                    this
+                            )
                     );
 
                     if (hit.getType() == HitResult.Type.MISS) {
@@ -383,7 +508,7 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
             }
         }
 
-        return visible / total;
+        return total <= 0.0 ? 0.0 : visible / total;
     }
 
     public void setSize(float value) {
@@ -415,7 +540,6 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
     @Override
     public void setStretchDir(Vector3f value) {
         this.entityData.set(STRETCH_DIR, value);
-
     }
 
     @Override
@@ -457,7 +581,6 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
 
     @Override
     public PostEffectRegistry.HoleEffectInstance getEffectInstance() {
-        return effectInstance;
+        return this.effectInstance;
     }
-
 }

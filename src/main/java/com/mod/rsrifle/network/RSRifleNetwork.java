@@ -4,67 +4,48 @@ import com.mod.rsrifle.ReinforcedSingularityRifle;
 import com.mod.rsrifle.network.packet.ClientboundShootPacket;
 import com.mod.rsrifle.network.packet.ServerboundFirearmActionPacket;
 import com.mod.rsrifle.network.packet.ServerboundSetAttackKeyPacket;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.level.Level;
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.network.NetworkRegistry;
-import net.minecraftforge.network.PacketDistributor;
-import net.minecraftforge.network.simple.SimpleChannel;
+import net.minecraft.server.level.ServerLevel;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
+import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
-import java.util.function.Function;
-import java.util.function.Supplier;
+public final class RSRifleNetwork {
+    private static final String VERSION = "1";
 
-public class RSRifleNetwork {
-
-    private static SimpleChannel NETWORK = construct();
-    public static final String VERSION = "1.0.0";
-
-    private static SimpleChannel construct() {
-        SimpleChannel network = NetworkRegistry.ChannelBuilder.named(ResourceLocation.fromNamespaceAndPath(ReinforcedSingularityRifle.MODID,"network"))
-                .clientAcceptedVersions(VERSION::equals)
-                .serverAcceptedVersions(VERSION::equals)
-                .networkProtocolVersion(() -> VERSION)
-                .simpleChannel();
-
-        int id = 0;
-
-        buildMessage(network, id++, ServerboundSetAttackKeyPacket.class, ServerboundSetAttackKeyPacket::new);
-        buildMessage(network, id++, ServerboundFirearmActionPacket.class, ServerboundFirearmActionPacket::new);
-        buildMessage(network, id++, ClientboundShootPacket.class, ClientboundShootPacket::new);
-
-        return network;
+    private RSRifleNetwork() {
     }
 
-    private static <MSG extends RSRiflePacket> void buildMessage(SimpleChannel network, int id, Class<MSG> msg, Function<FriendlyByteBuf, MSG> decoder) {
-        network.messageBuilder(msg, id)
-                .decoder(decoder)
-                .encoder(RSRiflePacket::rootEncode)
-                .consumerMainThread(RSRifleNetwork::consumeRBHPacket)
-                .add();
+    public static void register(IEventBus modEventBus) {
+        modEventBus.addListener(RSRifleNetwork::registerPayloads);
     }
 
-    private static <MSG extends RSRiflePacket> void consumeRBHPacket(MSG packet, Supplier<NetworkEvent.Context> sup) {
-        NetworkEvent.Context ctx = sup.get();
-        packet.handle(ctx::enqueueWork, ctx.getNetworkManager().getPacketListener(), ctx.getSender());
-        ctx.setPacketHandled(true);
+    private static void registerPayloads(RegisterPayloadHandlersEvent event) {
+        PayloadRegistrar registrar = event.registrar(ReinforcedSingularityRifle.MODID)
+                .versioned(VERSION);
+
+        registrar.playToServer(
+                ServerboundSetAttackKeyPacket.TYPE,
+                ServerboundSetAttackKeyPacket.STREAM_CODEC,
+                ServerboundSetAttackKeyPacket::handle
+        );
+
+        registrar.playToServer(
+                ServerboundFirearmActionPacket.TYPE,
+                ServerboundFirearmActionPacket.STREAM_CODEC,
+                ServerboundFirearmActionPacket::handle
+        );
+
+        registrar.playToClient(
+                ClientboundShootPacket.TYPE,
+                ClientboundShootPacket.STREAM_CODEC,
+                ClientboundShootPacket::handle
+        );
     }
 
-    public static <MSG extends RSRiflePacket> void sendToServer(MSG msg) { NETWORK.sendToServer(msg); }
-
-    public static <MSG extends RSRiflePacket> void sendToPlayer(MSG msg, ServerPlayer player) {
-        NETWORK.send(PacketDistributor.PLAYER.with(() -> player), msg);
+    public static void sendToAllInDimension(ClientboundShootPacket packet, net.minecraft.world.level.Level level) {
+        if (level instanceof ServerLevel serverLevel) {
+            PacketDistributor.sendToPlayersInDimension(serverLevel, packet);
+        }
     }
-
-    public static <MSG extends RSRiflePacket> void sendToAll(MSG msg) {
-        NETWORK.send(PacketDistributor.SERVER.noArg(), msg);
-    }
-
-    public static <MSG extends RSRiflePacket> void sendToAllInDimension(MSG msg, Level level) {
-        NETWORK.send(PacketDistributor.DIMENSION.with(level::dimension), msg);
-    }
-
-    public static void init() {}
-
 }

@@ -1,35 +1,47 @@
 package com.mod.rsrifle.network.packet;
 
+import com.mod.rsrifle.ReinforcedSingularityRifle;
 import com.mod.rsrifle.api.HoldAttackKeyInteraction;
-import com.mod.rsrifle.network.RSRiflePacket;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.network.PacketListener;
+import io.netty.buffer.ByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
 
-import javax.annotation.Nullable;
-import java.util.concurrent.Executor;
+public record ServerboundSetAttackKeyPacket(boolean down) implements CustomPacketPayload {
+    public static final Type<ServerboundSetAttackKeyPacket> TYPE =
+            new Type<>(ResourceLocation.fromNamespaceAndPath(ReinforcedSingularityRifle.MODID, "set_attack_key"));
 
-public record ServerboundSetAttackKeyPacket(boolean down) implements RSRiflePacket {
-
-    public ServerboundSetAttackKeyPacket(FriendlyByteBuf buf) { this(buf.readBoolean()); }
+    public static final StreamCodec<ByteBuf, ServerboundSetAttackKeyPacket> STREAM_CODEC =
+            StreamCodec.composite(
+                    ByteBufCodecs.BOOL,
+                    ServerboundSetAttackKeyPacket::down,
+                    ServerboundSetAttackKeyPacket::new
+            );
 
     @Override
-    public void rootEncode(FriendlyByteBuf buf) {
-        buf.writeBoolean(this.down);
+    public Type<? extends CustomPacketPayload> type() {
+        return TYPE;
     }
 
-    @Override
-    public void handle(Executor exec, PacketListener listener, @Nullable ServerPlayer sender) {
-        if (sender == null)
-            return;
-        ItemStack mainhandItem = sender.getMainHandItem();
-        if (mainhandItem.getItem() instanceof HoldAttackKeyInteraction interactable) {
-            if (this.down) {
-                interactable.onPressAttackKey(mainhandItem, sender);
-            } else {
-                interactable.onReleaseAttackKey(mainhandItem, sender);
+    public static void handle(ServerboundSetAttackKeyPacket packet, IPayloadContext context) {
+        context.enqueueWork(() -> {
+            if (!(context.player() instanceof ServerPlayer sender)) {
+                return;
             }
-        }
+
+            ItemStack mainHandItem = sender.getMainHandItem();
+
+            if (mainHandItem.getItem() instanceof HoldAttackKeyInteraction interactable) {
+                if (packet.down()) {
+                    interactable.onPressAttackKey(mainHandItem, sender);
+                } else {
+                    interactable.onReleaseAttackKey(mainHandItem, sender);
+                }
+            }
+        });
     }
 }

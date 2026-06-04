@@ -1,6 +1,7 @@
-// 1.20.1	2025-12-08T21:08:35.168969072	Recipes
-b5b701a2e83de16c596dfb5c1143e35d888783eb data/rsrifle/advancements/recipes/combat/singularity_rifle.json
-a299dafcb67b26bc961dc45ef3fe047556cdbf98 data/rsrifle/advancements/recipes/misc/singularity_battery_empty.json
-210ee46f49ebd1f3469645cbf200d722113f6a4b data/rsrifle/recipes/singularity_battery.json
-dd19ae958d53747f22cf9f253d677c99a484959d data/rsrifle/recipes/singularity_battery_empty.json
-696d2329cf3ed77fff54ecb795145414cf599f30 data/rsrifle/recipes/singularity_rifle.json
+// 1.21.1	2026-06-04T10:32:31.898470748	Recipes
+b55675dbb386715e53a72c3d32248435c1597268 data/rsrifle/advancement/recipes/combat/singularity_rifle.json
+ad20237a1d684350970fef2c102d538b71b17f22 data/rsrifle/advancement/recipes/misc/singularity_battery.json
+4b32f3c3bcfa1ab98b50aa450fec23c490399449 data/rsrifle/advancement/recipes/misc/singularity_battery_empty.json
+1cc5eb4470d4bc30544e2672a2c9f1722faa6f5f data/rsrifle/recipe/singularity_battery.json
+90829e8ba2bcdbf2d25441ed97e908c021f05118 data/rsrifle/recipe/singularity_battery_empty.json
+8a612f775e2ab18921ecd35c0cfa39b8b1e7076b data/rsrifle/recipe/singularity_rifle.json

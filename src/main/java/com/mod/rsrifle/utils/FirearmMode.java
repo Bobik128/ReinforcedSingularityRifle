@@ -17,10 +17,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.fml.DistExecutor;
 import software.bernie.geckolib.animatable.GeoItem;
-import software.bernie.geckolib.core.animation.RawAnimation;
+import software.bernie.geckolib.animation.RawAnimation;
 
 import javax.annotation.Nullable;
 import java.util.*;
@@ -409,10 +407,13 @@ public class FirearmMode {
         }
 
         if (entity.level().isClientSide) {
-            int finalActionTime = actionTime;
-            long finalId = id;
-            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () ->
-                    FirearmModeClient.clientTick(this, itemStack, entity, isSelected, finalId, finalActionTime)
+            FirearmModeClient.clientTick(
+                    this,
+                    itemStack,
+                    entity,
+                    isSelected,
+                    id,
+                    actionTime
             );
         }
 

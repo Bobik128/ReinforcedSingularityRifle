@@ -1,9 +1,9 @@
 package com.mod.rsrifle.mixin.client;
 
-
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.mod.rsrifle.items.SingularityRifle;
+import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiGraphics;
@@ -20,12 +20,23 @@ public abstract class GuiMixin {
     protected Minecraft minecraft;
 
     @WrapMethod(method = "renderCrosshair")
-    private void ritchiesfirearmengine$renderCrosshair(GuiGraphics guiGraphics, Operation<Void> original) {
-        ItemStack mainhandItem = this.minecraft.player.getMainHandItem();
-        // TODO offhand, custom crosshairs
-        if (mainhandItem.getItem() instanceof SingularityRifle firearm && firearm.isAiming(mainhandItem, this.minecraft.player))
+    private void rsrifle$renderCrosshair(
+            GuiGraphics guiGraphics,
+            DeltaTracker deltaTracker,
+            Operation<Void> original
+    ) {
+        if (this.minecraft.player == null) {
+            original.call(guiGraphics, deltaTracker);
             return;
-        original.call(guiGraphics);
-    }
+        }
 
+        ItemStack mainhandItem = this.minecraft.player.getMainHandItem();
+
+        if (mainhandItem.getItem() instanceof SingularityRifle rifle
+                && rifle.isAiming(mainhandItem, this.minecraft.player)) {
+            return;
+        }
+
+        original.call(guiGraphics, deltaTracker);
+    }
 }

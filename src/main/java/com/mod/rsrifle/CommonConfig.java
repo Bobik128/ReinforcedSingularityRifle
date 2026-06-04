@@ -1,36 +1,43 @@
 package com.mod.rsrifle;
 
-import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.config.ModConfigEvent;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.ModConfigSpec;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.event.config.ModConfigEvent;
 
-// An example config class. This is not required, but it's a good idea to have one to keep your config organized.
-// Demonstrates how to use Forge's config APIs
-@Mod.EventBusSubscriber(modid = ReinforcedSingularityRifle.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CommonConfig {
 
-    public static final ForgeConfigSpec SPEC;
+    public static final ModConfigSpec SPEC;
 
-    private static final ForgeConfigSpec.BooleanValue DESTROY_BLOCKS;
+    private static final ModConfigSpec.BooleanValue DESTROY_BLOCKS;
 
     static {
-        final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
+        ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
 
-        DESTROY_BLOCKS = BUILDER
+        DESTROY_BLOCKS = builder
                 .comment("Black holes can destroy blocks")
                 .define("destroy_blocks", true);
 
-        SPEC = BUILDER.build();
+        SPEC = builder.build();
     }
 
     public static boolean destroyBlocks;
 
-    @SubscribeEvent
-    static void onLoad(final ModConfigEvent event) {
-        ModConfig config = event.getConfig();
-        if (config.getSpec() == CommonConfig.SPEC) {
+    public static void register(IEventBus modEventBus) {
+        modEventBus.addListener(CommonConfig::onConfigLoad);
+        modEventBus.addListener(CommonConfig::onConfigReload);
+    }
+
+    private static void onConfigLoad(final ModConfigEvent.Loading event) {
+        bakeConfig(event.getConfig());
+    }
+
+    private static void onConfigReload(final ModConfigEvent.Reloading event) {
+        bakeConfig(event.getConfig());
+    }
+
+    private static void bakeConfig(ModConfig config) {
+        if (config.getSpec() == SPEC) {
             destroyBlocks = DESTROY_BLOCKS.get();
         }
     }

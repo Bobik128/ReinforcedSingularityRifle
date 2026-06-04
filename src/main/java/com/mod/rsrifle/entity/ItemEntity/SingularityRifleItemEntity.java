@@ -10,53 +10,93 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 public class SingularityRifleItemEntity extends ItemEntity {
     private static final int LIFETIME = 6000;
 
-    @OnlyIn(Dist.CLIENT) private LoopingSound soundInstance;
+    @OnlyIn(Dist.CLIENT)
+    private LoopingSound soundInstance;
 
-    public SingularityRifleItemEntity(EntityType<? extends ItemEntity> pEntityType, Level pLevel) {
-        super(pEntityType, pLevel);
+    public SingularityRifleItemEntity(EntityType<? extends ItemEntity> entityType, Level level) {
+        super(entityType, level);
     }
 
-    public SingularityRifleItemEntity(Level pLevel, double pPosX, double pPosY, double pPosZ, ItemStack pItemStack, double pDeltaX, double pDeltaY, double pDeltaZ) {
-        this(RSRifleEntityTypes.RIFLE_ITEM.get(), pLevel);
-        this.setPos(pPosX, pPosY, pPosZ);
-        this.setDeltaMovement(pDeltaX, pDeltaY, pDeltaZ);
-        this.setItem(pItemStack);
-        this.lifespan = (pItemStack.getItem() == null ? LIFETIME : pItemStack.getEntityLifespan(pLevel));
+    public SingularityRifleItemEntity(
+            Level level,
+            double posX,
+            double posY,
+            double posZ,
+            ItemStack itemStack,
+            double deltaX,
+            double deltaY,
+            double deltaZ
+    ) {
+        this(RSRifleEntityTypes.RIFLE_ITEM.get(), level);
+
+        this.setPos(posX, posY, posZ);
+        this.setDeltaMovement(deltaX, deltaY, deltaZ);
+        this.setItem(itemStack);
+
+        this.lifespan = itemStack.isEmpty()
+                ? LIFETIME
+                : itemStack.getEntityLifespan(level);
     }
 
-    public SingularityRifleItemEntity(ItemEntity pOther) {
-        super(RSRifleEntityTypes.RIFLE_ITEM.get(), pOther.level());
-        this.setItem(pOther.getItem().copy());
-        this.copyPosition(pOther);
-        this.lifespan = pOther.lifespan;
-        this.setDeltaMovement(pOther.getDeltaMovement());
+    public SingularityRifleItemEntity(ItemEntity other) {
+        super(RSRifleEntityTypes.RIFLE_ITEM.get(), other.level());
+
+        this.setItem(other.getItem().copy());
+        this.copyPosition(other);
+        this.lifespan = other.lifespan;
+        this.setDeltaMovement(other.getDeltaMovement());
         this.setDefaultPickUpDelay();
     }
 
-    public SingularityRifleItemEntity(Level pLevel, double pPosX, double pPosY, double pPosZ, ItemStack pItemStack) {
-        this(pLevel, pPosX, pPosY, pPosZ, pItemStack, pLevel.random.nextDouble() * 0.2D - 0.1D, 0.2D, pLevel.random.nextDouble() * 0.2D - 0.1D);
+    public SingularityRifleItemEntity(
+            Level level,
+            double posX,
+            double posY,
+            double posZ,
+            ItemStack itemStack
+    ) {
+        this(
+                level,
+                posX,
+                posY,
+                posZ,
+                itemStack,
+                level.random.nextDouble() * 0.2D - 0.1D,
+                0.2D,
+                level.random.nextDouble() * 0.2D - 0.1D
+        );
     }
 
     @OnlyIn(Dist.CLIENT)
     private void clientTick() {
-        if (soundInstance == null || soundInstance.isStopped()) {
-            soundInstance = new LoopingSound(RSRifleSounds.ELECTRIC_BUZZ_MONO.get(), SoundSource.NEUTRAL, this, FirearmMode.getVolume(getItem()) + 0.01f);
-            Minecraft.getInstance().getSoundManager().play(soundInstance);
+        float volume = FirearmMode.getVolume(this.getItem());
+
+        if (this.soundInstance == null || this.soundInstance.isStopped()) {
+            this.soundInstance = new LoopingSound(
+                    RSRifleSounds.ELECTRIC_BUZZ_MONO.get(),
+                    SoundSource.NEUTRAL,
+                    this,
+                    volume + 0.01f
+            );
+
+            Minecraft.getInstance().getSoundManager().play(this.soundInstance);
         }
-        soundInstance.setVolume(FirearmMode.getVolume(getItem()));
+
+        this.soundInstance.setVolume(volume);
     }
 
     @Override
     public void tick() {
         super.tick();
+
         if (this.level().isClientSide) {
-            clientTick();
+            this.clientTick();
         }
     }
 }
