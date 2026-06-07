@@ -1,14 +1,14 @@
-[07Jun2026 14:34:04.397] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientdev, --version, 21.1.228, --assetIndex, 17, --assetsDir, /home/tomas/.gradle/caches/neoformruntime/assets, --gameDir, ., --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.228, --fml.neoFormVersion, 20240808.144430]
-[07Jun2026 14:34:04.399] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.11+10-LTS
-[07Jun2026 14:34:04.400] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.11 by Eclipse Adoptium; OS Linux arch amd64 version 7.0.10-201.fc44.x86_64
-[07Jun2026 14:34:04.486] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[07Jun2026 14:34:04.578] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[07Jun2026 14:34:04.625] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[07Jun2026 14:34:04.707] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/home/tomas/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23126!/ Service=ModLauncher Env=CLIENT
-[07Jun2026 14:34:04.781] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Mesa Intel(R) Iris(R) Xe Graphics (TGL GT2) GL version 4.6 (Core Profile) Mesa 26.0.6 (git-0e095aab43), Intel
-[07Jun2026 14:34:05.013] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: library:mixinextras.neoforge. Using Mod File: /home/tomas/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-neoforge/0.5.0/d734b83ce6542bb70ea31755c1595b88992dbe65/mixinextras-neoforge-0.5.0.jar
-[07Jun2026 14:34:05.013] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 4 dependencies adding them to mods collection
-[07Jun2026 14:34:05.014] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+[07Jun2026 16:36:09.645] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientdev, --version, 21.1.228, --assetIndex, 17, --assetsDir, /home/tomas/.gradle/caches/neoformruntime/assets, --gameDir, ., --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.228, --fml.neoFormVersion, 20240808.144430]
+[07Jun2026 16:36:09.648] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.11+10-LTS
+[07Jun2026 16:36:09.650] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.11 by Eclipse Adoptium; OS Linux arch amd64 version 7.0.10-201.fc44.x86_64
+[07Jun2026 16:36:09.728] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[07Jun2026 16:36:09.808] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[07Jun2026 16:36:09.848] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[07Jun2026 16:36:09.934] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/home/tomas/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23126!/ Service=ModLauncher Env=CLIENT
+[07Jun2026 16:36:10.015] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Mesa Intel(R) Iris(R) Xe Graphics (TGL GT2) GL version 4.6 (Core Profile) Mesa 26.0.6 (git-0e095aab43), Intel
+[07Jun2026 16:36:10.248] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: library:mixinextras.neoforge. Using Mod File: /home/tomas/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-neoforge/0.5.0/d734b83ce6542bb70ea31755c1595b88992dbe65/mixinextras-neoforge-0.5.0.jar
+[07Jun2026 16:36:10.249] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 4 dependencies adding them to mods collection
+[07Jun2026 16:36:10.250] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
      Mod List:
 		Name Version (Mod Id)
 
@@ -20,104 +20,41 @@
 		Ponder 1.0.82+mc1.21.1 (ponder)
 		Reinforced Black Holes 1.1.3 (rbh)
 		Reinforced Singularity Rifle 1.0.0 (rsrifle)
-[07Jun2026 14:34:05.668] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
-[07Jun2026 14:34:05.676] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by rbh.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
-[07Jun2026 14:34:05.681] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by rsrifle.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
-[07Jun2026 14:34:05.695] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientdev' with arguments [--version, 21.1.228, --gameDir, ., --assetsDir, /home/tomas/.gradle/caches/neoformruntime/assets, --assetIndex, 17]
-[07Jun2026 14:34:05.733] [main/WARN] [mixin/]: Reference map 'rbh.refmap.json' for rbh.mixins.json could not be read. If this is a development environment you can ignore this message
-[07Jun2026 14:34:05.733] [main/WARN] [mixin/]: Reference map 'geckolib.refmap.json' for geckolib.mixins.json could not be read. If this is a development environment you can ignore this message
-[07Jun2026 14:34:05.734] [main/WARN] [mixin/]: Reference map 'ponder.refmap.json' for ponder-common.mixins.json could not be read. If this is a development environment you can ignore this message
-[07Jun2026 14:34:05.738] [main/WARN] [mixin/]: Reference map 'rsrifle.refmap.json' for rsrifle.mixins.json could not be read. If this is a development environment you can ignore this message
-[07Jun2026 14:34:06.278] [main/WARN] [mixin/]: Error loading class: org/jetbrains/annotations/ApiStatus$ScheduledForRemoval (java.lang.ClassNotFoundException: org.jetbrains.annotations.ApiStatus$ScheduledForRemoval)
-[07Jun2026 14:34:06.307] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
-[07Jun2026 14:34:06.344] [main/INFO] [mixin/]: Mixing client.MinecraftMixin from rsrifle.mixins.json into net.minecraft.client.Minecraft
-[07Jun2026 14:34:06.344] [main/WARN] [mixin/]: rsrifle.mixins.json:client.MinecraftMixin from mod rsrifle: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
-[07Jun2026 14:34:07.562] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 263 milliseconds
-[07Jun2026 14:34:11.909] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[07Jun2026 14:34:11.910] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[07Jun2026 14:34:11.913] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[07Jun2026 14:34:11.914] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[07Jun2026 14:34:11.915] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[07Jun2026 14:34:12.009] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/moddev/artifacts/neoforge-21.1.228.jar%23177!/assets/.mcassetsroot' uses unexpected schema
-[07Jun2026 14:34:12.009] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/moddev/artifacts/neoforge-21.1.228.jar%23177!/data/.mcassetsroot' uses unexpected schema
-[07Jun2026 14:34:12.024] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[07Jun2026 14:34:12.030] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[07Jun2026 14:34:12.101] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
-[07Jun2026 14:34:12.156] [Yggdrasil Key Fetcher/ERROR] [com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo/]: Failed to request yggdrasil public key
-com.mojang.authlib.exceptions.MinecraftClientException: Failed to read from https://api.minecraftservices.com/publickeys due to api.minecraftservices.com
-	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:108) ~[authlib-6.0.54.jar%23104!/:?]
-	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:57) ~[authlib-6.0.54.jar%23104!/:?]
-	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo.fetch(YggdrasilServicesKeyInfo.java:114) ~[authlib-6.0.54.jar%23104!/:?]
-	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo$1.run(YggdrasilServicesKeyInfo.java:89) ~[authlib-6.0.54.jar%23104!/:?]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[?:?]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
-	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
-Caused by: java.net.UnknownHostException: api.minecraftservices.com
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[?:?]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
-	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?]
-	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304) ~[?:?]
-	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178) ~[?:?]
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531) ~[?:?]
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636) ~[?:?]
-	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264) ~[?:?]
-	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:377) ~[?:?]
-	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:193) ~[?:?]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1302) ~[?:?]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1143) ~[?:?]
-	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:179) ~[?:?]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1705) ~[?:?]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1629) ~[?:?]
-	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:531) ~[?:?]
-	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:307) ~[?:?]
-	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:84) ~[authlib-6.0.54.jar%23104!/:?]
-	... 9 more
-[07Jun2026 14:34:12.156] [Download-1/WARN] [com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService/]: Couldn't look up profile properties for 380df991-f603-344c-a090-369bad2a924a
-com.mojang.authlib.exceptions.MinecraftClientException: Failed to read from https://sessionserver.mojang.com/session/minecraft/profile/380df991f603344ca090369bad2a924a?unsigned=false due to sessionserver.mojang.com
-	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:108) ~[authlib-6.0.54.jar%23104!/:?]
-	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:57) ~[authlib-6.0.54.jar%23104!/:?]
-	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fetchProfileUncached(YggdrasilMinecraftSessionService.java:201) ~[authlib-6.0.54.jar%23104!/:?]
-	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fetchProfile(YggdrasilMinecraftSessionService.java:171) ~[authlib-6.0.54.jar%23104!/:?]
-	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.lambda$new$1(Minecraft.java:432) ~[neoforge-21.1.228.jar%23177!/:?]
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
-	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
-Caused by: java.net.UnknownHostException: sessionserver.mojang.com
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[?:?]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?]
-	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?]
-	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304) ~[?:?]
-	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178) ~[?:?]
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:531) ~[?:?]
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:636) ~[?:?]
-	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264) ~[?:?]
-	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:377) ~[?:?]
-	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:193) ~[?:?]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1302) ~[?:?]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1143) ~[?:?]
-	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:179) ~[?:?]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1705) ~[?:?]
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1629) ~[?:?]
-	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:531) ~[?:?]
-	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:307) ~[?:?]
-	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:84) ~[authlib-6.0.54.jar%23104!/:?]
-	... 8 more
-[07Jun2026 14:34:12.290] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.228, for MC 1.21.1
-[07Jun2026 14:34:12.340] [modloading-worker-0/INFO] [com.simibubi.create.Create/]: Create 6.0.10 initializing! Commit hash: ac0c444d9828da3453ae8cc65338e8de063286fb
-[07Jun2026 14:34:12.411] [modloading-worker-0/INFO] [mixin/]: Mixing client.ShaderInstanceMixin from rbh.mixins.json into net.minecraft.client.renderer.ShaderInstance
-[07Jun2026 14:34:12.411] [modloading-worker-0/WARN] [mixin/]: rbh.mixins.json:client.ShaderInstanceMixin from mod rbh: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
-[07Jun2026 14:34:12.525] [modloading-worker-0/INFO] [mixin/]: Mixing client.LevelRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.LevelRenderer
-[07Jun2026 14:34:15.643] [Render thread/INFO] [mixin/]: Mixing client.ItemInHandRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.ItemInHandRenderer
-[07Jun2026 14:34:15.643] [Render thread/INFO] [mixin/]: Mixing client.ItemInHandRendererMixin from rsrifle.mixins.json into net.minecraft.client.renderer.ItemInHandRenderer
-[07Jun2026 14:34:15.747] [Render thread/INFO] [mixin/]: Mixing client.GuiMixin from rsrifle.mixins.json into net.minecraft.client.gui.Gui
-[07Jun2026 14:34:15.807] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: [rsrifle]
-[07Jun2026 14:34:15.854] [Render thread/INFO] [mixin/]: Mixing client.PlayerRendererMixin from rsrifle.mixins.json into net.minecraft.client.renderer.entity.player.PlayerRenderer
-[07Jun2026 14:34:15.877] [Render thread/INFO] [mixin/]: Mixing client.ArrowRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.entity.ArrowRenderer
-[07Jun2026 14:34:16.043] [Render thread/ERROR] [com.mojang.text2speech.Narrator/]: Error while loading the narrator
+[07Jun2026 16:36:11.041] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
+[07Jun2026 16:36:11.046] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by rbh.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[07Jun2026 16:36:11.055] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by rsrifle.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[07Jun2026 16:36:11.083] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientdev' with arguments [--version, 21.1.228, --gameDir, ., --assetsDir, /home/tomas/.gradle/caches/neoformruntime/assets, --assetIndex, 17]
+[07Jun2026 16:36:11.167] [main/WARN] [mixin/]: Reference map 'rbh.refmap.json' for rbh.mixins.json could not be read. If this is a development environment you can ignore this message
+[07Jun2026 16:36:11.168] [main/WARN] [mixin/]: Reference map 'geckolib.refmap.json' for geckolib.mixins.json could not be read. If this is a development environment you can ignore this message
+[07Jun2026 16:36:11.169] [main/WARN] [mixin/]: Reference map 'ponder.refmap.json' for ponder-common.mixins.json could not be read. If this is a development environment you can ignore this message
+[07Jun2026 16:36:11.172] [main/WARN] [mixin/]: Reference map 'rsrifle.refmap.json' for rsrifle.mixins.json could not be read. If this is a development environment you can ignore this message
+[07Jun2026 16:36:11.822] [main/WARN] [mixin/]: Error loading class: org/jetbrains/annotations/ApiStatus$ScheduledForRemoval (java.lang.ClassNotFoundException: org.jetbrains.annotations.ApiStatus$ScheduledForRemoval)
+[07Jun2026 16:36:11.859] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
+[07Jun2026 16:36:11.911] [main/INFO] [mixin/]: Mixing client.MinecraftMixin from rsrifle.mixins.json into net.minecraft.client.Minecraft
+[07Jun2026 16:36:11.912] [main/WARN] [mixin/]: rsrifle.mixins.json:client.MinecraftMixin from mod rsrifle: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[07Jun2026 16:36:13.237] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 259 milliseconds
+[07Jun2026 16:36:20.160] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[07Jun2026 16:36:20.162] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[07Jun2026 16:36:20.166] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[07Jun2026 16:36:20.167] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[07Jun2026 16:36:20.168] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[07Jun2026 16:36:20.369] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/moddev/artifacts/neoforge-21.1.228.jar%23177!/assets/.mcassetsroot' uses unexpected schema
+[07Jun2026 16:36:20.370] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/tomas/IdeaProjects/ReinforcedSingularityRifle/build/moddev/artifacts/neoforge-21.1.228.jar%23177!/data/.mcassetsroot' uses unexpected schema
+[07Jun2026 16:36:20.392] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[07Jun2026 16:36:20.404] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[07Jun2026 16:36:20.555] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
+[07Jun2026 16:36:20.878] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.228, for MC 1.21.1
+[07Jun2026 16:36:20.986] [modloading-worker-0/INFO] [com.simibubi.create.Create/]: Create 6.0.10 initializing! Commit hash: ac0c444d9828da3453ae8cc65338e8de063286fb
+[07Jun2026 16:36:21.176] [modloading-worker-0/INFO] [mixin/]: Mixing client.ShaderInstanceMixin from rbh.mixins.json into net.minecraft.client.renderer.ShaderInstance
+[07Jun2026 16:36:21.176] [modloading-worker-0/WARN] [mixin/]: rbh.mixins.json:client.ShaderInstanceMixin from mod rbh: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[07Jun2026 16:36:21.373] [modloading-worker-0/INFO] [mixin/]: Mixing client.LevelRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.LevelRenderer
+[07Jun2026 16:36:24.900] [Render thread/INFO] [mixin/]: Mixing client.ItemInHandRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.ItemInHandRenderer
+[07Jun2026 16:36:24.901] [Render thread/INFO] [mixin/]: Mixing client.ItemInHandRendererMixin from rsrifle.mixins.json into net.minecraft.client.renderer.ItemInHandRenderer
+[07Jun2026 16:36:25.088] [Render thread/INFO] [mixin/]: Mixing client.GuiMixin from rsrifle.mixins.json into net.minecraft.client.gui.Gui
+[07Jun2026 16:36:25.186] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: [rsrifle]
+[07Jun2026 16:36:25.266] [Render thread/INFO] [mixin/]: Mixing client.PlayerRendererMixin from rsrifle.mixins.json into net.minecraft.client.renderer.entity.player.PlayerRenderer
+[07Jun2026 16:36:25.297] [Render thread/INFO] [mixin/]: Mixing client.ArrowRendererMixin from rbh.mixins.json into net.minecraft.client.renderer.entity.ArrowRenderer
+[07Jun2026 16:36:25.664] [Render thread/ERROR] [com.mojang.text2speech.Narrator/]: Error while loading the narrator
 com.mojang.text2speech.Narrator$InitializeException: Failed to load library flite
 	at MC-BOOTSTRAP/text2speech@1.17.9/com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:69) ~[text2speech-1.17.9.jar%23110!/:?]
 	at MC-BOOTSTRAP/text2speech@1.17.9/com.mojang.text2speech.NarratorLinux.<init>(NarratorLinux.java:18) ~[text2speech-1.17.9.jar%23110!/:?]
@@ -239,145 +176,92 @@ Native library (linux-x86-64/libflite.so) not found in resource path (/home/toma
 		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 		at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 		at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?]
-[07Jun2026 14:34:16.063] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/flywheel, mod/rbh, mod/geckolib, mod/ponder, mod/create, mod/rsrifle, mod/neoforge
-[07Jun2026 14:34:16.078] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: rsrifle:animations/item/.xdp-unknown.animation.json-HzCbfV, ignoring
-[07Jun2026 14:34:16.078] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: rsrifle:geo/item/.xdp-singularity_rifle.geo.bbmodel-IVDbIH, ignoring
-[07Jun2026 14:34:16.146] [NeoForge Version Check/INFO] [net.neoforged.fml.VersionChecker/]: [create] Starting version check at https://api.modrinth.com/updates/create/forge_updates.json?neoforge=only
-[07Jun2026 14:34:16.236] [Worker-Main-1/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
-[07Jun2026 14:34:16.265] [NeoForge Version Check/WARN] [net.neoforged.fml.VersionChecker/]: Failed to process update information
-java.net.ConnectException: null
-	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:955) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133) ~[java.net.http:?]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.VersionChecker$1.openUrlString(VersionChecker.java:129) ~[loader-4.0.42.jar%23134!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.VersionChecker$1.process(VersionChecker.java:162) ~[loader-4.0.42.jar%23134!/:4.0]
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75) [?:?]
-	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.VersionChecker$1.run(VersionChecker.java:105) [loader-4.0.42.jar%23134!/:4.0]
-Caused by: java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1065) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:529) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:140) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:98) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:391) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:584) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:428) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:420) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:435) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:477) ~[java.net.http:?]
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?]
-	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950) ~[?:?]
-	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372) ~[?:?]
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:467) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:355) ~[java.net.http:?]
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150) ~[?:?]
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?]
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:177) ~[java.net.http:?]
-	at java.base/java.util.concurrent.CompletableFuture.completeAsync(CompletableFuture.java:2719) ~[?:?]
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsync(MultiExchange.java:308) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.HttpClientImpl.sendAsync(HttpClientImpl.java:1053) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:933) ~[java.net.http:?]
-	... 5 more
-Caused by: java.nio.channels.UnresolvedAddressException
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:147) ~[?:?]
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:155) ~[?:?]
-	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:842) ~[?:?]
-	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:865) ~[?:?]
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210) ~[java.net.http:?]
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571) ~[?:?]
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:529) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:140) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:98) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:391) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:584) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:428) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:420) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:435) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:477) ~[java.net.http:?]
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?]
-	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950) ~[?:?]
-	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372) ~[?:?]
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:467) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:355) ~[java.net.http:?]
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150) ~[?:?]
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?]
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?]
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:177) ~[java.net.http:?]
-	at java.base/java.util.concurrent.CompletableFuture.completeAsync(CompletableFuture.java:2719) ~[?:?]
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsync(MultiExchange.java:308) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.HttpClientImpl.sendAsync(HttpClientImpl.java:1053) ~[java.net.http:?]
-	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:933) ~[java.net.http:?]
-	... 5 more
-[07Jun2026 14:34:16.533] [Worker-Main-6/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
-[07Jun2026 14:34:19.944] [Worker-Main-4/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model rsrifle:singularity_rifle#inventory:
+[07Jun2026 16:36:25.712] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/flywheel, mod/rbh, mod/geckolib, mod/ponder, mod/create, mod/rsrifle, mod/neoforge
+[07Jun2026 16:36:25.740] [Worker-Main-2/ERROR] [net.minecraft.Util/]: Invalid path in pack: rsrifle:animations/item/.xdp-unknown.animation.json-HzCbfV, ignoring
+[07Jun2026 16:36:25.742] [Worker-Main-1/ERROR] [net.minecraft.Util/]: Invalid path in pack: rsrifle:geo/item/.xdp-singularity_rifle.geo.bbmodel-IVDbIH, ignoring
+[07Jun2026 16:36:25.847] [NeoForge Version Check/INFO] [net.neoforged.fml.VersionChecker/]: [create] Starting version check at https://api.modrinth.com/updates/create/forge_updates.json?neoforge=only
+[07Jun2026 16:36:26.025] [Worker-Main-6/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
+[07Jun2026 16:36:26.477] [NeoForge Version Check/INFO] [net.neoforged.fml.VersionChecker/]: [create] Found status: OUTDATED Current: 6.0.10 Target: 6.0.10+mc1.21.1
+[07Jun2026 16:36:27.159] [Worker-Main-1/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
+[07Jun2026 16:36:30.787] [Worker-Main-1/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model rsrifle:singularity_rifle#inventory:
     minecraft:textures/atlas/blocks.png:rbh:item/texture
-[07Jun2026 14:34:20.437] [Worker-Main-4/INFO] [PonderIndex/]: Registering Ponder Scenes took 299.0 ms
-[07Jun2026 14:34:20.464] [Worker-Main-4/INFO] [PonderIndex/]: Registering Ponder Tags took 26.36 ms
-[07Jun2026 14:34:20.802] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[07Jun2026 14:34:20.803] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[07Jun2026 14:34:20.917] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device Built-in Audio Analog Stereo
-[07Jun2026 14:34:20.918] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[07Jun2026 14:34:21.134] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
-[07Jun2026 14:34:21.267] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[07Jun2026 14:34:21.268] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[07Jun2026 14:34:21.272] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[07Jun2026 14:34:21.275] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[07Jun2026 14:34:21.320] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[07Jun2026 14:34:21.321] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[07Jun2026 14:34:21.322] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[07Jun2026 14:34:21.324] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[07Jun2026 14:34:21.401] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[07Jun2026 14:34:21.409] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
-[07Jun2026 14:34:21.410] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[07Jun2026 14:34:21.411] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
-[07Jun2026 14:34:21.412] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
-[07Jun2026 14:34:21.451] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[07Jun2026 14:34:21.495] [Render thread/INFO] [mixin/]: Mixing client.PostChainMixin from rbh.mixins.json into net.minecraft.client.renderer.PostChain
-[07Jun2026 14:34:21.505] [Render thread/INFO] [mixin/]: Mixing client.PostPassMixin from rbh.mixins.json into net.minecraft.client.renderer.PostPass
-[07Jun2026 14:34:21.506] [Render thread/INFO] [mixin/]: Renaming synthetic method lambda$new$0(Lnet/minecraft/client/renderer/PostPass;)V to md61bd2a$rbh$lambda$new$0$0 in rbh.mixins.json:client.PostPassMixin from mod rbh
-[07Jun2026 14:34:21.525] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rbh:rendertype_black_hole could not find uniform named GameTime in the specified shader program.
-[07Jun2026 14:34:21.525] [Render thread/INFO] [com.mod.rbh.shaders.RBInternalShaders/]: Registered internal shaders
-[07Jun2026 14:34:21.542] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleScreenCenter in the specified shader program.
-[07Jun2026 14:34:21.542] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleRadius in the specified shader program.
-[07Jun2026 14:34:21.543] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named Radius in the specified shader program.
-[07Jun2026 14:34:21.579] [Render thread/INFO] [flywheel/backend/shaders/]: Loaded 77 shader sources in 27.996 ms
-[07Jun2026 14:34:21.598] [Render thread/INFO] [com.simibubi.create.Create/]: Loaded 58 train hat configurations.
-[07Jun2026 14:34:21.598] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
-[07Jun2026 14:34:33.153] [Render thread/INFO] [com.simibubi.create.Create/]: Created 157 recipes which will be injected into the game
-[07Jun2026 14:34:33.158] [Render thread/INFO] [com.simibubi.create.Create/]: Created 0 tags which will be injected into the game
-[07Jun2026 14:34:33.828] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 2818 recipes
-[07Jun2026 14:34:33.958] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 2508 advancements
-[07Jun2026 14:34:34.688] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.1
-[07Jun2026 14:34:34.689] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[07Jun2026 14:34:36.500] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[07Jun2026 14:34:36.839] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[07Jun2026 14:34:36.988] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
-[07Jun2026 14:34:37.012] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 504 ms
-[07Jun2026 14:34:37.065] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[07Jun2026 14:34:37.066] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[07Jun2026 14:34:37.119] [Render thread/WARN] [io.netty.util.internal.MacAddressUtil/]: Failed to find a usable hardware address from the network interfaces; using random bytes: 86:b5:b4:89:91:ff:50:4e
-[07Jun2026 14:34:37.469] [Render thread/INFO] [com.simibubi.create.Create/]: Created 157 recipes which will be injected into the game
-[07Jun2026 14:34:37.472] [Render thread/INFO] [com.simibubi.create.Create/]: Created 0 tags which will be injected into the game
-[07Jun2026 14:34:37.790] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:f4af404b] logged in with entity id 166 at (-191.271233439793, 72.86244003093897, 162.1458178993768)
-[07Jun2026 14:34:37.815] [Render thread/INFO] [mixin/]: Mixing client.MultiPlayerGameModeMixin from rsrifle.mixins.json into net.minecraft.client.multiplayer.MultiPlayerGameMode
-[07Jun2026 14:34:37.864] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[07Jun2026 14:34:38.278] [Render thread/INFO] [flywheel/]: Started 2 worker threads
-[07Jun2026 14:34:38.384] [Render thread/WARN] [net.minecraft.client.multiplayer.ClientPacketListener/]: Ignoring chat session from Dev due to missing Services public key
-[07Jun2026 14:34:38.397] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 73 advancements
-[07Jun2026 14:35:06.190] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[07Jun2026 14:35:06.232] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:overworld
-[07Jun2026 14:35:06.273] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:the_end
-[07Jun2026 14:35:06.273] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:the_nether
-[07Jun2026 14:36:03.391] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[07Jun2026 14:36:03.391] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[07Jun2026 14:36:03.401] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[07Jun2026 14:36:03.509] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:overworld
-[07Jun2026 14:36:03.568] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:the_end
-[07Jun2026 14:36:03.571] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:the_nether
-[07Jun2026 14:36:03.579] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (neoforge test): All chunks are saved
-[07Jun2026 14:36:03.579] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[07Jun2026 14:36:03.579] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[07Jun2026 14:36:03.579] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[07Jun2026 16:36:30.990] [Worker-Main-4/INFO] [PonderIndex/]: Registering Ponder Scenes took 71.81 ms
+[07Jun2026 16:36:30.994] [Worker-Main-4/INFO] [PonderIndex/]: Registering Ponder Tags took 3.689 ms
+[07Jun2026 16:36:31.130] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[07Jun2026 16:36:31.130] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[07Jun2026 16:36:31.204] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device Built-in Audio Analog Stereo
+[07Jun2026 16:36:31.204] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[07Jun2026 16:36:31.334] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[07Jun2026 16:36:31.469] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[07Jun2026 16:36:31.471] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[07Jun2026 16:36:31.475] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[07Jun2026 16:36:31.477] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[07Jun2026 16:36:31.523] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[07Jun2026 16:36:31.523] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[07Jun2026 16:36:31.525] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[07Jun2026 16:36:31.526] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[07Jun2026 16:36:31.595] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[07Jun2026 16:36:31.601] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[07Jun2026 16:36:31.602] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[07Jun2026 16:36:31.603] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[07Jun2026 16:36:31.604] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[07Jun2026 16:36:31.656] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[07Jun2026 16:36:31.706] [Render thread/INFO] [mixin/]: Mixing client.PostChainMixin from rbh.mixins.json into net.minecraft.client.renderer.PostChain
+[07Jun2026 16:36:31.716] [Render thread/INFO] [mixin/]: Mixing client.PostPassMixin from rbh.mixins.json into net.minecraft.client.renderer.PostPass
+[07Jun2026 16:36:31.717] [Render thread/INFO] [mixin/]: Renaming synthetic method lambda$new$0(Lnet/minecraft/client/renderer/PostPass;)V to md3182bb$rbh$lambda$new$0$0 in rbh.mixins.json:client.PostPassMixin from mod rbh
+[07Jun2026 16:36:31.732] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rbh:rendertype_black_hole could not find uniform named GameTime in the specified shader program.
+[07Jun2026 16:36:31.732] [Render thread/INFO] [com.mod.rbh.shaders.RBInternalShaders/]: Registered internal shaders
+[07Jun2026 16:36:31.749] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleScreenCenter in the specified shader program.
+[07Jun2026 16:36:31.750] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleRadius in the specified shader program.
+[07Jun2026 16:36:31.750] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named Radius in the specified shader program.
+[07Jun2026 16:36:31.792] [Render thread/INFO] [flywheel/backend/shaders/]: Loaded 77 shader sources in 33.385 ms
+[07Jun2026 16:36:31.816] [Render thread/INFO] [com.simibubi.create.Create/]: Loaded 58 train hat configurations.
+[07Jun2026 16:36:31.817] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
+[07Jun2026 16:36:42.323] [Render thread/INFO] [com.simibubi.create.Create/]: Created 157 recipes which will be injected into the game
+[07Jun2026 16:36:42.329] [Render thread/INFO] [com.simibubi.create.Create/]: Created 0 tags which will be injected into the game
+[07Jun2026 16:36:43.021] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 2818 recipes
+[07Jun2026 16:36:43.281] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 2508 advancements
+[07Jun2026 16:36:44.519] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.1
+[07Jun2026 16:36:44.519] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[07Jun2026 16:36:49.021] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[07Jun2026 16:36:49.695] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[07Jun2026 16:36:49.696] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[07Jun2026 16:36:49.945] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 901 ms
+[07Jun2026 16:36:49.946] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[07Jun2026 16:36:50.137] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[07Jun2026 16:36:50.137] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[07Jun2026 16:36:50.867] [Render thread/INFO] [com.simibubi.create.Create/]: Created 157 recipes which will be injected into the game
+[07Jun2026 16:36:50.872] [Render thread/INFO] [com.simibubi.create.Create/]: Created 0 tags which will be injected into the game
+[07Jun2026 16:36:51.513] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:9102e97e] logged in with entity id 173 at (-190.41332028116142, 72.49206027985169, 177.432062561798)
+[07Jun2026 16:36:51.552] [Render thread/INFO] [mixin/]: Mixing client.MultiPlayerGameModeMixin from rsrifle.mixins.json into net.minecraft.client.multiplayer.MultiPlayerGameMode
+[07Jun2026 16:36:51.699] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[07Jun2026 16:36:52.245] [Render thread/INFO] [flywheel/]: Started 2 worker threads
+[07Jun2026 16:36:52.390] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 73 advancements
+[07Jun2026 16:36:53.452] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleScreenCenter in the specified shader program.
+[07Jun2026 16:36:53.462] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleRadius in the specified shader program.
+[07Jun2026 16:36:53.463] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named Radius in the specified shader program.
+[07Jun2026 16:37:22.120] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleScreenCenter in the specified shader program.
+[07Jun2026 16:37:22.121] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named HoleRadius in the specified shader program.
+[07Jun2026 16:37:22.121] [Render thread/WARN] [net.minecraft.client.renderer.EffectInstance/]: Shader rbh:black_hole could not find uniform named Radius in the specified shader program.
+[07Jun2026 16:37:43.401] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[07Jun2026 16:37:43.418] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:overworld
+[07Jun2026 16:37:43.434] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:the_nether
+[07Jun2026 16:37:43.434] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:the_end
+[07Jun2026 16:38:33.252] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[07Jun2026 16:38:33.305] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:overworld
+[07Jun2026 16:38:33.379] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:the_nether
+[07Jun2026 16:38:33.380] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:the_end
+[07Jun2026 16:38:35.563] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[07Jun2026 16:38:35.564] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[07Jun2026 16:38:35.577] [Server thread/INFO] [net.minecraft.server.network.ServerCommonPacketListenerImpl/]: Stopping singleplayer server as player logged out
+[07Jun2026 16:38:35.605] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[07Jun2026 16:38:35.606] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[07Jun2026 16:38:35.606] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[07Jun2026 16:38:36.061] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:overworld
+[07Jun2026 16:38:36.390] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:the_nether
+[07Jun2026 16:38:36.395] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[neoforge test]'/minecraft:the_end
+[07Jun2026 16:38:36.414] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (neoforge test): All chunks are saved
+[07Jun2026 16:38:36.414] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[07Jun2026 16:38:36.414] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[07Jun2026 16:38:36.414] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[07Jun2026 16:38:38.541] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!

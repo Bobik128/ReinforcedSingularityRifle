@@ -639,13 +639,14 @@ public class SingularityRifleRenderer extends GeoItemRenderer<SingularityRifle> 
             relNow.x *= m00h / m00l;
         }
 
-        if (Float.isFinite(m11h) && Float.isFinite(m11l) && m11l != 0.0f) {
+        boolean b = Float.isFinite(m11h) && Float.isFinite(m11l) && m11l != 0.0f;
+        if (b) {
             relNow.y *= m11h / m11l;
         }
 
         float radiusScale = 1.0f;
 
-        if (Float.isFinite(m11h) && Float.isFinite(m11l) && m11l != 0.0f) {
+        if (b) {
             radiusScale = m11h / m11l;
         }
 
