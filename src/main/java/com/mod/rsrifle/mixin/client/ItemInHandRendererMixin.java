@@ -30,9 +30,11 @@ import software.bernie.geckolib.animatable.GeoItem;
 public abstract class ItemInHandRendererMixin {
 
     @Unique
-    private static final Vec3 reinforcedBlackHoles$equipedPos = new Vec3(0.3F, -0.46F, -0.7F);
+    private static final Vec3 reinforcedBlackHoles$equippedPos = new Vec3(0.3F, -0.46F, -0.7F);
     @Unique
     private static final Vec3 reinforcedBlackHoles$aimingPos = new Vec3(0f, -0.5F, -0.5F);
+    @Unique
+    private static final int UNEQUIPPED_RENDER_TIME = 12;
 
     @Shadow
     protected abstract void applyItemArmTransform(PoseStack pPoseStack, HumanoidArm pHand, float pEquippedProg);
@@ -64,7 +66,7 @@ public abstract class ItemInHandRendererMixin {
             poseStack.pushPose();
 
             if (stack.getItem() instanceof SingularityRifle) {
-                ExtendedRifleItemRenderer.startUnequip(16, stack, hand);
+                ExtendedRifleItemRenderer.startUnequip(UNEQUIPPED_RENDER_TIME, stack, hand);
             } else {
                 stack = ExtendedRifleItemRenderer.getCurrentRifle(hand);
                 if (!(stack.getItem() instanceof SingularityRifle)) {
@@ -90,7 +92,7 @@ public abstract class ItemInHandRendererMixin {
             float runningProgress = 1.0f - reinforcedBlackHoles$getRunningProgress(player, stack, rifle, partialTicks);
 
             float k = 1;
-            Vec3 finalPos = reinforcedBlackHoles$equipedPos.lerp(reinforcedBlackHoles$aimingPos, progress);
+            Vec3 finalPos = reinforcedBlackHoles$equippedPos.lerp(reinforcedBlackHoles$aimingPos, progress);
 
             poseStack.translate(k * finalPos.x, finalPos.y, finalPos.z);
 

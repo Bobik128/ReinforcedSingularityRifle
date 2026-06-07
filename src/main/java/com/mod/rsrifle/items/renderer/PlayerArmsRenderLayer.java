@@ -133,9 +133,6 @@ public class PlayerArmsRenderLayer extends GeoRenderLayer<SingularityRifle> {
 
     private static void translateToBone(PoseStack poseStack, GeoBone bone) {
         RenderUtil.translateMatrixToBone(poseStack, bone);
-        RenderUtil.translateToPivotPoint(poseStack, bone);
-        RenderUtil.rotateMatrixAroundBone(poseStack, bone);
-        RenderUtil.scaleMatrixForBone(poseStack, bone);
-        RenderUtil.translateAwayFromPivotPoint(poseStack, bone);
+        RenderUtil.translateAndRotateMatrixForBone(poseStack, bone);
     }
 }
