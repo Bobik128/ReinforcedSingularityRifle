@@ -22,7 +22,7 @@ import java.util.function.Consumer;
 
 public class RSRifleClient {
     public static final KeyMapping RELOAD_RIFLE = createSafeKeyMapping(
-            "key.rsrifle.reload_firearm",
+            "key.rsrifle.reload",
             InputConstants.Type.KEYSYM,
             GLFW.GLFW_KEY_R
     );
