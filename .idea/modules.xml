@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ReinforcedSingularityRifle.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ReinforcedSingularityRifle.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ReinforcedSingularityRifle.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ReinforcedSingularityRifle.test.iml" />
     </modules>
   </component>
 </project>
