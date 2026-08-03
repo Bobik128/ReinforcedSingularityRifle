@@ -17,20 +17,27 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.client.event.RenderLivingEvent;
 import net.neoforged.neoforge.client.event.ViewportEvent;
 import org.lwjgl.glfw.GLFW;
+import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 
 import java.util.function.Consumer;
+import net.neoforged.neoforge.common.util.Lazy;
 
 public class RSRifleClient {
-    public static final KeyMapping RELOAD_RIFLE = createSafeKeyMapping(
-            "key.rsrifle.reload",
-            InputConstants.Type.KEYSYM,
-            GLFW.GLFW_KEY_R
+
+    public static final Lazy<KeyMapping> RELOAD_RIFLE = Lazy.of(() ->
+            createSafeKeyMapping(
+                    "key.rsrifle.reload",
+                    InputConstants.Type.KEYSYM,
+                    GLFW.GLFW_KEY_R
+            )
     );
 
-    public static final KeyMapping CHARGE_RIFLE = createSafeKeyMapping(
-            "key.rsrifle.charge_firearm",
-            InputConstants.Type.KEYSYM,
-            GLFW.GLFW_KEY_G
+    public static final Lazy<KeyMapping> CHARGE_RIFLE = Lazy.of(() ->
+            createSafeKeyMapping(
+                    "key.rsrifle.charge_firearm",
+                    InputConstants.Type.KEYSYM,
+                    GLFW.GLFW_KEY_G
+            )
     );
 
     public static boolean chargeKeyIsPressed = false;
@@ -114,13 +121,13 @@ public class RSRifleClient {
         ItemStack useStack = minecraft.player.getMainHandItem();
 
         if (useStack.getItem() instanceof SingularityRifle) {
-            if (action == GLFW.GLFW_PRESS && RELOAD_RIFLE.matches(key, scanCode)) {
+            if (action == GLFW.GLFW_PRESS && RELOAD_RIFLE.get().matches(key, scanCode)) {
                 RSRifleClientNetwork.sendToServer(
                         new ServerboundFirearmActionPacket(SingularityRifle.Action.RELOAD)
                 );
             }
 
-            if (CHARGE_RIFLE.isDown()) {
+            if (CHARGE_RIFLE.get().isDown()) {
                 if (!chargeKeyIsPressed) {
                     chargeKeyIsPressed = true;
 
@@ -144,9 +151,9 @@ public class RSRifleClient {
         }
     }
 
-    public static void registerKeyMappings(Consumer<KeyMapping> consumer) {
-        consumer.accept(RELOAD_RIFLE);
-        consumer.accept(CHARGE_RIFLE);
+    public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
+        event.register(RELOAD_RIFLE.get());
+        event.register(CHARGE_RIFLE.get());
     }
 
     public static void onRenderEntity(RenderLivingEvent.Pre<?, ?> event) {

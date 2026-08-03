@@ -85,7 +85,7 @@ public class RSRifleClientNeoForge {
     }
 
     private static void onRegisterKeyMappings(final RegisterKeyMappingsEvent event) {
-        RSRifleClient.registerKeyMappings(event::register);
+        RSRifleClient.registerKeyMappings(event);
     }
 
     private static void onComputeFov(final ComputeFovModifierEvent event) {
