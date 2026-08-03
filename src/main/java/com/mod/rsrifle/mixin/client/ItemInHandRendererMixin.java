@@ -125,9 +125,12 @@ public abstract class ItemInHandRendererMixin {
         float aimingTime = (float) denom - mode.getAimingTime(stack, player);
         float frac = denom > 0 ? aimingTime / (float) denom : 1;
         float frac1 = denom > 0 ? partialTicks / (float) denom : 0;
+
         float d = isAiming ? frac + frac1 : 1 - frac - frac1;
-        d = Mth.clamp(d, 0f, 1f);
-        return d * d;
+        d = Mth.clamp(d, 0.0F, 1.0F);
+
+        // Sine ease-in-out
+        return 0.5F - 0.5F * Mth.cos(d * Mth.PI);
     }
 
     @Unique

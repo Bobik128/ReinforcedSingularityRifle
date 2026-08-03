@@ -137,7 +137,7 @@ configurations {
 dependencies {
     implementation "curse.maven:geckolib-388172:7707149"
     implementation "curse.maven:create-328085:7963363"
-    implementation "curse.maven:reinforced-black-holes-1367499:8194775"
+    implementation "curse.maven:reinforced-black-holes-1367499:8220326"
     /*
      * If Maven local does not work, comment the line above and use one of these instead:
      *
