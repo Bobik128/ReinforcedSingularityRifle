@@ -101,12 +101,12 @@ public class SingularityRifle extends Item implements GeoItem, FovModifyingItem,
         // === Show keybind hints ===
         if (Screen.hasShiftDown()) {
             tooltipComponents.add(Component.literal("▶ ")
-                    .append(Component.literal("[" + RSRifleClient.RELOAD_RIFLE.get().getTranslatedKeyMessage().getString() + "]"))
+                    .append(Component.literal("[" + RSRifleClient.RELOAD_RIFLE.getTranslatedKeyMessage().getString() + "]"))
                     .append(" Reload")
                     .withStyle(ChatFormatting.YELLOW));
 
             tooltipComponents.add(Component.literal("▶ ")
-                    .append(Component.literal("[" + RSRifleClient.CHARGE_RIFLE.get().getTranslatedKeyMessage().getString() + "]"))
+                    .append(Component.literal("[" + RSRifleClient.CHARGE_RIFLE.getTranslatedKeyMessage().getString() + "]"))
                     .append(" Charge")
                     .withStyle(ChatFormatting.GOLD));
         } else {

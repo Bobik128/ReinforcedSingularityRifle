@@ -29,9 +29,6 @@ public class RSRifleClientNeoForge {
         modBus.addListener(RSRifleClientNeoForge::onRegisterKeyMappings);
         modBus.addListener(RSRifleClientNeoForge::onRegisterClientExtensions);
 
-        modBus.addListener(RSRifleClientNeoForge::onClientSetup);
-        modBus.addListener(RSRifleClientNeoForge::onRegisterKeyMappings);
-
         neoForgeBus.addListener(RSRifleClientNeoForge::onClientTickPre);
         neoForgeBus.addListener(RSRifleClientNeoForge::onClientTickPost);
 

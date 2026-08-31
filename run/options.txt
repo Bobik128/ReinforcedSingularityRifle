@@ -130,8 +130,6 @@ key_create.keyinfo.ctrl_modifier:key.keyboard.left.control
 key_create.keyinfo.alt_modifier:key.keyboard.left.alt
 key_key.rsrifle.reload:key.keyboard.r
 key_key.rsrifle.charge_firearm:key.keyboard.g
-key_key.rsrifle.reload:key.keyboard.r
-key_key.rsrifle.charge_firearm:key.keyboard.g
 soundCategory_master:1.0
 soundCategory_music:0.0
 soundCategory_record:1.0
