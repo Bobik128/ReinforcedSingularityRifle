@@ -80,7 +80,7 @@ public class RegisterDamageTypes {
             LivingEntity killCredit = livingEntity.getKillCredit();
 
             String baseKey = "death.attack." + this.getMsgId();
-            int index = livingEntity.getRandom().nextInt(2);
+            int index = livingEntity.getRandom().nextInt(3);
 
             String victimOnlyKey = baseKey + "." + index;
             String attackerKey = baseKey + ".attacker_" + index;

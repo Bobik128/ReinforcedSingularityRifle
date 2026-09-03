@@ -75,7 +75,6 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
     public int life = 0;
     public int lifetime = 1000;
     public final int maxExplodingTime = 3;
-    public boolean exploding = false;
 
     private Vec3 lastDeltaDir = new Vec3(1.0, 0.0, 0.0);
 
@@ -148,7 +147,6 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
         tag.putInt("Color", this.getColor());
         tag.putBoolean("Rainbow", this.shouldBeRainbow());
         tag.putInt("ExplodingTime", this.getExplodingTime());
-        tag.putBoolean("Exploding", this.exploding);
         tag.putInt("Life", this.life);
     }
 
@@ -192,10 +190,6 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
             this.setExplodingTime(tag.getInt("ExplodingTime"));
         }
 
-        if (tag.contains("Exploding")) {
-            this.exploding = tag.getBoolean("Exploding");
-        }
-
         if (tag.contains("Life")) {
             this.life = tag.getInt("Life");
         }
@@ -203,21 +197,29 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
 
     @Override
     public boolean shouldRender(double x, double y, double z) {
-        return this.life > 1 && super.shouldRender(x, y, z);
+        return (life > 1 || getExplodingTime() >= 0) && super.shouldRender(x, y, z);
     }
 
     @Override
     public void tick() {
         super.tick();
 
-        if (this.exploding) {
-            this.setExplodingTime(this.getExplodingTime() + 1);
+        /*
+         * EXPLODING_TIME is synchronized entity data, so both sides agree that
+         * the projectile has stopped moving while the starburst is displayed.
+         */
+        if (getExplodingTime() >= 0) {
+            setDeltaMovement(Vec3.ZERO);
 
-            if (this.getExplodingTime() > this.maxExplodingTime) {
-                this.discard();
+            if (!level().isClientSide) {
+                int next = getExplodingTime() + 1;
+                setExplodingTime(next);
+
+                if (next > maxExplodingTime) {
+                    discard();
+                }
             }
 
-            this.setDeltaMovement(Vec3.ZERO);
             return;
         }
 
@@ -270,6 +272,10 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
     protected void onHitEntity(EntityHitResult result) {
         super.onHitEntity(result);
 
+        if (this.level().isClientSide || getExplodingTime() >= 0) {
+            return;
+        }
+
         Entity entity = result.getEntity();
 
         if (entity instanceof Player player) {
@@ -284,9 +290,7 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
                 this.getEffectSize() * DAMAGE_SIZE_MULTIPLIER
         );
 
-        if (!this.level().isClientSide) {
-            this.explode();
-        }
+        this.explode();
     }
 
     private void removeItemsFromInvDepOnSize(Player player, float fraction) {
@@ -384,7 +388,7 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
                 .getBlockState(blockPos)
                 .entityInside(this.level(), blockPos, this);
 
-        if (!this.level().isClientSide()) {
+        if (!this.level().isClientSide && getExplodingTime() < 0) {
             this.explode();
         }
 
@@ -392,6 +396,14 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
     }
 
     private void explode() {
+        if (this.level().isClientSide || getExplodingTime() >= 0) {
+            return;
+        }
+
+        // Start the synchronized three-tick explosion/starburst state first.
+        setExplodingTime(0);
+        setDeltaMovement(Vec3.ZERO);
+
         this.level().broadcastEntityEvent(this, (byte) 17);
         this.gameEvent(GameEvent.EXPLODE, this.getOwner());
 
@@ -418,8 +430,6 @@ public class BlackHoleProjectile2 extends Projectile implements IBlackHole {
                     1.0f
             );
         }
-
-        this.exploding = true;
     }
 
     private void dealExplosionDamage() {
